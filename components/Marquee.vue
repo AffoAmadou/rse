@@ -1,5 +1,6 @@
 <template>
 <vue-marquee-slider
+id="marqueeid"
   class="marquee-slider"
   :speed="200000"
   :width="9000"

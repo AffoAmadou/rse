@@ -1,11 +1,11 @@
 <template>
-    <section data-scroll-section class="header" :class="`header--${index}`" ref="headerSection">
+    <section data-scroll-section class="header" :class="`header--${props.index}`" ref="headerSection">
         <div class="header__content">
             <div class="index">0{{ displayIndex }}-04</div>
-            <h1 class="header__title" v-html="text">
+            <h1 class="header__title" v-html="props.text">
             </h1>
             <div class="header__tag">
-                <p>{{ tag }}</p>
+                <p>{{ props.tag }}</p>
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 <template>
     <section data-scroll-section  class="text__reveal" ref="textSection">
-      <p  ref="textRevealRef" class="text__reveal__content" v-html="text"></p>
+      <p  ref="textRevealRef" class="text__reveal__content" v-html="props.text"></p>
     </section>
   </template>
   <!-- :style="{ backgroundColor: bg }"

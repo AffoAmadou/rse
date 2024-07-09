@@ -1,11 +1,13 @@
 <template>
-<section data-scroll-section class="content" ref="contentSection">
-  <!-- :style="{ backgroundColor: bgColor, color: txtColor }"  -->
-<Marquee :text= textm :text2=texts />
+<section     class="content" ref="contentSection">
+
+<!-- <Marquee 
+id="marquee"
+ :text= props.textm :text2=props.texts /> -->
 
 
     <Card
-      v-for="card in cards"
+      v-for="card in props.cards"
       :key="card.index"
         :top="card.top"
         :left="card.left"
@@ -43,7 +45,6 @@ onMounted(() => {
     markers: true,
     id: 5,
     onEnter: () => {
-      console.log('enter',props.txtColor, props.bgColor);
 
       gsap.to(body, {
         backgroundColor:props.bgColor,

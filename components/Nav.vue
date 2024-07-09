@@ -1,10 +1,10 @@
 <template>
    <div class="nav">
     <div class="nav__wrapper">
-<NavItem index="0" text="Environnement" />
-<NavItem index="1"  text="Ethique"/>
-<NavItem index="2" text="Social" />
-<NavItem index="3" text="Engagement" />
+<NavItem :index=0 text="Environnement" />
+<NavItem :index=1  text="Ethique"/>
+<NavItem :index=2 text="Social" />
+<NavItem :index=3 text="Engagement" />
     </div>
 
    </div>

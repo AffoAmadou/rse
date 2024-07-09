@@ -1,14 +1,14 @@
 <template>
-<div :style="{ top:top, left:left }" class="card">
+<div :style="{ top:props.top, left:props.left }" class="card">
     <div class="card__top">
         <div class="card__top__wrapper">
-            <div class="card__index">{{ index }}</div>
+            <div class="card__index">{{ props.index }}</div>
                 <Plus/>
         </div>
     </div>
 
     <div class="card__bottom__wrapper">
-        <p>{{text}}</p>
+        <p>{{props.text}}</p>
     </div>
 </div>
 </template>

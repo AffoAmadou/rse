@@ -13,7 +13,7 @@ const isLoading = ref(true); // Initial loading state
 setTimeout(() => {
   isLoading.value = false;
   console.log("isLoading", isLoading.value);
-}, 2000);
+}, 4000);
 
 </script>
 
@@ -39,10 +39,11 @@ setTimeout(() => {
           v-for="(content, contentIndex) in item.contents" :key="contentIndex"
             :textm="content.text"
             :texts="content.texts"
-            :image="content.image"
-            :bgColor="content.bgColor"
-            :txtColor="content.txtColor"
             :cards="content.cards"
+            :image="content.image"
+
+:bgColor="content.bgColor"
+:txtColor="content.txtColor"
           />
         
       </div>
