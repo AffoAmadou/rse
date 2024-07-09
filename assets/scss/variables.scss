@@ -1,0 +1,46 @@
+// @media (min-aspect-ratio: 1440/800) {
+//   :root {
+//     --vr: calc(100vh / 800);
+//   }
+// }
+// @media (max-aspect-ratio: 1440/800) {
+//   :root {
+//     --vr: calc(100vw / 1440);
+//   }
+// }
+
+
+$neue      :"Neue Haas Grotesk Display Pro";
+
+$bg-green:#005454;
+$txt-green:#9AD8CB;
+
+$bg-blue: #312A89;
+$txt-blue:#ABBFFF;
+
+$bg-purple:#493167;
+$txt-purple:#C9BAF9;
+
+$bg-red:#E52A41;
+$txt-red:#FFB4BF;
+
+$white:#fff;
+
+$bgcolors: $bg-green, $bg-blue, $bg-purple, $bg-red;
+$txtcolors: $txt-green, $txt-blue, $txt-purple, $txt-red;
+
+@mixin bgcolor-by-index($index) {
+    @if $index >= 0 and $index < length($bgcolors) {
+      background-color: nth($bgcolors, $index + 1);
+    } @else {
+      background-color: $white; // Default color if index is out of bounds
+    }
+    }
+
+    @mixin txtcolor-by-index($index) {
+        @if $index >= 0 and $index < length($txtcolors) {
+          color: nth($txtcolors, $index + 1);
+        } @else {
+          color: $white; // Default color if index is out of bounds
+        }
+        }

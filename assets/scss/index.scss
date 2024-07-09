@@ -1,0 +1,33 @@
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'fonts';
+@import 'title';
+
+html {
+    $vw: 100vw;
+    font-size: calc($vw / 1440px * 10px);
+    line-height: 1;
+  font-family: $neue ;
+    background-color: #f5f5f1;
+  
+    // @media screen and (max-width: 600px) {
+    //   $vw: 100vw;
+    //   font-size: calc($vw / 390px * 10px);
+    // }
+  
+  }
+
+  button{
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+body{
+  background-color: #005454;
+  color: #9AD8CB;
+}
+
+section{
+  margin-bottom: 5rem;
+}
