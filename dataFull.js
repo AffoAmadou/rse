@@ -34,7 +34,7 @@ export const data = [
         textReveal: {
             bg: "#9AD8CB",
             textColor: "#005454",
-            text: "Exercitation ullamco laboris nisi ut aliquip ex ea eommodo consequat edeno lorem ipsum dolor sit amet pour etre notre terre"
+            text: "En tant qu'acteur du monde numérique, nous veillons à minimiser notre propre impact environnemental & nous engageons dans la promotion de pratiques durables."
         ,lineColor:"#00545408",
         icons:[
             {
@@ -140,7 +140,7 @@ fill:"#FFFFFF08",
         textReveal: {
             bg: "#ABBFFF",
             textColor: "#312A89",
-            text: "Another exercitation ullamco laboris nisi ut aliquip ex ea eommodo consequat edeno lorem ipsum dolor sit amet pour etre notre terre"
+            text: "Nous nous efforçons de laisser une empreinte positive sur la société, contribuant à un monde plus juste et équitable, en incarnant des valeurs sociétales exemplaires."
          ,lineColor:"#00545408",
          icons:[
             {
@@ -238,7 +238,7 @@ fill:"#FFFFFF08",
         textReveal: {
             bg: "#C9BAF9",
             textColor: "#493167",
-            text: "Another exercitation ullamco laboris nisi ut aliquip ex ea eommodo consequat edeno lorem ipsum dolor sit amet pour etre notre terre"
+            text: "Nous accordons une priorité absolue à la cohésion d'équipe et à la motivation de nos talents en veillant avant tout au bien-être au travail."
             ,lineColor:"#49316708",
             icons:[
                 {
@@ -325,7 +325,7 @@ fill:"#FFFFFF08",
         textReveal: {
             bg: "#FFB4BF",
             textColor: "#E52A41",
-            text: "Another exercitation ullamco laboris nisi ut aliquip ex ea eommodo consequat edeno lorem ipsum dolor sit amet pour etre notre terre"
+            text: "Nous sommes engagés dans une démarche altruiste de partage des savoirs, des connaissances et de notre temps pour favoriser une société basée sur l’entraide."
         ,lineColor:"#E52A410A",
         icons:[
             {
