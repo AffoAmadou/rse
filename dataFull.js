@@ -23,6 +23,7 @@ export const data = [
                  image: "path/to/image1.jpg",
                 bgColor: "#005454",
                 txtColor: "#9AD8CB",
+                lineColor:"#9AD8CB0D",
                 cardsColors:{
                     number:"#9AD8CB",
                     text:"#005454"
@@ -41,6 +42,7 @@ export const data = [
                 image: "path/to/image2.jpg",
                 bgColor: "#9AD8CB",
                 txtColor: "#005454",
+                lineColor:"#00545408",
                 cardsColors:{
                     number:"#9AD8CB",
                     text:"#005454"
@@ -57,6 +59,7 @@ export const data = [
                 image: "path/to/image2.jpg",
                 bgColor: "#005454",
                 txtColor: "#9AD8CB",
+                lineColor:"#9AD8CB0D",
                 cardsColors:{
                     number:"#9AD8CB",
                     text:"#005454"
@@ -90,6 +93,8 @@ export const data = [
                 image: "path/to/image3.jpg",
                 bgColor: "#312A89",
                 txtColor: "#ABBFFF",
+                lineColor:"#9AD8CB0D",
+
                 cardsColors:{
                     number:"#ABBFFF",
                     text:"#312A89"
@@ -106,6 +111,7 @@ export const data = [
                 image: "path/to/image3.jpg",
                 bgColor: "#ABBFFF",
                 txtColor: "#312A89",
+                lineColor:"#00545408",
                 cardsColors:{
                     number:"#ABBFFF",
                     text:"#312A89"
@@ -141,6 +147,8 @@ export const data = [
                                 image: "path/to/image3.jpg",
                 bgColor: "#493167",
                 txtColor: "#C9BAF9",
+                                lineColor:"#C9BAF90D",
+
                 cardsColors:{
                     number:"#C9BAF9",
                     text:"#493167"
@@ -156,6 +164,8 @@ export const data = [
                                 image: "path/to/image3.jpg",
                 bgColor: "#C9BAF9",
                 txtColor: "#493167",
+                                lineColor:"#49316708",
+
                 cardsColors:{
                     number:"#C9BAF9",
                     text:"#493167"
@@ -190,6 +200,7 @@ export const data = [
                 image: "path/to/image3.jpg",
                 bgColor: "#E52A41",
                 txtColor: "#FFB4BF",
+                lineColor:"#FFB4BF1A",
                 cardsColors:{
                     number:"#FFB4BF",
                     text:"#E52A41"
