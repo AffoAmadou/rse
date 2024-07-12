@@ -1,6 +1,6 @@
 <template>
     <section data-scroll-section class="footer" ref="footerSection">
-        <Marquee id="marquee" text="Made on earth" text2="with heart" />
+        <!-- <Marquee id="marquee" text="Made on earth" text2="with heart" /> -->
 
         <div class="footer__card">
             <h3 class="footer__title">Briefer l’agence</h3>
@@ -26,7 +26,6 @@
 </template>
 
 <script setup>
-import Marquee from './Marquee.vue';
 import Instagram from './icons/instagram.vue';
 import Linkedin from './icons/linkedin.vue';
 

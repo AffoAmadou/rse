@@ -28,14 +28,35 @@ Signal.on(":loaderFinished", (index) => {
 
     <div v-if="!isLoading">
       <div v-for="(item, index) in data" :key="index">
-        <Header :index="item.header.index" :text="item.header.text" :tag="item.header.tag"
-          :bgColor="item.header.bgColor" :txtColor="item.header.txtColor" :lineColor="item.header.lineColor" />
-        <TextReveal :bg="item.textReveal.bg" :textColor="item.textReveal.textColor" :text="item.textReveal.text"
-          :lineColor="item.textReveal.lineColor" />
+        <Header 
+        :index="item.header.index" 
+        :text="item.header.text" 
+        :tag="item.header.tag"
+          
+        :bgColor="item.header.bgColor" 
+          :txtColor="item.header.txtColor" 
+          :lineColor="item.header.lineColor"
+          :icons= "item.header.icons"
+          />
+        <TextReveal 
+        :bg="item.textReveal.bg" 
+        :textColor="item.textReveal.textColor" 
+        :text="item.textReveal.text"
+          :icons="item.textReveal.icons"
+        :lineColor="item.textReveal.lineColor" />
 
-        <Content v-for="(content, contentIndex) in item.contents" :key="contentIndex" :textm="content.text"
-          :texts="content.texts" :cards="content.cards" :cardsColors="content.cardsColors" :image="content.image"
-          :bgColor="content.bgColor" :txtColor="content.txtColor" :lineColor="content.lineColor" />
+        <Content v-for="(content, contentIndex) in item.contents" 
+        :key="contentIndex" 
+        :textm="content.text"
+          
+        :texts="content.texts" 
+          :cards="content.cards" 
+          :cardsColors="content.cardsColors" 
+          :image="content.image"
+          
+          :bgColor="content.bgColor" 
+          :txtColor="content.txtColor" 
+          :lineColor="content.lineColor" />
 
       </div>
       <Footer />

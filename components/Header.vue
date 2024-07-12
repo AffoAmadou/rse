@@ -1,5 +1,24 @@
 <template>
     <section data-scroll-section class="header" :class="`header--${props.index}`" ref="headerSection">
+        <component :style="{
+            width: props.icons[0].width,
+            height: props.icons[0].height,
+            top: props.icons[0].top,
+            left: props.icons[0].left,
+            transform: props.icons[0].transform,
+            zIndex: '0',
+        }" :is="firstIcon" :color=props.icons[0].fill class="icon" />
+
+
+        <component :style="{
+            width: props.icons[1].width,
+            height: props.icons[1].height,
+            top: props.icons[1].top,
+            left: props.icons[1].left,
+            transform: props.icons[1].transform,
+            zIndex: '0',
+        }" :is="secondIcon" :color=props.icons[1].fill class="icon" />
+
         <div class="header__content">
             <div class="index">0{{ displayIndex }}-04</div>
             <h1 class="header__title" v-html="props.text">
@@ -16,7 +35,7 @@
 <script setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, computed, defineAsyncComponent } from 'vue';
 gsap.registerPlugin(ScrollTrigger);
 const props = defineProps({
     index: {
@@ -43,15 +62,41 @@ const props = defineProps({
         type: String,
         default: '#005454',
     },
+    icons: {
+        type: Array,
+        default: () => [],
+    },
 });
 const headerSection = ref(null);
 const displayIndex = props.index + 1;
 
+// Define the components using async imports
+const components = [
+    defineAsyncComponent(() => import('../components/icons/environnement.vue')),
+    defineAsyncComponent(() => import('../components/icons/star.vue')),
+    defineAsyncComponent(() => import('../components/icons/social.vue')),
+    defineAsyncComponent(() => import('../components/icons/engagement.vue'))
+];
+
+const firstIcon = computed(() => {
+    if (props.icons[0].index >= 0 && props.icons[0].index < components.length) {
+        return components[props.icons[0].index];
+    }
+    // Default to the first component if index is out of bounds
+    return components[0];
+});
+
+const secondIcon = computed(() => {
+    if (props.icons[1].index >= 0 && props.icons[1].index < components.length) {
+        return components[props.icons[1].index];
+    }
+    // Default to the first component if index is out of bounds
+    return components[0];
+});
 
 
 onMounted(() => {
     const body = document.querySelector('body');
-
     const lineV = document.querySelectorAll(".line__vertical")
     const lineH = document.querySelectorAll(".line__horizontal")
 
@@ -68,7 +113,7 @@ onMounted(() => {
             });
 
             gsap.to(lineV, {
-               borderColor: props.lineColor,
+                borderColor: props.lineColor,
                 duration: 2,
                 stagger: .1,
             });
@@ -88,7 +133,7 @@ onMounted(() => {
             });
 
             gsap.to(lineV, {
-               borderColor: props.lineColor,
+                borderColor: props.lineColor,
                 duration: 2,
                 stagger: .1,
             });
@@ -125,23 +170,6 @@ onMounted(() => {
     z-index: 1;
     position: relative;
 
-    //     &--0 {
-    //     @include bgcolor-by-index(0);
-    //     @include txtcolor-by-index(0)
-
-    //   }
-    //   &--1 {
-    //     @include bgcolor-by-index(1);
-    //     @include txtcolor-by-index(1)
-    //   }
-    //   &--2 {
-    //     @include bgcolor-by-index(2);
-    //     @include txtcolor-by-index(2)
-    //   }
-    //   &--3 {
-    //     @include bgcolor-by-index(3);
-    //     @include txtcolor-by-index(3) // Add more as needed, handle index out of bounds in mixin
-    //   }
 }
 
 .header__content {
@@ -177,5 +205,10 @@ onMounted(() => {
         color: $white;
     }
 
+}
+
+.icon {
+    position: absolute;
+    z-index: 0;
 }
 </style>

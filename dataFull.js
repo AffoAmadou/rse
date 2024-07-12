@@ -6,14 +6,48 @@ export const data = [
             tag: "RESPONSABILITÉ ENVIRONNEMENTALE",
             bgColor: "#005454",
             txtColor: "#9AD8CB",
-            lineColor:"#9AD8CB0D"
+            lineColor:"#9AD8CB0D",
+            icons:[
+                {
+                    index:0,
+                    width:"60rem",
+                    height:"60rem",
+                    top:"8.5rem",
+                    left:"10rem",
+                    fill:"#FFFFFF08",
+                                        transform: 'rotate(0deg)'
+
+                },
+                {
+                    index:0,
+                    width:"45rem",
+                    height:"45rem",
+                    top:"36rem",
+                    left:"95.2rem",
+                    fill:"#FFFFFF08",
+                                        transform: 'rotate(0deg)'
+
+                }
+            ]
             
         },
         textReveal: {
             bg: "#9AD8CB",
             textColor: "#005454",
             text: "Exercitation ullamco laboris nisi ut aliquip ex ea eommodo consequat edeno lorem ipsum dolor sit amet pour etre notre terre"
-        ,lineColor:"#00545408"
+        ,lineColor:"#00545408",
+        icons:[
+            {
+                index:0,
+                width:"50.1rem",
+                height:"50.1rem",
+                top:"16.4rem",
+                left:"112rem",
+                fill:"#0054540F",                                 transform: 'rotate(0deg)'
+
+            },
+           
+        ]
         }
         ,
         contents: [
@@ -78,13 +112,58 @@ export const data = [
             tag: "ÉTHIQUE",
             bgColor: "#312A89",
             txtColor: "#ABBFFF",
-            lineColor:"#9AD8CB0D"
+            lineColor:"#9AD8CB0D",
+            icons:[
+                {
+                    index:1,
+                    width:"35.4rem",
+                    height:"35.4rem",
+                    top:"41.1rem",
+                    left:"15.6rem",
+fill:"#FFFFFF08",
+                    transform: 'rotate(0deg)'
+
+                },
+                {
+                    index:1,
+                    width:"64.1rem",
+                    height:"64.1rem",
+                    top:"1.9rem",
+                    left:"76.7rem",
+                    fill:"#FFFFFF08",
+                                        transform: 'rotate(0deg)'
+
+                }
+            ]
+            
         },
         textReveal: {
             bg: "#ABBFFF",
             textColor: "#312A89",
             text: "Another exercitation ullamco laboris nisi ut aliquip ex ea eommodo consequat edeno lorem ipsum dolor sit amet pour etre notre terre"
-         ,lineColor:"#00545408"
+         ,lineColor:"#00545408",
+         icons:[
+            {
+                index:1,
+                width:"35.4rem",
+                height:"35.4rem",
+                top:"10.8rem",
+                left:"92.9rem",
+                fill:"#312A8908",
+                                    transform: 'rotate(0deg)'
+
+            },
+            {
+                index:1,
+                width:"19.2rem",
+                height:"19.2rem",
+                top:"38rem",
+                left:"118rem",
+                fill:"#312A8908",
+                                    transform: 'rotate(0deg)'
+
+            }
+        ]
         },
         contents: [
             {
@@ -131,13 +210,48 @@ export const data = [
             tag: "SOCIAL",
             bgColor: "#493167",
             txtColor: "#C9BAF9",
-            lineColor:"#C9BAF90D"
+            lineColor:"#C9BAF90D",
+            icons:[
+                {
+                    index:2,
+                    width:"25.6rem",
+                    height:"25.6rem",
+                    top:"16.9rem",
+                    left:"17rem",
+                    fill:"#FFFFFF08",
+                    transform: 'rotate(0deg)'
+
+                },
+                {
+                    index:2,
+                    width:"45rem",
+                    height:"45rem",
+                    top:"37.5rem",
+                    left:"102rem",
+                    fill:"#FFFFFF08",
+                    transform: 'rotate(0deg)'
+
+                }
+            ]
+            
         },
         textReveal: {
             bg: "#C9BAF9",
             textColor: "#493167",
             text: "Another exercitation ullamco laboris nisi ut aliquip ex ea eommodo consequat edeno lorem ipsum dolor sit amet pour etre notre terre"
-            ,lineColor:"#49316708"
+            ,lineColor:"#49316708",
+            icons:[
+                {
+                    index:2,
+                    width:"26.3rem",
+                    height:"25.1rem",
+                    top:"34.9rem",
+                    left:"130rem",
+                    fill:"#49316708",
+                                        transform: 'rotate(90deg)'
+    
+                }
+            ]
 
         },
         contents: [
@@ -185,13 +299,47 @@ export const data = [
             tag: "social",
             bgColor: "#E52A41",
             txtColor: "#FFB4BF",
-            lineColor:"#FFB4BF1A"
+            lineColor:"#FFB4BF1A",
+            icons:[
+                {
+                    index:3,
+                    width:"51rem",
+                    height:"34rem",
+                    top:"34rem",
+                    left:"8.6rem",
+                    fill:"#FFFFFF0F",
+                    transform: 'rotate(0deg)'
+                },
+                {
+                    index:3,
+                    width:"17.1rem",
+                    height:"11.4rem",
+                    top:"8.4rem",
+                    left:"113.4rem",
+                    fill:"#FFFFFF0F",
+                    transform: 'rotate(90deg)'
+                }
+            ]
+            
         },
         textReveal: {
             bg: "#FFB4BF",
             textColor: "#E52A41",
             text: "Another exercitation ullamco laboris nisi ut aliquip ex ea eommodo consequat edeno lorem ipsum dolor sit amet pour etre notre terre"
-        ,lineColor:"#E52A410A"
+        ,lineColor:"#E52A410A",
+        icons:[
+            {
+                index:3,
+                width:"34rem",
+                height:"22.66rem",
+                top:"25.6rem",
+                left:"136.4rem",
+                fill:"#FFFFFF0F",
+                                    transform: 'rotate(90deg)'
+
+            }
+        ]
+
         },
         contents: [
             {

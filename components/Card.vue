@@ -3,7 +3,9 @@
     <div class="card__top">
         <div class="card__top__wrapper">
             <div :style="{colors:props.colors.number}" class="card__index">{{ props.index }}</div>
-                <Plus />
+            <button>
+              <Plus />
+            </button>  
         </div>
     </div>
 

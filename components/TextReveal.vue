@@ -1,5 +1,24 @@
 <template>
   <section data-scroll-section class="text__reveal" ref="textSection">
+    <component :style="{
+      width: props.icons[0].width,
+      height: props.icons[0].height,
+      top: props.icons[0].top,
+      left: props.icons[0].left,
+      transform: props.icons[0].transform,
+      zIndex: '0',
+    }" :is="firstIcon" :color=props.icons[0].fill class="icon" />
+
+
+    <component v-if="props.icons[1]" :style="{
+      width: props.icons[1].width,
+      height: props.icons[1].height,
+      top: props.icons[1].top,
+      left: props.icons[1].left,
+      transform: props.icons[1].transform,
+      zIndex: '0',
+    }" :is="secondIcon" :color=props.icons[1].fill class="icon" />
+
     <p ref="textRevealRef" class="text__reveal__content" v-html="props.text"></p>
   </section>
 </template>
@@ -28,9 +47,37 @@ const props = defineProps({
     type: String,
     default: '#005454',
   },
+  icons: {
+    type: Array,
+    default: () => [],
+  },
 });
 
 const textRevealRef = ref(null);
+
+// Define the components using async imports
+const components = [
+  defineAsyncComponent(() => import('../components/icons/environnement.vue')),
+  defineAsyncComponent(() => import('../components/icons/star.vue')),
+  defineAsyncComponent(() => import('../components/icons/social.vue')),
+  defineAsyncComponent(() => import('../components/icons/engagement.vue'))
+];
+
+const firstIcon = computed(() => {
+  if (props.icons[0].index >= 0 && props.icons[0].index < components.length) {
+    return components[props.icons[0].index];
+  }
+  // Default to the first component if index is out of bounds
+  return components[0];
+});
+
+const secondIcon = computed(() => {
+  if (props.icons[1].index >= 0 && props.icons[1].index < components.length) {
+    return components[props.icons[1].index];
+  }
+  // Default to the first component if index is out of bounds
+  return components[0];
+});
 
 onMounted(() => {
   const text = new SplitType(textRevealRef.value, { types: 'chars' });
@@ -101,7 +148,7 @@ onMounted(() => {
       start: "top 80%",
       end: "bottom 20%",
       scrub: true,
-      markers: true,
+      // markers: true,
       id: "TextReveal",
       ease: "ease.out",
     },
@@ -137,5 +184,10 @@ onMounted(() => {
   .char {
     opacity: 0.1;
   }
+}
+
+.icon {
+  position: absolute;
+  z-index: 0;
 }
 </style>

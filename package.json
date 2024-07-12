@@ -20,6 +20,6 @@
     "sass": "^1.77.6",
     "split-type": "^0.3.4",
     "vue": "latest",
-    "vue3-marquee-slider": "^1.0.5"
+    "vue3-marquee": "^4.2.0"
   }
 }

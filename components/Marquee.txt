@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 <vue-marquee-slider
 id="marqueeid"
   class="marquee-slider"
@@ -51,4 +51,4 @@ const props = defineProps({
     height: 14.995rem;
     border-radius: 3rem;
 }
-</style>
+</style> -->
