@@ -2,13 +2,13 @@
 <div :style="{ top:props.top, left:props.left }" class="card">
     <div class="card__top">
         <div class="card__top__wrapper">
-            <div class="card__index">{{ props.index }}</div>
-                <Plus/>
+            <div :style="{colors:props.colors.number}" class="card__index">{{ props.index }}</div>
+                <Plus />
         </div>
     </div>
 
     <div class="card__bottom__wrapper">
-        <p>{{props.text}}</p>
+        <p class="card__bottom__text" :style="{colors:props.colors.text}">{{props.text}}</p>
     </div>
 </div>
 </template>
@@ -68,5 +68,9 @@ const props = defineProps({
     text: {
       type: String,
     },
+    colors: {
+      type: Object,
+    },
   });
+
 </script>

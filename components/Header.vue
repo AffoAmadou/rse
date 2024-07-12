@@ -39,13 +39,21 @@ const props = defineProps({
         type: String,
         default: '#005454',
     },
+    lineColor: {
+        type: String,
+        default: '#005454',
+    },
 });
 const headerSection = ref(null);
 const displayIndex = props.index + 1;
 
 
+
 onMounted(() => {
     const body = document.querySelector('body');
+
+    const lineV = document.querySelectorAll(".line__vertical")
+    const lineH = document.querySelectorAll(".line__horizontal")
 
     ScrollTrigger.create({
         trigger: headerSection.value,
@@ -58,6 +66,18 @@ onMounted(() => {
                 duration: .4,
                 ease: "ease.in",
             });
+
+            gsap.to(lineV, {
+               borderColor: props.lineColor,
+                duration: 2,
+                stagger: .1,
+            });
+
+            gsap.to(lineH, {
+                borderColor: props.lineColor,
+                duration: 2,
+                stagger: .1,
+            });
         },
         onEnterBack: () => {
             gsap.to(body, {
@@ -65,6 +85,18 @@ onMounted(() => {
                 color: props.txtColor,
                 duration: .4,
                 ease: "ease.in",
+            });
+
+            gsap.to(lineV, {
+               borderColor: props.lineColor,
+                duration: 2,
+                stagger: .1,
+            });
+
+            gsap.to(lineH, {
+                borderColor: props.lineColor,
+                duration: 2,
+                stagger: .1,
             });
 
         },
@@ -90,6 +122,8 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    position: relative;
 
     //     &--0 {
     //     @include bgcolor-by-index(0);
@@ -129,6 +163,7 @@ onMounted(() => {
     line-height: 10rem;
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
+    letter-spacing: -.4rem;
 }
 
 .header__tag {

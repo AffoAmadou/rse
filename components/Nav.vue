@@ -1,18 +1,29 @@
 <template>
-   <div class="nav">
-    <div class="nav__wrapper">
-<NavItem :index=0 text="Environnement" />
-<NavItem :index=1  text="Ethique"/>
-<NavItem :index=2 text="Social" />
-<NavItem :index=3 text="Engagement" />
-    </div>
+    <div class="nav " :class="{ 'is-visible': navVisible }">
+        <div class="nav__wrapper">
+            <NavItem :index=0 text="Environnement" />
+            <NavItem :index=1 text="Ethique" />
+            <NavItem :index=2 text="Social" />
+            <NavItem :index=3 text="Engagement" />
+        </div>
 
-   </div>
+    </div>
 
 </template>
 
 <script setup>
-	import NavItem from "./NavItem.vue";
+import { ref,onMounted } from "vue";
+import NavItem from "./NavItem.vue";
+import Signal from "../utils/signal";
+const navVisible = ref(false);
+
+
+onMounted(() => {
+    Signal.on(":showNav", (index) => {
+        navVisible.value = true;
+    })
+})
+
 </script>
 
 <style scoped lang="scss">
@@ -21,23 +32,27 @@
 @import "../assets/scss/mixins.scss";
 
 
-.nav{
+.nav {
     position: fixed;
     width: 100%;
-    bottom: 4.9rem;
+    bottom: -8.9rem;
     left: 0;
     right: 0;
     z-index: 1000;
-  @extend %center;  
+    @extend %center;
+    transition: all .5s ease-out;
 }
 
-.nav__wrapper{
+.is-visible {
+    opacity: 1;
+    bottom: 4.9rem;
+}
+
+.nav__wrapper {
     padding: 1rem 1.1rem 1rem 1.1rem;
     background-color: white;
     border-radius: 10rem;
     display: flex;
     gap: 0.54rem;
-   
 }
-
 </style>

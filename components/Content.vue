@@ -13,6 +13,7 @@ id="marquee"
         :left="card.left"
         :index="card.index"
         :text="card.text"
+        :colors="props.cardsColors"
       />
 </section>
 </template>
@@ -33,16 +34,23 @@ const props = defineProps({
   image: String,
   bgColor: String,
   txtColor: String,
-  cards: Array
+  cards: Array,
+  cardsColors: Object
 });
 
 onMounted(() => {
   const body = document.querySelector('body');
 
+  const cards = document.querySelectorAll('.card__index');
+
+  const carsTexts = document.querySelectorAll('.card__bottom__text');
+
+  const btn = document.querySelectorAll('.p__circle');
+
+
   ScrollTrigger.create({
     trigger: contentSection.value,
-    start: "top 10%",
-    markers: true,
+    start: "top top",
     id: 5,
     onEnter: () => {
 
@@ -52,6 +60,24 @@ onMounted(() => {
         duration: .4,
         ease:'ease.in'
       });
+
+      gsap.to(cards, {
+       color: props.cardsColors.number,
+        duration: .4,
+        ease:'ease.in'
+      });
+
+      gsap.to(carsTexts, {
+        color: props.cardsColors.text,
+        duration: .4,
+        ease:'ease.in'
+      })
+
+      gsap.to(btn, {
+        fill: props.cardsColors.text,
+        duration: .4,
+        ease:'ease.in'
+      })
     },
   });
 });
@@ -70,6 +96,7 @@ onMounted(() => {
     @extend %center;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 </style>
