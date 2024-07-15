@@ -50,11 +50,6 @@ onMounted(() => {
             },
           
         })
-    // .to(loader.value, { display: "none", duration: 1 })
-
-
-    // console.log(Signal,"signal")on
-    // Signal.emit(":loaderFinished", "hey")
 });
 </script>
 

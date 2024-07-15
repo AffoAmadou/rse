@@ -157,6 +157,46 @@ onMounted(() => {
   let cardWrapperHeight = cardWrapper.value.offsetHeight;
 
 
+  // console.log(cards.length, "cards")
+
+  // let ContentCards = gsap.utils.toArray(contentSection.value.querySelectorAll('.card'));
+  // console.log(ContentCards, "All_cards")
+
+
+  // gsap.to(cardWrapper.value, {
+  //   scrollTrigger: {
+  //     trigger: contentSection.value,
+  //     scrub: true,
+  //     pin: true,
+  //     start: "top top",
+  //     end: "+=100%",
+
+  //   },
+  //   y: `-=${cardWrapperHeight / 2}`,
+  //   ease: "none"
+  // });
+
+
+  // Assuming you have the `contentSection` and `cardWrapper` already defined and set up
+
+  // Get all cards inside the content section
+  let ContentCards = gsap.utils.toArray(contentSection.value.querySelectorAll('.card'));
+  console.log(ContentCards, "All_cards");
+
+  // Calculate the total height of all cards including the gaps between them
+  let totalHeight = 0;
+  ContentCards.forEach((card, index) => {
+    if (index === 0) {
+      totalHeight += card.offsetHeight; // Add the height of the first card
+    } else {
+      const prevCard = ContentCards[index - 1];
+      const gap = card.offsetTop - (prevCard.offsetTop + prevCard.offsetHeight);
+      totalHeight += card.offsetHeight + gap; // Add the height and gap of subsequent cards
+    }
+  });
+
+  let additionalOffset = 50; // Add some additional offset if needed
+  let endValue = `+=${totalHeight + additionalOffset}px`;
 
   gsap.to(cardWrapper.value, {
     scrollTrigger: {
@@ -164,10 +204,7 @@ onMounted(() => {
       scrub: true,
       pin: true,
       start: "top top",
-      end: "+=100%",
-      onEnter: () => {
-        console.log("enter")
-      }
+      end: endValue,
     },
     y: `-=${cardWrapperHeight / 2}`,
     ease: "none"
@@ -225,17 +262,18 @@ onMounted(() => {
   position: relative;
 }
 
-.marquee__content{
-    display: flex;
-    gap: 5rem;
-}
-.marquee__text{
-@extend %title-150-bold ;
+.marquee__content {
+  display: flex;
+  gap: 5rem;
 }
 
-.marquee__image{
-    width: 23.3rem;
-    height: 14.995rem;
-    border-radius: 3rem;
+.marquee__text {
+  @extend %title-150-bold;
+}
+
+.marquee__image {
+  width: 23.3rem;
+  height: 14.995rem;
+  border-radius: 3rem;
 }
 </style>

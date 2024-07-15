@@ -83,7 +83,6 @@ onMounted(() => {
   const text = new SplitType(textRevealRef.value, { types: 'chars' });
 
 
-  console.log(text.chars, "text")
   const body = document.querySelector('body');
   const lineV = document.querySelectorAll(".line__vertical")
   const lineH = document.querySelectorAll(".line__horizontal")

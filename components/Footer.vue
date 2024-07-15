@@ -65,8 +65,6 @@ onMounted(() => {
 .footer {
     width: 100%;
     height: 100vh;
-    // background-color: #162040;
-    // color: #FF90B9;
     @extend %center;
     position: relative;
     overflow: hidden;

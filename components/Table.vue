@@ -27,7 +27,6 @@ onMounted(() => {
 
     Signal.on(":loaderFinished", () => {
         lineAnimation();
-        console.log("index LINES");
     })
 })
 

@@ -1,6 +1,6 @@
 <template>
     <button class="nav__item">
-      <component  :is="currentComponent" />
+      <component :animation=false  :is="currentComponent" />
       <div class="nav__item__text">{{ text }}</div>
     </button>
   </template>

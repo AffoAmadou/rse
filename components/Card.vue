@@ -30,7 +30,6 @@
     left: 15.5rem;
     border-radius: 1.806rem;
     padding: 3.43rem 3rem 3rem 3rem;
-    // color: #9AD8CB;
 
     display: flex;
     flex-direction: column;
@@ -46,7 +45,6 @@
 .card__bottom__wrapper{
     max-width: 22.7rem;
     @extend   %title-35-medium;
-    // color: #005454;
 }
 .card__index{
     @extend %title-60;

@@ -70,7 +70,6 @@ const props = defineProps({
 const headerSection = ref(null);
 const displayIndex = props.index + 1;
 
-// Define the components using async imports
 const components = [
     defineAsyncComponent(() => import('../components/icons/environnement.vue')),
     defineAsyncComponent(() => import('../components/icons/star.vue')),
@@ -82,7 +81,6 @@ const firstIcon = computed(() => {
     if (props.icons[0].index >= 0 && props.icons[0].index < components.length) {
         return components[props.icons[0].index];
     }
-    // Default to the first component if index is out of bounds
     return components[0];
 });
 
@@ -90,7 +88,6 @@ const secondIcon = computed(() => {
     if (props.icons[1].index >= 0 && props.icons[1].index < components.length) {
         return components[props.icons[1].index];
     }
-    // Default to the first component if index is out of bounds
     return components[0];
 });
 
@@ -99,6 +96,18 @@ onMounted(() => {
     const body = document.querySelector('body');
     const lineV = document.querySelectorAll(".line__vertical")
     const lineH = document.querySelectorAll(".line__horizontal")
+
+
+
+    //get all svgs from headerSection
+    let svgs = headerSection.value.querySelectorAll('svg');
+console.log(headerSection.value)
+    console.log(svgs);
+    gsap.to([svgs], {
+        duration: 10,
+        rotate: 360,
+        repeat: -1,
+    })
 
     ScrollTrigger.create({
         trigger: headerSection.value,
