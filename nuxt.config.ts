@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   ssr: false,
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxt/image', "nuxt-locomotive-scroll"],
+  modules: ['@nuxt/image'],
   image: {
     formats: ['webp', 'avif'],
   },
