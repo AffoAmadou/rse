@@ -20,10 +20,10 @@
         }" :is="secondIcon" :color=props.icons[1].fill class="icon" />
 
         <div class="header__content">
-            <div class="index">0{{ displayIndex }}-04</div>
-            <h1 class="header__title" v-html="props.text">
+            <div ref="index" class="index">0{{ displayIndex }}-04</div>
+            <h1 ref="title" class="header__title" v-html="props.text">
             </h1>
-            <div class="header__tag">
+            <div ref="tag" class="header__tag">
                 <p>{{ props.tag }}</p>
             </div>
         </div>
@@ -36,6 +36,8 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted, ref, computed, defineAsyncComponent } from 'vue';
+import Signal from '../utils/signal';
+
 gsap.registerPlugin(ScrollTrigger);
 const props = defineProps({
     index: {
@@ -68,6 +70,10 @@ const props = defineProps({
     },
 });
 const headerSection = ref(null);
+const index = ref(null);
+const tag = ref(null);
+const title = ref(null);
+
 const displayIndex = props.index + 1;
 
 const components = [
@@ -90,6 +96,14 @@ const secondIcon = computed(() => {
     }
     return components[0];
 });
+const animateHeader = () => {
+    gsap.to([index.value, tag.value, title.value], {
+        autoAlpha: 1,
+        visibility: 'visible',
+        duration: 1,
+        stagger: .2,
+    });
+}
 
 
 onMounted(() => {
@@ -97,12 +111,13 @@ onMounted(() => {
     const lineV = document.querySelectorAll(".line__vertical")
     const lineH = document.querySelectorAll(".line__horizontal")
 
+    // gsap.set([index.value, tag.value, title.value], {
+    //     autoAlpha: 0,
+    // });
 
 
     //get all svgs from headerSection
     let svgs = headerSection.value.querySelectorAll('svg');
-console.log(headerSection.value)
-    console.log(svgs);
     gsap.to([svgs], {
         duration: 10,
         rotate: 360,
@@ -157,9 +172,14 @@ console.log(headerSection.value)
 
     });
 
-
+    console.log(Signal);
+    Signal.on(":showContent", () => {
+        console.log('loader finished');
+        animateHeader();
+    })
 
 });
+
 
 
 </script>
@@ -179,6 +199,11 @@ console.log(headerSection.value)
     z-index: 1;
     position: relative;
 
+    @media screen and (max-width: 600px) {
+       overflow: hidden;
+    
+    }
+
 }
 
 .header__content {
@@ -187,20 +212,26 @@ console.log(headerSection.value)
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+       max-width: 33.6rem;
+    }
 }
 
 .index {
     @extend %description-15;
+
+   
 }
 
 .header__title {
     @extend %title-110-bold;
     text-align: center;
     text-transform: uppercase;
-    line-height: 10rem;
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
     letter-spacing: -.4rem;
+    width: 100%;
 }
 
 .header__tag {

@@ -11,10 +11,10 @@ html {
   font-family: $neue ;
     background-color: #f5f5f1;
   
-    // @media screen and (max-width: 600px) {
-    //   $vw: 100vw;
-    //   font-size: calc($vw / 390px * 10px);
-    // }
+    @media screen and (max-width: 600px) {
+      $vw: 100vw;
+      font-size: calc($vw / 390px * 10px);
+    }
   
   }
 

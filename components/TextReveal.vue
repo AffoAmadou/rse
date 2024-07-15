@@ -170,6 +170,11 @@ onMounted(() => {
   padding-bottom: 10rem;
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: 600px){
+    overflow: hidden;
+    padding:14.269rem 2.2rem 5rem 2.1rem ;
+  }
 }
 
 .text__reveal__content {

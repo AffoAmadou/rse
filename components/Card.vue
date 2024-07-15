@@ -3,7 +3,7 @@
     <div class="card__top">
         <div class="card__top__wrapper">
             <div :style="{colors:props.colors.number}" class="card__index">{{ props.index }}</div>
-            <button>
+            <button @click="open" ref="button">
               <Plus />
             </button>  
         </div>
@@ -34,6 +34,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (max-width: 600px){
+        width: 25.5rem;
+        position: static;
+        padding: 3.06rem 2.354rem 3.24rem 2.354rem;
+    }
 }
 
 .card__top__wrapper{
@@ -45,15 +51,30 @@
 .card__bottom__wrapper{
     max-width: 22.7rem;
     @extend   %title-35-medium;
+
+    @media screen and (max-width: 600px){
+        max-width: 16.2rem;
+      
+    }
 }
 .card__index{
     @extend %title-60;
+
+    font-size: 4.708rem;
 
 }
 </style>
 
 <script setup>
 import Plus from './icons/plus.vue';
+import Signal from '~/utils/signal';
+import { ref } from 'vue';
+
+const button = ref();
+
+function open(){
+  Signal.emit(':openCard', props.index);
+}
 
 const props = defineProps({
     top: {

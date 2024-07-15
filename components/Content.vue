@@ -2,7 +2,6 @@
   <section class="content" ref="contentSection">
 
     <div class="marquee__wrapper">
-      <!-- <h3>MAQUEEEEE</h3> -->
       <Vue3Marquee>
         <div class="marquee__content">
           <img class="marquee__image" src="/public/img/locaux.png" alt="">
@@ -15,7 +14,6 @@
 
     </div>
     <div class="content__wrapper" ref="contentWrapper">
-      <!-- <Marquee id="marquee" :text=props.textm :text2=props.texts /> -->
 
 
 
@@ -29,7 +27,6 @@
 
 <script setup>
 import Card from './Card.vue';
-import Marquee from './Marquee.txt';
 
 import { onMounted, ref } from 'vue';
 import gsap from 'gsap';
@@ -157,10 +154,8 @@ onMounted(() => {
   let cardWrapperHeight = cardWrapper.value.offsetHeight;
 
 
-  // console.log(cards.length, "cards")
 
   // let ContentCards = gsap.utils.toArray(contentSection.value.querySelectorAll('.card'));
-  // console.log(ContentCards, "All_cards")
 
 
   // gsap.to(cardWrapper.value, {
@@ -181,7 +176,6 @@ onMounted(() => {
 
   // Get all cards inside the content section
   let ContentCards = gsap.utils.toArray(contentSection.value.querySelectorAll('.card'));
-  console.log(ContentCards, "All_cards");
 
   // Calculate the total height of all cards including the gaps between them
   let totalHeight = 0;
@@ -242,6 +236,8 @@ onMounted(() => {
 
   h3 {
     font-size: 10rem;
+
+
   }
 }
 
@@ -260,6 +256,24 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   position: relative;
+
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    gap: 12rem;
+
+    .card {
+      //child odd 
+      &:nth-child(odd) {
+       align-self: flex-start;
+      }
+      //child even
+      &:nth-child(even) {
+        align-self: flex-end;
+      }
+    }
+  }
 }
 
 .marquee__content {
@@ -275,5 +289,11 @@ onMounted(() => {
   width: 23.3rem;
   height: 14.995rem;
   border-radius: 3rem;
+
+  @media screen and (max-width: 600px) {
+    width: 10.24rem;
+    height: 6.59rem;
+    border-radius: 1.318rem;
+  }
 }
 </style>

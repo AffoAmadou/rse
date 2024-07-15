@@ -10,12 +10,14 @@ import Signal from '~/utils/signal';
 import Table from './components/Table.vue';
 import Logo from './components/Logo.vue';
 import Loader from "./components/Loader.vue";
+import OpenCard from './components/OpenCard.vue';
 
 const isLoading = ref(true); // Initial loading state
 
 
 
 Signal.on(":loaderFinished", (index) => {
+  console.log("Loader finished", index);
   isLoading.value = false;
 })
 </script>
@@ -23,10 +25,12 @@ Signal.on(":loaderFinished", (index) => {
 <template>
   <div class="full__Content">
     <Logo />
-    <Nav />
-    <Table />
+    <!-- <Nav /> -->
+    <!-- <Table /> -->
 
     <div v-if="!isLoading">
+      <OpenCard />
+
       <div v-for="(item, index) in data" :key="index">
         <Header 
         :index="item.header.index" 
@@ -59,7 +63,7 @@ Signal.on(":loaderFinished", (index) => {
           :lineColor="content.lineColor" />
 
       </div>
-      <Footer />
+      <!-- <Footer /> -->
     </div>
     <div v-else>
       <Loader />

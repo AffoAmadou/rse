@@ -38,7 +38,7 @@ onMounted(() => {
     bottom: -8.9rem;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
     @extend %center;
     transition: all .5s ease-out;
 }

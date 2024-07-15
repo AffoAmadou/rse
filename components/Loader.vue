@@ -47,8 +47,9 @@ onMounted(() => {
             opacity: 0, backgroundColor: "#005454", duration: 1,
             onComplete: () => {
                 Signal.emit(":loaderFinished", "hey")
+                Signal.emit(":showContent", "hey");
             },
-          
+
         })
 });
 </script>
@@ -71,6 +72,12 @@ onMounted(() => {
     // @extend %center;
 
     position: relative;
+
+    @media screen and (max-width: 600px) {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+    }
 }
 
 .loader__content {
@@ -79,6 +86,12 @@ onMounted(() => {
     position: absolute;
     top: 36rem;
     left: 15.5rem;
+
+    @media screen and (max-width: 600px) {
+        width: 34.5rem;
+        top: 40rem;
+        left: 2.5rem;
+    }
 }
 
 p {

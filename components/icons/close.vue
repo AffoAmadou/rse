@@ -16,10 +16,10 @@ const props = defineProps(["open"])
 .c-icon-plus {
 	width: 6rem;
 	aspect-ratio: 1/1;
+	transform: rotate(45deg);
 
 	@media screen and (max-width: 600px) {
 		width: 4.708rem;
-
 	}
 }
 </style>
