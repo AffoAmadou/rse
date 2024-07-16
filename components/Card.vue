@@ -25,7 +25,7 @@
 .card {
   width: 32.5rem;
   aspect-ratio: 1/1;
-  background-color: lightgray;
+  background-color: white;
   position: absolute;
   top: 10.1rem;
   left: 15.5rem;
