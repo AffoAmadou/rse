@@ -2,6 +2,15 @@
     <section data-scroll-section class="footer" ref="footerSection">
         <!-- <Marquee id="marquee" text="Made on earth" text2="with heart" /> -->
 
+        <Vue3Marquee>
+            <div class="marquee__content">
+                <img class="marquee__image" src="/img/footer.png" alt="">
+                <p class="marquee__text">Made on earth</p>
+                <img class="marquee__image" src="/img/footer.png" alt="">
+                <p class="marquee__text">with heart</p>
+            </div>
+        </Vue3Marquee>
+
         <div class="footer__card">
             <h3 class="footer__title">Briefer l’agence</h3>
             <p class="footer__text">Vous recherchez une agence digitale créative et exigeante pour vos projets
@@ -49,7 +58,7 @@ onMounted(() => {
                 backgroundColor: '#162040',
                 color: '#FF90B9',
                 duration: .4,
-                ease:'ease.in'
+                ease: 'ease.in'
             });
         },
     });
@@ -80,6 +89,7 @@ onMounted(() => {
         top: 12.2rem;
         left: 15.5rem;
         color: #162040;
+        z-index: 1;
 
 
 
@@ -115,6 +125,7 @@ onMounted(() => {
         padding: 4.023rem 7rem 5.973rem 5.2rem;
         @extend %column;
         justify-content: space-between;
+        z-index: 1;
 
 
     }
@@ -130,5 +141,42 @@ onMounted(() => {
 .footer__social__icons {
     display: flex;
     gap: 1.347rem;
+}
+
+.marquee__wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @extend %center;
+  z-index: 0;
+
+  h3 {
+    font-size: 10rem;
+
+
+  }
+}
+.marquee__content {
+    display: flex;
+    gap: 5rem;
+}
+
+.marquee__text {
+    @extend %title-150-bold;
+}
+
+.marquee__image {
+    width: 23.3rem;
+    height: 14.995rem;
+    border-radius: 3rem;
+
+    @media screen and (max-width: 600px) {
+        width: 10.24rem;
+        height: 6.59rem;
+        border-radius: 1.318rem;
+    }
 }
 </style>

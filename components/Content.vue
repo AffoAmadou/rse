@@ -4,9 +4,9 @@
     <div class="marquee__wrapper">
       <Vue3Marquee>
         <div class="marquee__content">
-          <img class="marquee__image" src="/public/img/locaux.png" alt="">
+          <img class="marquee__image" :src=props.image alt="">
           <p class="marquee__text">{{ props.textm }}</p>
-          <img class="marquee__image" src="/public/img/locaux.png" alt="">
+          <img class="marquee__image" :src=props.image alt="">
           <p class="marquee__text">{{ props.texts }}</p>
         </div>
       </Vue3Marquee>
@@ -55,6 +55,8 @@ const props = defineProps({
     }
   }
 });
+
+console.log(props.image)
 
 onMounted(() => {
   const body = document.querySelector('body');

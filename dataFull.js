@@ -54,7 +54,7 @@ export const data = [
             {
                 text: "LOCAUX DE L’AGENCE",
                 texts: "LOCAUX DE L’AGENCE",               
-                 image: "path/to/image1.jpg",
+                 image: "/img/locaux.png",
                 bgColor: "#005454",
                 txtColor: "#9AD8CB",
                 lineColor:"#9AD8CB0D",
@@ -82,7 +82,7 @@ export const data = [
             {
                 text: "transport durable",
                 texts: "transport durable", 
-                image: "path/to/image2.jpg",
+                image: "/img/transport.png",
                 bgColor: "#9AD8CB",
                 txtColor: "#005454",
                 lineColor:"#00545408",
@@ -104,7 +104,7 @@ export const data = [
             {
                 text: "expertise durable",
                 texts: "expertise durable", 
-                image: "path/to/image2.jpg",
+                image: "/img/expertise.png",
                 bgColor: "#005454",
                 txtColor: "#9AD8CB",
                 lineColor:"#9AD8CB0D",
@@ -187,7 +187,7 @@ fill:"#FFFFFF08",
             {
                 text: "ethique des affaires",
                 texts: "ethique des affaires", // Assuming this is an alternative text representation
-                image: "path/to/image3.jpg",
+                image: "/img/ethique.png",
                 bgColor: "#312A89",
                 txtColor: "#ABBFFF",
                 lineColor:"#9AD8CB0D",
@@ -211,7 +211,7 @@ fill:"#FFFFFF08",
             {
                 text: "diversité et inclusion",
                 texts: "diversité et inclusion", 
-                image: "path/to/image3.jpg",
+                image: "/img/diversite.png",
                 bgColor: "#ABBFFF",
                 txtColor: "#312A89",
                 lineColor:"#00545408",
@@ -288,7 +288,7 @@ fill:"#FFFFFF08",
             {
                 text: "formations et certifications",
                 texts: "formations et certifications", 
-                                image: "path/to/image3.jpg",
+                                image: "/img/formation.png",
                 bgColor: "#493167",
                 txtColor: "#C9BAF9",
                                 lineColor:"#C9BAF90D",
@@ -309,7 +309,7 @@ fill:"#FFFFFF08",
             {
                 text: "qualité de vie au travail",
                 texts: "qualité de vie au travail", 
-                                image: "path/to/image3.jpg",
+                                image: "/img/qualite.png",
                 bgColor: "#C9BAF9",
                 txtColor: "#493167",
                                 lineColor:"#49316708",
@@ -385,7 +385,7 @@ fill:"#FFFFFF08",
             {
                 text: "actions et décisions",
                 texts: "actions et décisions", // Assuming this is an alternative text representation
-                image: "path/to/image3.jpg",
+                image: "/img/action.png",
                 bgColor: "#E52A41",
                 txtColor: "#FFB4BF",
                 lineColor:"#FFB4BF1A",
@@ -400,8 +400,8 @@ fill:"#FFFFFF08",
                     { top: "30.2rem", left: "90rem", index: "02", text: "Actions de bénévolat",
                         contenu:"Nous encourageons les collaborateurs à s’impliquer dans des actions sociales, comme le bénévolat ou la participation à des projets solidaires."
                      },
-                    { top: "70.1rem", left: "40.5rem", index: "03", text: "Sélection de partenaires locaux",contenu:"Nous favorisons des partenaires nationaux voire locaux, y compris pour l’hébergement de nos développements. " },
-                    { top: "70.1rem", left: "40.5rem", index: "04", text: "Choix de l’open source",contenu:"Nos développements sont basés sur les logiciels et technologies open-source pour une utilisation plus efficace et durable des ressources et l’encouragement d’une économie circulaire." }
+                    { top: "60.1rem", left: "40.5rem", index: "03", text: "Sélection de partenaires locaux",contenu:"Nous favorisons des partenaires nationaux voire locaux, y compris pour l’hébergement de nos développements. " },
+                    { top: "70.1rem", left: "80.5rem", index: "04", text: "Choix de l’open source",contenu:"Nos développements sont basés sur les logiciels et technologies open-source pour une utilisation plus efficace et durable des ressources et l’encouragement d’une économie circulaire." }
 
                 ]
             }

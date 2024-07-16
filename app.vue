@@ -4,6 +4,7 @@ import Header from "./components/Header.vue";
 import TextReveal from "./components/TextReveal.vue";
 import Nav from "./components/Nav.vue";
 import Content from "./components/Content.vue";
+import ContentDesktop from './components/ContentDesktop.vue';
 import Footer from "./components/Footer.vue";
 import { data } from "./dataFull.js";
 import Signal from '~/utils/signal';
@@ -31,22 +32,11 @@ Signal.on(":loaderFinished", (index) => {
       <OpenCard />
 
       <div v-for="(item, index) in data" :key="index">
-        <Header 
-        :index="item.header.index" 
-        :text="item.header.text" 
-        :tag="item.header.tag"
-          
-        :bgColor="item.header.bgColor" 
-          :txtColor="item.header.txtColor" 
-          :lineColor="item.header.lineColor"
-          :icons= "item.header.icons"
-          />
-        <TextReveal 
-        :bg="item.textReveal.bg" 
-        :textColor="item.textReveal.textColor" 
-        :text="item.textReveal.text"
-          :icons="item.textReveal.icons"
-        :lineColor="item.textReveal.lineColor" />
+        <Header :index="item.header.index" :text="item.header.text" :tag="item.header.tag"
+          :bgColor="item.header.bgColor" :txtColor="item.header.txtColor" :lineColor="item.header.lineColor"
+          :icons="item.header.icons" />
+        <TextReveal :bg="item.textReveal.bg" :textColor="item.textReveal.textColor" :text="item.textReveal.text"
+          :icons="item.textReveal.icons" :lineColor="item.textReveal.lineColor" />
 
         <Content v-for="(content, contentIndex) in item.contents" 
         :key="contentIndex" 
@@ -61,8 +51,10 @@ Signal.on(":loaderFinished", (index) => {
           :txtColor="content.txtColor" 
           :lineColor="content.lineColor" />
 
+        <!-- <ContentDesktop :contents="item.contents" /> -->
       </div>
-      <!-- <Footer /> -->
+
+      <Footer />
     </div>
     <div v-else>
       <Loader />
