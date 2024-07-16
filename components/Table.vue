@@ -87,6 +87,18 @@ const lineAnimation = () => {
     border: .133rem solid #9AD8CB0D;
     height: 0%;
 
+
+    @media screen and (max-width: 600px){
+
+        //display: none;    the last 14 lines are hidden on mobile
+
+        &:nth-child(n+5):nth-child(-n+14) {
+            display: none;
+        }
+
+        
+    }
+
 }
 
 .horizontal__wrapper {

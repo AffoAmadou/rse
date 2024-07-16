@@ -172,9 +172,7 @@ onMounted(() => {
 
     });
 
-    console.log(Signal);
     Signal.on(":showContent", () => {
-        console.log('loader finished');
         animateHeader();
     })
 

@@ -17,7 +17,6 @@ const isLoading = ref(true); // Initial loading state
 
 
 Signal.on(":loaderFinished", (index) => {
-  console.log("Loader finished", index);
   isLoading.value = false;
 })
 </script>
@@ -26,7 +25,7 @@ Signal.on(":loaderFinished", (index) => {
   <div class="full__Content">
     <Logo />
     <!-- <Nav /> -->
-    <!-- <Table /> -->
+    <Table />
 
     <div v-if="!isLoading">
       <OpenCard />

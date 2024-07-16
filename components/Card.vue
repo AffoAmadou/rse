@@ -1,66 +1,69 @@
 <template>
-<div :style="{ top:props.top, left:props.left }" class="card">
+  <div :style="{ top: props.top, left: props.left }" class="card">
     <div class="card__top">
-        <div class="card__top__wrapper">
-            <div :style="{colors:props.colors.number}" class="card__index">{{ props.index }}</div>
-            <button @click="open" ref="button">
-              <Plus />
-            </button>  
-        </div>
+      <div class="card__top__wrapper">
+        <div :style="{ colors: props.colors.number }" class="card__index">{{ props.index }}</div>
+        <button @click="open" ref="button">
+          <Plus />
+        </button>
+      </div>
+
     </div>
 
     <div class="card__bottom__wrapper">
-        <p class="card__bottom__text" :style="{colors:props.colors.text}">{{props.text}}</p>
+      <p class="card__bottom__text" :style="{ colors: props.colors.text }">{{ props.text }}</p>
     </div>
-</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
- @import "../assets/scss/variables.scss";
+@import "../assets/scss/variables.scss";
 @import "../assets/scss/description.scss";
 @import "../assets/scss/title.scss";
 @import "../assets/scss/mixins.scss";
 
-.card{
-    width: 32.5rem;
-    aspect-ratio: 1/1;
-    background-color: lightgray;
-    position: absolute;
-    top: 10.1rem;
-    left: 15.5rem;
-    border-radius: 1.806rem;
-    padding: 3.43rem 3rem 3rem 3rem;
+.card {
+  width: 32.5rem;
+  aspect-ratio: 1/1;
+  background-color: lightgray;
+  position: absolute;
+  top: 10.1rem;
+  left: 15.5rem;
+  border-radius: 1.806rem;
+  padding: 3.43rem 3rem 3rem 3rem;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    @media screen and (max-width: 600px){
-        width: 25.5rem;
-        position: static;
-        padding: 3.06rem 2.354rem 3.24rem 2.354rem;
-    }
+  @media screen and (max-width: 600px) {
+    width: 25.5rem;
+    position: static;
+    padding: 3.06rem 2.354rem 3.24rem 2.354rem;
+  }
 }
 
-.card__top__wrapper{
-   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.card__bottom__wrapper{
-    max-width: 22.7rem;
-    @extend   %title-35-medium;
+.card__top__wrapper {
 
-    @media screen and (max-width: 600px){
-        max-width: 16.2rem;
-      
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.card__index{
-    @extend %title-60;
 
-    font-size: 4.708rem;
+.card__bottom__wrapper {
+  max-width: 22.7rem;
+  @extend %title-35-medium;
+
+  @media screen and (max-width: 600px) {
+    max-width: 16.2rem;
+
+  }
+}
+
+.card__index {
+  @extend %title-60;
+
+  font-size: 4.708rem;
 
 }
 </style>
@@ -72,26 +75,31 @@ import { ref } from 'vue';
 
 const button = ref();
 
-function open(){
-  Signal.emit(':openCard', props.index);
+function open() {
+  Signal.emit(':openCard', (props));
 }
 
 const props = defineProps({
-    top: {
-      type: String,
-    },
-    left: {
-      type: String,
-    },
-    index: {
-      type: String,
-    },
-    text: {
-      type: String,
-    },
-    colors: {
-      type: Object,
-    },
-  });
+  top: {
+    type: String,
+  },
+  left: {
+    type: String,
+  },
+  index: {
+    type: String,
+  },
+  text: {
+    type: String,
+  },
+  colors: {
+    type: Object,
+  },
+  cards: {
+    type: Array,
+  },
+});
+
+
 
 </script>

@@ -8,44 +8,62 @@
                         <Close @click="close" />
                     </button>
                 </div>
-                <div class="open__card__title">
-                    <p>Mise en place d’un code de conduite</p>
+                <div v-if="currentCard" class="open__card__title">
+                    <p v-html="currentCard.text"></p>
                 </div>
 
-                <p class="open_card__content">
-                    Nous avons développé un code de conduite éthique
-                    pour tous les employés.
+                <p v-if="currentCard" v-html="currentCard.contenu" class="open_card__content">
+
                 </p>
             </div>
             <div class="open__card__bottom">
-                <p class="open__card__index">01</p>
+                <p v-if="currentCard" v-html="currentCard.index" class="open__card__index"></p>
 
-                <div class="open__card__btn__wrapper">
+                <button @click="nextCard" class="open__card__btn__wrapper">
                     <p>Action suivante</p>
                     <Arrow />
-                </div>
+                </button>
             </div>
         </div>
     </div>
 </template>
 
+
 <script setup>
-import { ref } from 'vue';
-import Signal from '~/utils/signal';
+import { ref, computed } from 'vue';
+import Signal from '~/utils/signal'; // Adjust path as needed
 
-import NavItem from './NavItem.vue';
-import Close from './icons/close.vue';
-import Arrow from './icons/arrow.vue';
+import NavItem from './NavItem.vue'; // Adjust path as needed
+import Close from './icons/close.vue'; // Adjust path as needed
+import Arrow from './icons/arrow.vue'; // Adjust path as needed
 
-const openCard = ref();
+const openCard = ref(null);
+const cards = ref([]);
+const currentIndex = ref(0);
 
-function close() {
-    openCard.value.style.display = 'none';
-}
-
-Signal.on(':openCard', () => {
-    openCard.value.style.display = 'flex';
+const currentCard = computed(() => {
+  return cards.value[currentIndex.value];
 });
+
+const close = () => {
+  openCard.value.style.display = 'none';
+};
+
+Signal.on(':openCard', (props) => {
+  cards.value = props.cards;
+  currentIndex.value = parseInt(props.index) - 1;
+  openCard.value.style.display = 'flex';
+});
+
+const nextCard = () => {
+// currentcard ++ but check if its the last in the array and restart from 0 usign modulo
+  currentIndex.value = (currentIndex.value + 1) % cards.value.length;
+
+
+
+
+};
+
 </script>
 
 <style scoped lang="scss">
