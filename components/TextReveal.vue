@@ -31,6 +31,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
+
 const textSection = ref(null);
 
 const props = defineProps({
@@ -80,7 +81,7 @@ const secondIcon = computed(() => {
 });
 
 onMounted(() => {
-  const text = new SplitType(textRevealRef.value, { types: 'chars' });
+  const text = new SplitType(textRevealRef.value, { types: 'words,chars' });
 
 
   const body = document.querySelector('body');
@@ -171,9 +172,9 @@ onMounted(() => {
   position: relative;
   z-index: 1;
 
-  @media screen and (max-width: 600px){
+  @media screen and (max-width: 600px) {
     overflow: hidden;
-    padding:14.269rem 2.2rem 5rem 2.1rem ;
+    padding: 14.269rem 2.2rem 5rem 2.1rem;
   }
 }
 
