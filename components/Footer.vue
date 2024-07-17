@@ -14,11 +14,10 @@
         <div class="footer__card">
             <h3 class="footer__title">Briefer l’agence</h3>
             <p class="footer__text">Vous recherchez une agence digitale créative et exigeante pour vos projets
-                d’identité & branding, site internet,motion design, brand content.</p>
+                d’identité & branding, site internet, motion design, brand content.</p>
 
-            <button class="footer__btn">
+            <button @click="maitlTo" class="footer__btn">
                 Rencontrons-nous
-
             </button>
 
         </div>
@@ -46,7 +45,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const footerSection = ref(null);
 
+const maitlTo = () => {
+    window.location.href = 'mailto:briefer@bien-fonde.com';
+};
+
 onMounted(() => {
+
+
+
     const body = document.querySelector('body');
 
     ScrollTrigger.create({
@@ -144,21 +150,22 @@ onMounted(() => {
 }
 
 .marquee__wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  @extend %center;
-  z-index: 0;
+    @extend %center;
+    z-index: 0;
 
-  h3 {
-    font-size: 10rem;
+    h3 {
+        font-size: 10rem;
 
 
-  }
+    }
 }
+
 .marquee__content {
     display: flex;
     gap: 5rem;
