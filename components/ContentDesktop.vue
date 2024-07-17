@@ -5,9 +5,9 @@
             <Vue3Marquee>
                 <div class="marquee__content">
                     <img class="marquee__image" src="/public/img/locaux.png" alt="">
-                    <p class="marquee__text">bsad</p>
-                    <img class="marquee__image" src="/public/img/locaux.png" alt="">
-                    <p class="marquee__text">sda</p>
+                    <p class="marquee__text">{{ props.contents[currentIndex].text }}</p>
+                    <img class="marquee__image" :src=props.contents[currentIndex].image alt="">
+                    <p class="marquee__text">{{ props.contents[currentIndex].texts }}</p>
                 </div>
             </Vue3Marquee>
 
@@ -45,13 +45,25 @@ gsap.registerPlugin(ScrollTrigger);
 const contentSection = ref(null);
 const contentWrapper = ref(null);
 const cardWrapper = ref(null);
+const currentIndex = ref(0);
+
 let tl;
 
 const props = defineProps({
     contents: Array
 });
 
-console.log(props.contents);
+
+// const firstText = computed(() => {
+//     return props.contents.value[currentIndex.value].text;
+// });
+// const secondText = computed(() => {
+//     return props.contents[currentIndex.value].texts;
+// });
+
+// console.log(firstText.value, secondText);
+
+// console.log(props.contents);
 
 onMounted(() => {
     const body = document.querySelector('body');
@@ -86,6 +98,66 @@ onMounted(() => {
     let additionalOffset = 50; // Add some additional offset if needed
     let endValue = `+=${totalHeight + additionalOffset}px`;
 
+
+    let sectionCards = gsap.utils.toArray(contentWrapper.value.querySelectorAll('.sectionCard'));
+    let timeline = gsap.timeline({ paused: true });
+    let reverseTimeline = gsap.timeline({ paused: true });
+    sectionCards.forEach((sectionCard, index) => {
+        timeline.to(sectionCard, {
+
+            markers: true,
+            id: index,
+            ease: "none",
+            onStart: () => {
+                console.log("start");
+
+                currentIndex.value = index;
+                //update cu
+
+                gsap.to(body, {
+                    backgroundColor: props.contents[index].bgColor,
+                    color: props.contents[index].txtColor,
+                    duration: .4,
+                    ease: 'ease.in'
+                });
+
+                gsap.to(cards, {
+                    color: props.contents[index].cardsColors.number,
+                    duration: .4,
+                    ease: 'ease.in'
+                });
+
+                gsap.to(carsTexts, {
+                    color: props.contents[index].cardsColors.text,
+                    duration: .4,
+                    ease: 'ease.in'
+                })
+
+                gsap.to(btn, {
+                    fill: props.contents[index].cardsColors.text,
+                    duration: .4,
+                    ease: 'ease.in'
+                })
+
+
+                gsap.to(lineV, {
+                    borderColor: props.contents[index].lineColor,
+                    duration: 2,
+                    stagger: .1,
+                });
+
+                gsap.to(lineH, {
+                    borderColor: props.contents[index].lineColor,
+                    duration: 2,
+                    stagger: .1,
+                });
+            },
+
+        });
+
+    });
+
+
     gsap.to(cardWrapper.value, {
         scrollTrigger: {
             trigger: contentSection.value,
@@ -93,12 +165,23 @@ onMounted(() => {
             pin: true,
             start: "top top",
             end: "+=100%",
+            // onRefresh: () => ScrollTrigger.refresh(),
+            onUpdate: (self) => {
+                console.log(self.progress);
+                let progress = self.progress;
+                if (self.direction === 1) {
+                    timeline.progress(progress);
+                }
+
+                if (self.direction === -1) {
+                    timeline.progress(1 - progress);
+                }
+            }
         },
-        y: `-=${cardWrapperHeight / 1.5}`,
+        y: `-=${cardWrapperHeight / 1.8}`,
         ease: "none"
     });
 
-   
 });
 
 
@@ -116,6 +199,10 @@ onMounted(() => {
     @extend %center;
     position: relative;
     z-index: 1;
+
+    @media screen and (max-width: 600px){
+        display: none;
+    }
 }
 
 .marquee__wrapper {
@@ -139,7 +226,7 @@ onMounted(() => {
     width: 100%;
     height: 100%;
     // position: relative;
-    // overflow: hidden;
+    overflow: hidden;
 }
 
 .card__wrapper {
@@ -183,6 +270,7 @@ onMounted(() => {
 .marquee__content {
     display: flex;
     gap: 5rem;
+    text-transform: uppercase;
 }
 
 .marquee__text {
@@ -211,22 +299,5 @@ onMounted(() => {
     &:last-child {
         margin-bottom: 0;
     }
-
-    //change background color for each child max 3
-    //first child
-    &:nth-child(1) {
-        background-color: rgba(224, 255, 255, 0.496);
-    }
-
-    //second child
-    &:nth-child(2) {
-        background-color: rgba(255, 192, 203, 0.429);
-    }
-
-    //third child
-    &:nth-child(3) {
-        background-color: rgba(144, 238, 144, 0.46);
-    }
-
 }
 </style>

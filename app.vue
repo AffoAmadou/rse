@@ -38,20 +38,11 @@ Signal.on(":loaderFinished", (index) => {
         <TextReveal :bg="item.textReveal.bg" :textColor="item.textReveal.textColor" :text="item.textReveal.text"
           :icons="item.textReveal.icons" :lineColor="item.textReveal.lineColor" />
 
-        <Content v-for="(content, contentIndex) in item.contents" 
-        :key="contentIndex" 
-        :textm="content.text"
-          
-        :texts="content.texts" 
-          :cards="content.cards" 
-          :cardsColors="content.cardsColors" 
-          :image="content.image"
-          
-          :bgColor="content.bgColor" 
-          :txtColor="content.txtColor" 
-          :lineColor="content.lineColor" />
+        <Content v-for="(content, contentIndex) in item.contents" :key="contentIndex" :textm="content.text"
+          :texts="content.texts" :cards="content.cards" :cardsColors="content.cardsColors" :image="content.image"
+          :bgColor="content.bgColor" :txtColor="content.txtColor" :lineColor="content.lineColor" />
 
-        <!-- <ContentDesktop :contents="item.contents" /> -->
+        <ContentDesktop :contents="item.contents" />
       </div>
 
       <Footer />

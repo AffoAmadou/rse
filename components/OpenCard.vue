@@ -59,9 +59,6 @@ const nextCard = () => {
 // currentcard ++ but check if its the last in the array and restart from 0 usign modulo
   currentIndex.value = (currentIndex.value + 1) % cards.value.length;
 
-
-
-
 };
 
 </script>

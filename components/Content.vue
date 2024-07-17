@@ -18,8 +18,8 @@
 
 
       <div class="card__wrapper" ref="cardWrapper">
-        <Card v-for="card in props.cards" :cards="props.cards" :key="card.index" :top="card.top" :left="card.left" :index="card.index"
-          :text="card.text" :colors="props.cardsColors" />
+        <Card v-for="card in props.cards" :cards="props.cards" :key="card.index" :top="card.top" :left="card.left"
+          :index="card.index" :text="card.text" :colors="props.cardsColors" />
       </div>
     </div>
   </section>
@@ -224,6 +224,11 @@ onMounted(() => {
   @extend %center;
   position: relative;
   z-index: 1;
+  display: none;
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+  }
 }
 
 .marquee__wrapper {
@@ -261,15 +266,18 @@ onMounted(() => {
 
   padding-left: 2.4rem;
   padding-right: 2.4rem;
+
   @media screen and (max-width: 600px) {
     flex-direction: column;
     gap: 12rem;
 
     .card {
+
       //child odd 
       &:nth-child(odd) {
-       align-self: flex-start;
+        align-self: flex-start;
       }
+
       //child even
       &:nth-child(even) {
         align-self: flex-end;
