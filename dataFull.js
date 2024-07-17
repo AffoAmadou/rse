@@ -93,7 +93,7 @@ export const data = [
                 },
                 cards: [
                     { top: "14.1rem", left: "25.5rem", index: "01", text: "Favoriser le télétravail", 
-                        contenu:"Selon une étude de l'ADEME, le télétravail pourrait permettre de réduire de 20% les émissions de particules fines liées aux trajets. Nous encourageons le télétravail 2 jours par semaine minimum, ce qui réduit considérablement nos déplacements et améliore le bien-être des équipes." },
+                        contenu:"Selon une étude de l'ADEME, le télétravail pourrait permettre de réduire de 20% les émissions de particules fines liées aux trajets. Nous encourageons le télétravail <br> 2 jours par semaine minimum, ce qui réduit considérablement nos déplacements et améliore le bien-être des équipes." },
                     { top: "32.9rem", left: "85rem", index: "02", text: "Déplacement en vélo",
                         contenu:"Nous nous déplaçons au bureau soit en transport en commun, soit en vélo.<br>Ces déplacements ne génèrent aucune émission de gaz à effet de serre, en plus d’être une bonne chose pour notre santé et bien-être au quotidien. "
                      },
