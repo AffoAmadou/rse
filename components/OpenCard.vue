@@ -42,22 +42,22 @@ const cards = ref([]);
 const currentIndex = ref(0);
 
 const currentCard = computed(() => {
-  return cards.value[currentIndex.value];
+    return cards.value[currentIndex.value];
 });
 
 const close = () => {
-  openCard.value.style.display = 'none';
+    openCard.value.style.display = 'none';
 };
 
 Signal.on(':openCard', (props) => {
-  cards.value = props.cards;
-  currentIndex.value = parseInt(props.index) - 1;
-  openCard.value.style.display = 'flex';
+    cards.value = props.cards;
+    currentIndex.value = parseInt(props.index) - 1;
+    openCard.value.style.display = 'flex';
 });
 
 const nextCard = () => {
-// currentcard ++ but check if its the last in the array and restart from 0 usign modulo
-  currentIndex.value = (currentIndex.value + 1) % cards.value.length;
+    // currentcard ++ but check if its the last in the array and restart from 0 usign modulo
+    currentIndex.value = (currentIndex.value + 1) % cards.value.length;
 
 };
 
@@ -67,6 +67,11 @@ const nextCard = () => {
 @import "../assets/scss/variables.scss";
 @import "../assets/scss/description.scss";
 @import "../assets/scss/title.scss";
+
+a {
+    text-decoration: underline !important;
+
+}
 
 .open__card {
     width: 100%;
@@ -175,6 +180,7 @@ const nextCard = () => {
     width: 38.4rem;
     line-height: 2.6rem;
 
+
     @media screen and (max-width: 600px) {
         width: 29.6rem;
         font-size: 1.4rem;
@@ -192,5 +198,9 @@ const nextCard = () => {
         font-size: 1.8rem;
 
     }
+}
+
+a {
+    text-decoration: underline !important;
 }
 </style>
