@@ -61,9 +61,7 @@ const props = defineProps({
 //     return props.contents[currentIndex.value].texts;
 // });
 
-// console.log(firstText.value, secondText);
 
-// console.log(props.contents);
 
 onMounted(() => {
     const body = document.querySelector('body');
@@ -109,7 +107,6 @@ onMounted(() => {
             id: index,
             ease: "none",
             onStart: () => {
-                console.log("start");
 
                 currentIndex.value = index;
                 //update cu
@@ -167,7 +164,6 @@ onMounted(() => {
             end: "+=100%",
             // onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
-                console.log(self.progress);
                 let progress = self.progress;
                 if (self.direction === 1) {
                     timeline.progress(progress);

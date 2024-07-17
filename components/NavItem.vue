@@ -1,52 +1,89 @@
 <template>
-    <button class="nav__item">
-      <component :animation=false  :is="currentComponent" />
-      <div class="nav__item__text">{{ text }}</div>
-    </button>
-  </template>
-  
-  <script setup>
-  import { computed, defineAsyncComponent } from 'vue';
-  
-  const props = defineProps({
-    index: {
-      type: Number,
-      required: true,
-    },
-    text: {
-      type: String,
-      default: 'Environnement',
-    },
-  });
-  
-  // Define the components using async imports
-  const components = [
-    defineAsyncComponent(() => import('../components/icons/environnement.vue')),
-    defineAsyncComponent(() => import('../components/icons/star.vue')),
-    defineAsyncComponent(() => import('../components/icons/social.vue')),
-    defineAsyncComponent(() => import('../components/icons/engagement.vue'))
-  ];
-  
-  const currentComponent = computed(() => {
-    if (props.index >= 0 && props.index < components.length) {
-      return components[props.index];
-    }
-    // Default to the first component if index is out of bounds
-    return components[0];
-  });
-  </script>
-  
-  <style scoped lang="scss">
-  .nav__item {
-    display: flex;
-    align-items: center;
-    // height: 3.628rem;
-    padding: .9rem 2.052rem .928rem 1.5rem;
-    border: solid 1.17px #00000015;
-    border-radius: 10rem;
-    gap: .5rem;
-    font-size: 1.404rem;
-   
+  <button
+    :style="{ backgroundColor: active ? props.bgColor : '', color: active ? 'white !important' : 'black !important' }"
+    @click="onClick(text)" class="nav__item">
+    <component :animation=false :is="currentComponent" :color="active ? 'white' : props.bgColor" />
+    <div class="nav__item__text">{{ text }}</div>
+  </button>
+</template>
+
+<script setup>
+import { computed, defineAsyncComponent } from 'vue';
+import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import Signal from '~/utils/signal';
+gsap.registerPlugin(ScrollToPlugin)
+const props = defineProps({
+  index: {
+    type: Number,
+    required: true,
+  },
+  text: {
+    type: String,
+    default: 'Environnement',
+  },
+  bgColor: {
+    type: String,
+    default: '#9AD8CB',
+  },
+
+  active: {
+    type: Boolean,
+    default: false,
+  },
+
+});
+
+// Define the components using async imports
+const components = [
+  defineAsyncComponent(() => import('../components/icons/environnement.vue')),
+  defineAsyncComponent(() => import('../components/icons/star.vue')),
+  defineAsyncComponent(() => import('../components/icons/social.vue')),
+  defineAsyncComponent(() => import('../components/icons/engagement.vue'))
+];
+
+const currentComponent = computed(() => {
+  if (props.index >= 0 && props.index < components.length) {
+    return components[props.index];
+  }
+  // Default to the first component if index is out of bounds
+  return components[0];
+});
+
+function onClick(text) {
+  Signal.emit(':navClick', props.index);
+  console.log('Clicked on', props.text);
+
+  let id = "#" + props.text;
+  console.log(id);
+  gsap.to(window, { duration: 2, scrollTo: id });
+}
+
+
+</script>
+
+<style scoped lang="scss">
+.nav__item {
+  display: flex;
+  align-items: center;
+  // height: 3.628rem;
+  padding: .9rem 2.052rem .928rem 1.5rem;
+  border: solid 1.17px #00000015;
+  border-radius: 10rem;
+  gap: .5rem;
+  font-size: 1.404rem;
+
+  // color: black !important;
+@media screen and (max-width: 600px) {
+  // padding: 0;
+  padding: .9rem 1.5rem .928rem 1.5rem;
+
+  width: 6.2rem;
+  height: 3.628rem;
+  .nav__item__text{
+    display: none;
   }
   
- </style>
+}
+}
+</style>

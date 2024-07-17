@@ -56,7 +56,6 @@ const props = defineProps({
   }
 });
 
-console.log(props.image)
 
 onMounted(() => {
   const body = document.querySelector('body');

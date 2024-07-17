@@ -1,10 +1,13 @@
 <template>
     <div class="nav " :class="{ 'is-visible': navVisible }">
         <div class="nav__wrapper">
-            <NavItem :index=0 text="Environnement" />
-            <NavItem :index=1 text="Ethique" />
-            <NavItem :index=2 text="Social" />
-            <NavItem :index=3 text="Engagement" />
+            <NavItem v-for="item in computedData" 
+            :key="item.index" 
+            :text="item.menuTag" 
+            :index="item.index " 
+            :bgColor="item.backgroundColor"
+            :active="item.index === activeIndex"
+            />
         </div>
 
     </div>
@@ -12,15 +15,42 @@
 </template>
 
 <script setup>
-import { ref,onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import NavItem from "./NavItem.vue";
 import Signal from "../utils/signal";
+import { data } from "~/data";
 const navVisible = ref(false);
+const activeIndex = ref(0);
 
+const props = defineProps({
+    data: Array
+});
+
+
+const computedData = computed(() => {
+    return props.data.map(item => {
+        console.log(item.header)
+        return {
+            menuTag: item.header.menuTag,
+            index: item.header.index,
+            backgroundColor: item.header.bgColor,
+        };
+    });
+});
+
+console.log(computedData.value);
 
 onMounted(() => {
+
+
+
+
     Signal.on(":showNav", (index) => {
         navVisible.value = true;
+    })
+
+    Signal.on(":navClick", (index) => {
+        activeIndex.value = index;
     })
 })
 

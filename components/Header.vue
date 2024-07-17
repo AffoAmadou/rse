@@ -1,5 +1,5 @@
 <template>
-    <section data-scroll-section class="header" :class="`header--${props.index}`" ref="headerSection">
+    <section :id="props.goto" data-scroll-section class="header" :class="`header--${props.index}`" ref="headerSection">
         <component :style="{
             width: props.icons[0].width,
             height: props.icons[0].height,
@@ -68,6 +68,12 @@ const props = defineProps({
         type: Array,
         default: () => [],
     },
+    goto: {
+        type: String,
+        default: '0',
+
+    }
+
 });
 const headerSection = ref(null);
 const index = ref(null);
@@ -129,6 +135,8 @@ onMounted(() => {
         start: "top 10%",
         id: props.index,
         onEnter: () => {
+            Signal.emit(':navClick', props.index);
+
             gsap.to(body, {
                 backgroundColor: props.bgColor,
                 color: props.txtColor,
@@ -149,6 +157,8 @@ onMounted(() => {
             });
         },
         onEnterBack: () => {
+            Signal.emit(':navClick', props.index);
+
             gsap.to(body, {
                 backgroundColor: props.bgColor,
                 color: props.txtColor,
@@ -198,8 +208,8 @@ onMounted(() => {
     position: relative;
 
     @media screen and (max-width: 600px) {
-       overflow: hidden;
-    
+        overflow: hidden;
+
     }
 
 }
@@ -212,14 +222,14 @@ onMounted(() => {
     align-items: center;
 
     @media screen and (max-width: 600px) {
-       max-width: 33.6rem;
+        max-width: 33.6rem;
     }
 }
 
 .index {
     @extend %description-15;
 
-   
+
 }
 
 .header__title {
