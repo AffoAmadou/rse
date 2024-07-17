@@ -289,6 +289,8 @@ onMounted(() => {
 .marquee__content {
   display: flex;
   gap: 5rem;
+  text-transform: uppercase;
+
 }
 
 .marquee__text {
