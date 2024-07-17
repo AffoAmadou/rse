@@ -52,3 +52,10 @@ Signal.on(":loaderFinished", (index) => {
     </div>
   </div>
 </template>
+
+
+<style lang="scss" scoped>
+.full__Content {
+  overflow: hidden;
+}
+</style>
