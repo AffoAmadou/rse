@@ -97,7 +97,7 @@ export const data = [
                     { top: "32.9rem", left: "85rem", index: "02", text: "Déplacement en vélo",
                         contenu:"Nous nous déplaçons au bureau soit en transport en commun, soit en vélo.<br>Ces déplacements ne génèrent aucune émission de gaz à effet de serre, en plus d’être une bonne chose pour notre santé et bien-être au quotidien. "
                      },
-                    { top: "72.7rem", left: "48.6rem", index: "03", text: "Priorité aux transports en commun",
+                    { top: "72.7rem", left: "48.6rem", index: "03", text: "Priorités aux rails",
                         contenu:"Pour les trajets moyennes et longues distances, l’équipe se déplace en trains. Nous ne prenons jamais l’avion pour nos déplacements professionnels et privilégions les alternatives durables et écologiques."
                      }
                 ]
@@ -117,7 +117,7 @@ export const data = [
                     { top: "14.1rem", left: "25.5rem", index: "01", text: "Education de nos clients",
                         contenu:"En tant qu’acteur engagé du numérique, notre responsabilité est grande dans l’éducation de nos clients. Nous recommandons systématiquement des solutions et bonnes pratiques éco-responsables dans la mise en place de nos projets : hébergement, éco-conception, limitation de l’utilisation des ressources, etc."
                      },
-                    { top: "32.9rem", left: "85rem", index: "02", text: "Compenser notre empreinte carbone",
+                    { top: "32.9rem", left: "85rem", index: "02", text: "Empreinte carbone neutre",
                         contenu:"Nous compensons notre empreinte carbone annuelle par un don pour la planète, via des acteurs types  <a href='www.ecotree.green'>www.ecotree.green</a> "
                      },
                 ]
@@ -325,7 +325,7 @@ fill:"#FFFFFF08",
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Organisation de sorties culturelles",
                         contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler. Retrouvez nos en images lors de la dernière édition : "
                      },
-                    { top: "30.2rem", left: "90rem", index: "02", text: "Corganisation de séminaires collaborateurs",
+                    { top: "30.2rem", left: "90rem", index: "02", text: "Organisation de séminaires collaborateurs",
                         contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler. Retrouvez nos en images lors de la dernière édition : "
                      },
                     { top: "70.1rem", left: "40.5rem", index: "03", text: "Droit à la déconnexion & temps de travail",
