@@ -46,7 +46,6 @@ const currentComponent = computed(() => {
   if (props.index >= 0 && props.index < components.length) {
     return components[props.index];
   }
-  // Default to the first component if index is out of bounds
   return components[0];
 });
 
