@@ -65,7 +65,7 @@ export const data = [
                 },
                 cards: [
                     { top: "10.1rem", left: "15.5rem", index: "01", text: "Eco-gestion du matériel de bureau",
-                        contenu:'Notre matériel de bureau est acheté en seconde main, sur des sites comme  <a href="backmarket.fr">backmarket.fr</a>.<br>Tous nos équipements sont recyclés à leur tour. Nous privilégions également des fournitures écologiques.'
+                        contenu:'Notre matériel de bureau est acheté en seconde main, sur des sites comme  <a target="_blank" href="https://www.backmarket.fr/fr-fr">backmarket.fr</a>.<br>Tous nos équipements sont recyclés à leur tour. Nous privilégions également des fournitures écologiques.'
                     },
                     { top: "28.9rem", left: "96rem", index: "02", text: "Pas de papier",
                     contenu:"Nous avons remplacé tous les documents papier par des documents électroniques, en utilisant par exemple des outils de signature électronique, de stockage de fichiers dématérialisés, ou encore des plateformes collaboratives pour le partage de documents et la gestion de projets."
@@ -74,7 +74,7 @@ export const data = [
                         contenu:"Nous établissons une température ambiante raisonnable dans les bureaux en encourageant les apports naturels de chaleur, pour réduire la consommation énergétique."
                      },
                     { top: "68.7rem", left: "98.6rem", index: "04", text: "Contrat énergie verte",
-                        contenu:"Nous avons fait le choix d’un fournisseur d'énergie renouvelable en privilégiant les sources locales et en vérifiant les garanties de production et d'impact environnemental : <a href='https://ohm-energie.com/'>https://ohm-energie.com/</a>  (pour <a href='https://ohm-energie.com/?utm_source=adssn&gad_source=1&gclid=Cj0KCQjwv7O0BhDwARIsAC0sjWM3E9UoroiUJQX6Bgui8QiLbrFkG1lFFRm6BJLYUxU5nhLOnUim3OYaAnxnEALw_wcB'>en savoir plus</a>  sur leurs engagements)."
+                        contenu:"Nous avons fait le choix d’un fournisseur d'énergie renouvelable en privilégiant les sources locales et en vérifiant les garanties de production et d'impact environnemental : <a target='_blank' href='https://ohm-energie.com/'>ohm-energie.com</a>  (pour <a target='_blank' href='https://ohm-energie.com/?utm_source=adssn&gad_source=1&gclid=Cj0KCQjwv7O0BhDwARIsAC0sjWM3E9UoroiUJQX6Bgui8QiLbrFkG1lFFRm6BJLYUxU5nhLOnUim3OYaAnxnEALw_wcB'>en savoir plus</a>  sur leurs engagements)."
                      }
                 ]
                 ,
@@ -118,7 +118,7 @@ export const data = [
                         contenu:"En tant qu’acteur engagé du numérique, notre responsabilité est grande dans l’éducation de nos clients. Nous recommandons systématiquement des solutions et bonnes pratiques éco-responsables dans la mise en place de nos projets : hébergement, éco-conception, limitation de l’utilisation des ressources, etc."
                      },
                     { top: "32.9rem", left: "85rem", index: "02", text: "Empreinte carbone neutre",
-                        contenu:"Nous compensons notre empreinte carbone annuelle par un don pour la planète, via des acteurs types  <a href='www.ecotree.green'>www.ecotree.green</a> "
+                        contenu:"Nous compensons notre empreinte carbone annuelle par un don pour la planète, via des acteurs types  <a target='_blank' href='https://ecotree.green/'>ecotree.green</a> "
                      },
                 ]
             }

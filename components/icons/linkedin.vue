@@ -5,7 +5,7 @@
 </script>
 
 <template>
-	<button>
+	<a href="https://www.linkedin.com/company/bien-fond%C3%A9/" target="_blank">
 	<svg class="c-icon-linkedin"
     width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="30.368" cy="29.6327" r="29.6327" fill="#FF90B9"/>
@@ -14,7 +14,7 @@
 <path d="M32.256 26.5301H28.0756V39.1977H32.256C32.256 39.1977 32.256 35.2098 32.256 32.7163C32.256 31.2197 32.7671 29.7165 34.8061 29.7165C37.1104 29.7165 37.0966 31.6751 37.0858 33.1924C37.0718 35.1758 37.1053 37.1998 37.1053 39.1977H41.2857V32.512C41.2503 28.243 40.1379 26.2759 36.4782 26.2759C34.3049 26.2759 32.9577 27.2626 32.256 28.1553V26.5301Z" fill="white"/>
 </svg>
 
-</button>
+</a>
 
 
 </template>
