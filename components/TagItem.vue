@@ -82,9 +82,9 @@ function onClick(text) {
         width: 6.2rem;
         height: 3.628rem;
 
-        .nav__item__text {
-            display: none;
-        }
+        // .nav__item__text {
+        //     display: none;
+        // }
 
     }
 }
