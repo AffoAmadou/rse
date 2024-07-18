@@ -107,11 +107,6 @@ const props = defineProps({
   contentIndex: {
     type: String,
   },
-  // computed: {
-  //   dynamicId() {
-  //     return `card--${this.categoryTag}--${this.index}`;
-  //   }
-  // }
 
 });
 
@@ -119,15 +114,7 @@ function open() {
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);
 }
-
-//remove space and ' from contentIndex
 const dynamicId = `card--${props.categoryTag}--${props.contentIndex.replace(/[^a-zA-Z0-9]/g, '')}--${props.index}`;
-
-
-//remove all spaces and special characters from contentIndex
-// const dynamicId = `card--${props.categoryTag}--${props.contentIndex.replace(/[^a-zA-Z0-9]/g, '')}--${props.index}`;
-
-// const dynamicId = `card--${props.categoryTag}--${props.cIndex}--${props.index}`;
 
 
 
