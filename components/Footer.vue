@@ -90,7 +90,7 @@ onMounted(() => {
         height: 40.9rem;
         background-color: #FFFFFF;
         top: 0;
-        border-radius: 5rem;
+        border-radius: 2rem;
         padding: 6.5rem 8.8rem 6.1rem 5rem;
         top: 12.2rem;
         left: 15.5rem;
@@ -122,7 +122,7 @@ onMounted(() => {
     .footer__social__card {
         color: #162040;
         background-color: #FFFFFF;
-        border-radius: 5rem;
+        border-radius: 2rem;
         position: absolute;
         width: 33.5rem;
         height: 30.6rem;
@@ -173,6 +173,7 @@ onMounted(() => {
 
 .marquee__text {
     @extend %title-150-bold;
+    text-transform: uppercase;
 }
 
 .marquee__image {
