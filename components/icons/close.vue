@@ -8,7 +8,7 @@ const svg = ref(null)
 const rotate = () => {
 	gsap.to(svg.value, {
 		duration: 0.5,
-		rotation: 45,
+		rotation: 0,
 		ease: "power4"
 	})
 
@@ -17,7 +17,7 @@ const rotate = () => {
 const reverseRotate = () => {
 	gsap.to(svg.value, {
 		duration: 0.5,
-		rotation: 0,
+		rotation: 45,
 		ease: "power4"
 	})
 }
