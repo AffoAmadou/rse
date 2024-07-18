@@ -79,7 +79,7 @@ function onClick(text) {
         // padding: 0;
         padding: .9rem 1.5rem .928rem 1.5rem;
         color: white;
-        width: 6.2rem;
+        // width: 6.2rem;
         height: 3.628rem;
 
         // .nav__item__text {
