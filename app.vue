@@ -43,7 +43,7 @@ Signal.on(":loaderFinished", (index) => {
           :bgColor="content.bgColor" :txtColor="content.txtColor" :lineColor="content.lineColor"
           :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
 
-        <ContentDesktop :contents="item.contents" />
+        <ContentDesktop :contents="item.contents"  :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
       </div>
 
       <Footer />

@@ -19,7 +19,8 @@
 
       <div class="card__wrapper" ref="cardWrapper">
         <Card v-for="card in props.cards" :cards="props.cards" :key="card.index" :top="card.top" :left="card.left"
-          :index="card.index" :text="card.text" :colors="props.cardsColors" :categoryId="props.categoryId" :categoryTag="props.menuTag" />
+          :index="card.index" :text="card.text" :colors="props.cardsColors" :categoryId="props.categoryId"
+          :categoryTag="props.categoryTag" :contentIndex="props.textm" />
       </div>
     </div>
   </section>
@@ -58,6 +59,7 @@ const props = defineProps({
     default: 'Environnement',
   },
 
+
   computed: {
     dynamicId() {
       return `marquee--${this.textm}`;
@@ -74,6 +76,11 @@ onMounted(() => {
   const carsTexts = document.querySelectorAll('.card__bottom__text');
 
   const btn = document.querySelectorAll('.p__circle');
+  const tagItem = document.querySelectorAll('.tag__item');
+
+  const openCartTitle = document.querySelectorAll('.open__card__title');
+  const openCardContent = document.querySelectorAll('.open_card__content');
+  const openCardIndex = document.querySelectorAll('.open__card__index');
 
   const lineV = document.querySelectorAll(".line__vertical")
   const lineH = document.querySelectorAll(".line__horizontal")
@@ -90,6 +97,12 @@ onMounted(() => {
         duration: .4,
         ease: 'ease.in'
       });
+
+      gsap.to(tagItem, {
+        backgroundColor: props.contents[index].cardsColors.text,
+        duration: .4,
+        ease: 'ease.in'
+      })
 
       gsap.to(cards, {
         color: props.cardsColors.number,
@@ -120,6 +133,13 @@ onMounted(() => {
         duration: 2,
         stagger: .1,
       });
+
+      gsap.to((openCartTitle, openCardContent, openCardIndex), {
+        color: props.contents[index].cardsColors.text,
+        duration: .4,
+        ease: 'ease.in'
+      })
+
     },
     onEnterBack: () => {
       gsap.to(body, {
@@ -129,6 +149,17 @@ onMounted(() => {
         ease: 'ease.in'
       });
 
+      gsap.to((openCartTitle, openCardContent, openCardIndex), {
+        color: props.contents[index].cardsColors.text,
+        duration: .4,
+        ease: 'ease.in'
+      })
+
+      gsap.to(tagItem, {
+        backgroundColor: props.contents[index].cardsColors.text,
+        duration: .4,
+        ease: 'ease.in'
+      })
       gsap.to(cards, {
         color: props.cardsColors.number,
         duration: .4,

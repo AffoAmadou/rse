@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ top: props.top, left: props.left }" class="card">
+  <div :id="dynamicId" @click="open" :style="{ top: props.top, left: props.left }" class="card">
     <div class="card__top">
       <div class="card__top__wrapper">
         <div :style="{ colors: props.colors.number }" class="card__index">{{ props.index }}</div>
@@ -35,6 +35,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 
   @media screen and (max-width: 600px) {
     width: 25.5rem;
@@ -75,9 +76,6 @@ import { ref } from 'vue';
 
 const button = ref();
 
-function open() {
-  Signal.emit(':openCard', (props));
-}
 
 const props = defineProps({
   top: {
@@ -106,7 +104,31 @@ const props = defineProps({
     type: String,
     default: 'Environnement',
   },
+  contentIndex: {
+    type: String,
+  },
+  // computed: {
+  //   dynamicId() {
+  //     return `card--${this.categoryTag}--${this.index}`;
+  //   }
+  // }
+
 });
+
+function open() {
+  console.log(props.categoryTag,"CAT TAG")
+  Signal.emit(':openCard', (props));
+  Signal.emit(':sendId', dynamicId);
+}
+
+//remove space and ' from contentIndex
+const dynamicId = `card--${props.categoryTag}--${props.contentIndex.replace(/[^a-zA-Z0-9]/g, '')}--${props.index}`;
+
+
+//remove all spaces and special characters from contentIndex
+// const dynamicId = `card--${props.categoryTag}--${props.contentIndex.replace(/[^a-zA-Z0-9]/g, '')}--${props.index}`;
+
+// const dynamicId = `card--${props.categoryTag}--${props.cIndex}--${props.index}`;
 
 
 

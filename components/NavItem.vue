@@ -51,10 +51,8 @@ const currentComponent = computed(() => {
 
 function onClick(text) {
   Signal.emit(':navClick', props.index);
-  console.log('Clicked on', props.text);
 
   let id = "#" + props.text;
-  console.log(id);
   gsap.to(window, { duration: 2, scrollTo: id });
 }
 

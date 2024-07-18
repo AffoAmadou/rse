@@ -29,7 +29,6 @@ const props = defineProps({
 
 const computedData = computed(() => {
     return props.data.map(item => {
-        console.log(item.header)
         return {
             menuTag: item.header.menuTag,
             index: item.header.index,
@@ -38,7 +37,6 @@ const computedData = computed(() => {
     });
 });
 
-console.log(computedData.value);
 
 onMounted(() => {
 

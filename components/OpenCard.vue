@@ -1,9 +1,9 @@
 <template>
-    <div ref="openCard" class="open__card">
+    <div id="idCard" ref="openCard" class="open__card">
         <div class="card__wrapper">
             <div class="open__card__top">
                 <div class="open__card__icons">
-                    <NavItem :index=props text="Environnement" />
+                    <TagItem :index=categoryId :text=categoryTag />
                     <button>
                         <Close @click="close" />
                     </button>
@@ -31,15 +31,19 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import Signal from '~/utils/signal'; // Adjust path as needed
+import Signal from '~/utils/signal'; 
 
-import NavItem from './NavItem.vue'; // Adjust path as needed
-import Close from './icons/close.vue'; // Adjust path as needed
-import Arrow from './icons/arrow.vue'; // Adjust path as needed
+import TagItem from './TagItem.vue';
+import Close from './icons/close.vue'; 
+import Arrow from './icons/arrow.vue'; 
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollToPlugin);
 
 const openCard = ref(null);
 const cards = ref([]);
 const currentIndex = ref(0);
+const idCard = ref("card");
 
 const currentCard = computed(() => {
     return cards.value[currentIndex.value];
@@ -47,25 +51,45 @@ const currentCard = computed(() => {
 
 const categoryId = ref(0);
 const categoryTag = ref('Environnement');
+const contentIndex = ref("textm");
 
 const close = () => {
+
+    let id = "#" + idCard.value;
+    gsap.to(window, {
+        duration: 1.3,
+        scrollTo: id,
+        ease: "power4",
+       
+    });
     openCard.value.style.display = 'none';
+
+
 };
 
 Signal.on(':openCard', (props) => {
     cards.value = props.cards;
     currentIndex.value = parseInt(props.index) - 1;
 
+
     categoryId.value = props.categoryId;
     categoryTag.value = props.categoryTag;
+    contentIndex.value = props.contentIndex.replace(/[^a-zA-Z0-9]/g, '');
 
+    console.log(categoryTag.value, contentIndex.value, currentIndex.value);
 
     openCard.value.style.display = 'flex';
+});
+
+Signal.on(':sendId', (dynamicId) => {
+    idCard.value = dynamicId;
 });
 
 const nextCard = () => {
     // currentcard ++ but check if its the last in the array and restart from 0 usign modulo
     currentIndex.value = (currentIndex.value + 1) % cards.value.length;
+    //update the idCard card--Environnement--02
+    idCard.value = `card--${categoryTag.value}--${contentIndex.value}--0${currentIndex.value + 1}`;
 
 };
 
@@ -113,7 +137,7 @@ a {
 
     @media screen and (max-width: 600px) {
         width: 34rem;
-        height: 63.8rem;
+        height: 80%;
     }
 }
 
@@ -130,7 +154,6 @@ a {
     padding: 1.943rem 1.957rem 0 5rem;
 
     @media screen and (max-width: 600px) {
-        height: 55.3rem;
         padding: 2.8rem 1.917rem 0 2rem;
     }
 }
@@ -173,7 +196,7 @@ a {
 
     @media screen and (max-width: 600px) {
         height: 8.3rem;
-        padding: 2.8rem 1.917rem 0 2rem;
+        padding:0 1.917rem 0 2rem;
 
     }
 

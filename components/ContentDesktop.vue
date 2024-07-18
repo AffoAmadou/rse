@@ -25,7 +25,7 @@
             <div ref="cardWrapper" class="card__wrapper">
                 <div class="sectionCard" v-for="(item, index) in props.contents" :key="index">
                     <Card v-for="card in item.cards" :cards="item.cards" :key="card.index" :top="card.top"
-                        :left="card.left" :index="card.index" :text="card.text" :colors="item.cardsColors" />
+                        :left="card.left" :index="card.index" :text="card.text" :colors="item.cardsColors" :categoryId="props.categoryId" :categoryTag="props.categoryTag" :contentIndex="item.text" />
                 </div>
             </div>
         </div>
@@ -50,7 +50,15 @@ const currentIndex = ref(0);
 let tl;
 
 const props = defineProps({
-    contents: Array
+    contents: Array,
+    categoryId: {
+        type: Number,
+        required: true,
+    },
+    categoryTag: {
+        type: String,
+        default: 'Environnement',
+    },
 });
 
 
@@ -71,9 +79,14 @@ onMounted(() => {
     const carsTexts = document.querySelectorAll('.card__bottom__text');
 
     const btn = document.querySelectorAll('.p__circle');
+    const tagItem = document.querySelectorAll('.tag__item');
 
     const lineV = document.querySelectorAll(".line__vertical")
     const lineH = document.querySelectorAll(".line__horizontal")
+
+    const openCartTitle = document.querySelectorAll('.open__card__title');
+  const openCardContent = document.querySelectorAll('.open_card__content');
+  const openCardIndex = document.querySelectorAll('.open__card__index');
 
 
     let cardWrapperHeight = cardWrapper.value.offsetHeight;
@@ -132,6 +145,18 @@ onMounted(() => {
 
                 gsap.to(btn, {
                     fill: props.contents[index].cardsColors.text,
+                    duration: .4,
+                    ease: 'ease.in'
+                })
+
+                gsap.to((openCartTitle, openCardContent, openCardIndex), {
+                    color: props.contents[index].cardsColors.text,
+                    duration: .4,
+                    ease: 'ease.in'
+                })
+
+                gsap.to(tagItem, {
+                    backgroundColor: props.contents[index].cardsColors.text,
                     duration: .4,
                     ease: 'ease.in'
                 })
@@ -196,7 +221,7 @@ onMounted(() => {
     position: relative;
     z-index: 1;
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
         display: none;
     }
 }
