@@ -1,9 +1,18 @@
 <script setup>
 import gsap from "gsap"
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const svg = ref(null)
-const props = defineProps(["open"])
+const props = defineProps(
+	{
+		isHovered: {
+			type: Boolean,
+			default: false
+		}
+	}
+)
+
+
 
 const rotate = () => {
 	gsap.to(svg.value, {
@@ -21,11 +30,21 @@ const reverseRotate = () => {
 		ease: "power4"
 	})
 }
+watch(
+  () => props.isHovered,
+  (newValue) => {
+    if (newValue) {
+		reverseRotate();
+	} else {
+		rotate();
+    }
+  }
+);
 
 </script>
 
 <template>
-	<svg ref="svg" @mouseover="rotate" @mouseleave="reverseRotate" class="c-icon-plus" width="60" height="60"
+	<svg ref="svg"  class="c-icon-plus" width="60" height="60"
 		viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<circle class="p__circle" cx="30" cy="30" r="30" fill="#005454" />
 		<path d="M30.5 18V41" stroke="white" stroke-width="1.62791" stroke-linecap="round" />

@@ -1,10 +1,11 @@
 <template>
-  <div :id="dynamicId" @click="open" :style="{ top: props.top, left: props.left }" class="card">
+  <div ref="card" @mouseenter="isHovered = false" @mouseleave="isHovered = true" :id="dynamicId" @click="open"
+    :style="{ top: props.top, left: props.left }" class="card">
     <div class="card__top">
       <div class="card__top__wrapper">
         <div :style="{ colors: props.colors.number }" class="card__index">{{ props.index }}</div>
         <button @click="open" ref="button">
-          <Plus />
+          <Plus :isHovered="isHovered" />
         </button>
       </div>
 
@@ -75,7 +76,8 @@ import Signal from '~/utils/signal';
 import { ref } from 'vue';
 
 const button = ref();
-
+const isHovered = ref(false);
+const card = ref();
 
 const props = defineProps({
   top: {
@@ -115,6 +117,8 @@ function open() {
   Signal.emit(':sendId', dynamicId);
 }
 const dynamicId = `card--${props.categoryTag}--${props.contentIndex.replace(/[^a-zA-Z0-9]/g, '')}--${props.index}`;
+
+
 
 
 

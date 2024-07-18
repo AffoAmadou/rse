@@ -114,6 +114,12 @@ onMounted(() => {
             @extend %description-20-medium;
             border-radius: 5rem;
 
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                background-color: #162040;
+            }
+
 
         }
 

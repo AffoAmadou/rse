@@ -23,5 +23,22 @@ const props = defineProps(["open"])
 .c-icon-instagram {
 	width: 5.927rem;
 	aspect-ratio: 1/1;
+
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		transform: rotate(45deg);
+
+		//circle fill
+		&>circle {
+			fill: #162040;
+			;
+		}
+
+		//path fill
+		&>path {
+			fill: white;
+		}
+	}
 }
 </style>

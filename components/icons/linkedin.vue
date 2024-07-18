@@ -1,27 +1,49 @@
 <script setup>
-	import gsap from "gsap"
-	const props = defineProps([ "open" ])
+import gsap from "gsap"
+const props = defineProps(["open"])
 
 </script>
 
 <template>
 	<a href="https://www.linkedin.com/company/bien-fond%C3%A9/" target="_blank">
-	<svg class="c-icon-linkedin"
-    width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="30.368" cy="29.6327" r="29.6327" fill="#FF90B9"/>
-<path d="M25.9018 22.5616C25.9018 23.8248 24.8069 24.8488 23.4563 24.8488C22.1056 24.8488 21.0107 23.8248 21.0107 22.5616C21.0107 21.2984 22.1056 20.2744 23.4563 20.2744C24.8069 20.2744 25.9018 21.2984 25.9018 22.5616Z" fill="white"/>
-<path d="M21.3452 26.5301H25.5256V39.1977H21.3452V26.5301Z" fill="white"/>
-<path d="M32.256 26.5301H28.0756V39.1977H32.256C32.256 39.1977 32.256 35.2098 32.256 32.7163C32.256 31.2197 32.7671 29.7165 34.8061 29.7165C37.1104 29.7165 37.0966 31.6751 37.0858 33.1924C37.0718 35.1758 37.1053 37.1998 37.1053 39.1977H41.2857V32.512C41.2503 28.243 40.1379 26.2759 36.4782 26.2759C34.3049 26.2759 32.9577 27.2626 32.256 28.1553V26.5301Z" fill="white"/>
-</svg>
+		<svg class="c-icon-linkedin" width="60" height="60" viewBox="0 0 60 60" fill="none"
+			xmlns="http://www.w3.org/2000/svg">
+			<circle cx="30.368" cy="29.6327" r="29.6327" fill="#FF90B9" />
+			<path
+				d="M25.9018 22.5616C25.9018 23.8248 24.8069 24.8488 23.4563 24.8488C22.1056 24.8488 21.0107 23.8248 21.0107 22.5616C21.0107 21.2984 22.1056 20.2744 23.4563 20.2744C24.8069 20.2744 25.9018 21.2984 25.9018 22.5616Z"
+				fill="white" />
+			<path d="M21.3452 26.5301H25.5256V39.1977H21.3452V26.5301Z" fill="white" />
+			<path
+				d="M32.256 26.5301H28.0756V39.1977H32.256C32.256 39.1977 32.256 35.2098 32.256 32.7163C32.256 31.2197 32.7671 29.7165 34.8061 29.7165C37.1104 29.7165 37.0966 31.6751 37.0858 33.1924C37.0718 35.1758 37.1053 37.1998 37.1053 39.1977H41.2857V32.512C41.2503 28.243 40.1379 26.2759 36.4782 26.2759C34.3049 26.2759 32.9577 27.2626 32.256 28.1553V26.5301Z"
+				fill="white" />
+		</svg>
 
-</a>
+	</a>
 
 
 </template>
 
 <style lang="scss">
-	.c-icon-linkedin {
-		width: 5.927rem;
-		aspect-ratio: 1/1;
+.c-icon-linkedin {
+	width: 5.927rem;
+	aspect-ratio: 1/1;
+
+	transition: all .3s ease-in-out;
+
+	&:hover {
+
+		transform: rotate(45deg);
+
+		//circle fill
+		&>circle {
+			fill: #162040;
+			;
+		}
+
+		//path fill
+		&>path {
+			fill: white;
+		}
 	}
+}
 </style>
