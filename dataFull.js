@@ -105,7 +105,7 @@ export const data = [
             {
                 text: "expertise durable",
                 texts: "expertise durable", 
-                image: "/img/expertise.png",
+                image: "/img/expertise.jpg",
                 bgColor: "#005454",
                 txtColor: "#9AD8CB",
                 lineColor:"#9AD8CB0D",
