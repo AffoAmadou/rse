@@ -19,7 +19,7 @@
 
       <div class="card__wrapper" ref="cardWrapper">
         <Card v-for="card in props.cards" :cards="props.cards" :key="card.index" :top="card.top" :left="card.left"
-          :index="card.index" :text="card.text" :colors="props.cardsColors" />
+          :index="card.index" :text="card.text" :colors="props.cardsColors" :categoryId="props.categoryId" :categoryTag="props.menuTag" />
       </div>
     </div>
   </section>
@@ -49,6 +49,15 @@ const props = defineProps({
   cards: Array,
   cardsColors: Object,
   lineColor: String,
+  categoryId: {
+    type: Number,
+    required: true,
+  },
+  categoryTag: {
+    type: String,
+    default: 'Environnement',
+  },
+
   computed: {
     dynamicId() {
       return `marquee--${this.textm}`;

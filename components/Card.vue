@@ -98,6 +98,14 @@ const props = defineProps({
   cards: {
     type: Array,
   },
+  categoryId: {
+    type: Number,
+    required: true,
+  },
+  categoryTag: {
+    type: String,
+    default: 'Environnement',
+  },
 });
 
 

@@ -3,7 +3,7 @@
         <div class="card__wrapper">
             <div class="open__card__top">
                 <div class="open__card__icons">
-                    <NavItem :index=0 text="Environnement" />
+                    <NavItem :index=props text="Environnement" />
                     <button>
                         <Close @click="close" />
                     </button>
@@ -45,6 +45,9 @@ const currentCard = computed(() => {
     return cards.value[currentIndex.value];
 });
 
+const categoryId = ref(0);
+const categoryTag = ref('Environnement');
+
 const close = () => {
     openCard.value.style.display = 'none';
 };
@@ -52,6 +55,11 @@ const close = () => {
 Signal.on(':openCard', (props) => {
     cards.value = props.cards;
     currentIndex.value = parseInt(props.index) - 1;
+
+    categoryId.value = props.categoryId;
+    categoryTag.value = props.categoryTag;
+
+
     openCard.value.style.display = 'flex';
 });
 
@@ -94,13 +102,14 @@ a {
 
 .card__wrapper {
     width: 57.4rem;
-    height: 75.6rem;
+    height: 90%;
 
     border-radius: 2rem;
 
-    div {
-        background-color: white;
-    }
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @media screen and (max-width: 600px) {
         width: 34rem;
@@ -109,10 +118,13 @@ a {
 }
 
 .open__card__top {
+    // background-color: lightblue;
     width: 100%;
-    height: 65.1rem;
+    // height: 65.1rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
+
+    padding-bottom: 5rem;
 
 
     padding: 1.943rem 1.957rem 0 5rem;
@@ -151,7 +163,7 @@ a {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
     border-top: solid 1px #00000015;
-    padding-top: 1.943rem;
+    // padding-top: 1.943rem;
     padding-left: 5rem;
     padding-right: 1.957rem;
     display: flex;
