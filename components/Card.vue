@@ -116,7 +116,6 @@ const props = defineProps({
 });
 
 function open() {
-  console.log(props.categoryTag,"CAT TAG")
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);
 }

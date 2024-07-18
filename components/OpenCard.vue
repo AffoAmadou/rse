@@ -1,5 +1,5 @@
 <template>
-    <div id="idCard" ref="openCard" class="open__card">
+    <div :style="{ color: colorC }" id="idCard" ref="openCard" class="open__card">
         <div class="card__wrapper">
             <div class="open__card__top">
                 <div class="open__card__icons">
@@ -31,11 +31,11 @@
 
 <script setup>
 import { ref, computed } from 'vue';
-import Signal from '~/utils/signal'; 
+import Signal from '~/utils/signal';
 
 import TagItem from './TagItem.vue';
-import Close from './icons/close.vue'; 
-import Arrow from './icons/arrow.vue'; 
+import Close from './icons/close.vue';
+import Arrow from './icons/arrow.vue';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import gsap from 'gsap';
 gsap.registerPlugin(ScrollToPlugin);
@@ -44,6 +44,7 @@ const openCard = ref(null);
 const cards = ref([]);
 const currentIndex = ref(0);
 const idCard = ref("card");
+const colorC = ref("#000000");
 
 const currentCard = computed(() => {
     return cards.value[currentIndex.value];
@@ -60,7 +61,7 @@ const close = () => {
         duration: 1.3,
         scrollTo: id,
         ease: "power4",
-       
+
     });
     openCard.value.style.display = 'none';
 
@@ -70,15 +71,16 @@ const close = () => {
 Signal.on(':openCard', (props) => {
     cards.value = props.cards;
     currentIndex.value = parseInt(props.index) - 1;
+    colorC.value = props.colors.text + " !important";
 
 
     categoryId.value = props.categoryId;
     categoryTag.value = props.categoryTag;
     contentIndex.value = props.contentIndex.replace(/[^a-zA-Z0-9]/g, '');
 
-    console.log(categoryTag.value, contentIndex.value, currentIndex.value);
 
     openCard.value.style.display = 'flex';
+    // openCard.value.style.color = props.colors.text + " !important";
 });
 
 Signal.on(':sendId', (dynamicId) => {
@@ -196,7 +198,7 @@ a {
 
     @media screen and (max-width: 600px) {
         height: 8.3rem;
-        padding:0 1.917rem 0 2rem;
+        padding: 0 1.917rem 0 2rem;
 
     }
 

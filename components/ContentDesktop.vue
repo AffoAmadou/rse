@@ -149,11 +149,11 @@ onMounted(() => {
                     ease: 'ease.in'
                 })
 
-                gsap.to((openCartTitle, openCardContent, openCardIndex), {
-                    color: props.contents[index].cardsColors.text,
-                    duration: .4,
-                    ease: 'ease.in'
-                })
+                // gsap.to((openCartTitle, openCardContent, openCardIndex), {
+                //     color: props.contents[index].cardsColors.text,
+                //     duration: .4,
+                //     ease: 'ease.in'
+                // })
 
                 gsap.to(tagItem, {
                     backgroundColor: props.contents[index].cardsColors.text,

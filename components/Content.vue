@@ -99,7 +99,7 @@ onMounted(() => {
       });
 
       gsap.to(tagItem, {
-        backgroundColor: props.contents[index].cardsColors.text,
+        backgroundColor: props.cardsColors.text,
         duration: .4,
         ease: 'ease.in'
       })
@@ -134,11 +134,11 @@ onMounted(() => {
         stagger: .1,
       });
 
-      gsap.to((openCartTitle, openCardContent, openCardIndex), {
-        color: props.contents[index].cardsColors.text,
-        duration: .4,
-        ease: 'ease.in'
-      })
+      // gsap.to((openCartTitle, openCardContent, openCardIndex), {
+      //   color: props.cardsColors.text,
+      //   duration: .4,
+      //   ease: 'ease.in'
+      // })
 
     },
     onEnterBack: () => {
@@ -149,14 +149,14 @@ onMounted(() => {
         ease: 'ease.in'
       });
 
-      gsap.to((openCartTitle, openCardContent, openCardIndex), {
-        color: props.contents[index].cardsColors.text,
-        duration: .4,
-        ease: 'ease.in'
-      })
+      // gsap.to((openCartTitle, openCardContent, openCardIndex), {
+      //   color: props.contents[index].cardsColors.text,
+      //   duration: .4,
+      //   ease: 'ease.in'
+      // })
 
       gsap.to(tagItem, {
-        backgroundColor: props.contents[index].cardsColors.text,
+        backgroundColor: props.cardsColors.text,
         duration: .4,
         ease: 'ease.in'
       })
