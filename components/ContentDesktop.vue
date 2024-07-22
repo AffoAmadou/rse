@@ -1,8 +1,8 @@
 <template>
     <section class="content" ref="contentSection">
 
-        <div class="marquee__wrapper">
-            <Vue3Marquee ref="marquee" class="rf">
+        <div ref="marquee" class="marquee__wrapper">
+            <Vue3Marquee class="rf">
                 <div class="marquee__content">
                     <img class="marquee__image" src="/public/img/locaux.png" alt="">
                     <p class="marquee__text">{{ props.contents[currentIndex].text }}</p>
@@ -108,32 +108,32 @@ onMounted(() => {
 
     function marqueeEnterExit(index) {
         console.log(index);
-        // gsap.to(marquee.value, {
-        //     keyframes: [{
-        //         autoAlpha: 0,
-        //         duration: .4,
-        //         ease: 'ease.in',
-        //         y: -100,
-        //         onComplete: () => {
-        //             console.log(marquee.value, marquee);
-        //             currentIndex.value = index;
-        //             console.log(currentIndex.value);
-        //         }
-        //     },
-        //     {
-        //         autoAlpha: 1,
-        //         duration: .4,
-        //         ease: 'ease.in',
-        //         y: 0
-        //     }
-        //     ]
-        // });
+        gsap.to(marquee.value, {
+            keyframes: [{
+                autoAlpha: 0,
+                duration: .4,
+                ease: 'ease.in',
+                // y: -100,
+                onComplete: () => {
+                    console.log(marquee.value, marquee);
+                    currentIndex.value = index;
+                    console.log(currentIndex.value);
+                }
+            },
+            {
+                autoAlpha: 1,
+                duration: .4,
+                ease: 'ease.in',
+                // y: 0
+            }
+            ]
+        });
 
-        gsap.to(marquee, {
-            autoAlpha: 0,
-            duration: .4,
-            color: 'red',
-        })
+        // gsap.to(marquee.value, {
+        //     autoAlpha: 0,
+        //     duration: .4,
+        //     color: 'red',
+        // })
     }
     sectionCards.forEach((sectionCard, index) => {
         timeline.to(sectionCard, {
@@ -349,7 +349,5 @@ onMounted(() => {
     }
 }
 
-.rf {
-    background: rebeccapurple;
-}
+
 </style>
