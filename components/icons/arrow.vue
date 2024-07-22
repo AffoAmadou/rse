@@ -15,6 +15,7 @@
 <style lang="scss" scoped>
 	.c-icon-plus {
 	width: 6rem;
+	scale: 1.3;
 	aspect-ratio: 1/1;
 	}
 </style>

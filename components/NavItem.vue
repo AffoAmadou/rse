@@ -70,17 +70,20 @@ function onClick(text) {
   gap: .5rem;
   font-size: 1.404rem;
 
-  // color: black !important;
-@media screen and (max-width: 600px) {
-  // padding: 0;
-  padding: .9rem 1.5rem .928rem 1.5rem;
+  text-transform: capitalize;
 
-  width: 6.2rem;
-  height: 3.628rem;
-  .nav__item__text{
-    display: none;
+  // color: black !important;
+  @media screen and (max-width: 600px) {
+    // padding: 0;
+    padding: .9rem 1.5rem .928rem 1.5rem;
+
+    width: 6.2rem;
+    height: 3.628rem;
+
+    .nav__item__text {
+      display: none;
+    }
+
   }
-  
-}
 }
 </style>

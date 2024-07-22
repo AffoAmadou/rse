@@ -118,6 +118,8 @@ const props = defineProps({
 });
 
 function open() {
+  let body = document.querySelector('body');
+  body.style.overflow = 'hidden';
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);
 }

@@ -38,6 +38,7 @@ import TagItem from './TagItem.vue';
 import Close from './icons/close.vue';
 import Arrow from './icons/arrow.vue';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -65,6 +66,9 @@ const close = () => {
         ease: "power4",
 
     });
+    let body = document.querySelector('body');
+    body.style.overflow = 'auto';
+    ScrollTrigger.refresh();
     openCard.value.style.display = 'none';
 
 
@@ -123,6 +127,10 @@ a {
     align-items: center;
     padding-right: 2.1rem;
 
+    //dont consider mouse events
+    pointer-events: none;
+
+
     @media screen and (max-width: 600px) {
         justify-content: center;
         padding-right: 0;
@@ -165,7 +173,8 @@ a {
         padding: 2.8rem 1.917rem 0 2rem;
     }
 }
-.open__card__image{
+
+.open__card__image {
     margin-top: 3rem;
     width: 20rem;
     height: 20rem;
@@ -177,6 +186,7 @@ a {
         height: 17rem;
     }
 }
+
 .open__card__icons {
     display: flex;
     justify-content: space-between;
