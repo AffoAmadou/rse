@@ -1,6 +1,6 @@
 <template>
     <div :style="{ color: colorC }" id="idCard" ref="openCard" class="open__card">
-        <div class="card__wrapper">
+        <div ref="card" class="card__wrapper">
             <div class="open__card__top">
                 <div class="open__card__icons">
                     <TagItem :index=categoryId :text=categoryTag />
@@ -56,6 +56,7 @@ const categoryId = ref(0);
 const categoryTag = ref('Environnement');
 const contentIndex = ref("textm");
 const image = ref('');
+const card = ref(null);
 
 const close = () => {
 
@@ -69,7 +70,14 @@ const close = () => {
     let body = document.querySelector('body');
     body.style.overflow = 'auto';
     ScrollTrigger.refresh();
-    openCard.value.style.display = 'none';
+    gsap.to(card.value, {
+        duration: 1.3,
+        x: "70rem",
+        ease: "power4",
+        onComplete: () => {
+            openCard.value.style.display = 'none';
+        }
+    })
 
 
 };
@@ -88,6 +96,11 @@ Signal.on(':openCard', (props) => {
 
 
     openCard.value.style.display = 'flex';
+    gsap.to(card.value, {
+        duration: 1.3,
+        x: 0,
+        ease: "power4",
+    })
     // openCard.value.style.color = props.colors.text + " !important";
 });
 
@@ -149,6 +162,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
 
+    transform: translate(70rem);
     @media screen and (max-width: 600px) {
         width: 34rem;
         height: 80%;
