@@ -75,7 +75,8 @@ export const data = [
                      },
                     { top: "68.7rem", left: "98.6rem", index: "04", text: "Contrat énergie verte",
                         contenu:"Nous avons fait le choix d’un fournisseur d'énergie renouvelable en privilégiant les sources locales et en vérifiant les garanties de production et d'impact environnemental : <a target='_blank' href='https://ohm-energie.com/'>ohm-energie.com</a>  (pour <a target='_blank' href='https://ohm-energie.com/?utm_source=adssn&gad_source=1&gclid=Cj0KCQjwv7O0BhDwARIsAC0sjWM3E9UoroiUJQX6Bgui8QiLbrFkG1lFFRm6BJLYUxU5nhLOnUim3OYaAnxnEALw_wcB'>en savoir plus</a>  sur leurs engagements)."
-                     }
+                    ,image: "/img/arbre.png",
+                    }
                 ]
                 ,
                 
@@ -323,13 +324,15 @@ fill:"#FFFFFF08",
                 },
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Organisation de sorties culturelles",
-                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler. Retrouvez nos en images lors de la dernière édition : "
+                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler. Retrouvez nous <a target='_blank' href='https://www.instagram.com/p/CxZ-tnCM3bY/'>en vidéo lors de la dernière édition</a> "
                      },
                     { top: "30.2rem", left: "90rem", index: "02", text: "Organisation de séminaires collaborateurs",
-                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler. Retrouvez nos en images lors de la dernière édition : "
+                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler. Retrouvez nos en images lors de la dernière édition : ",
+                        image: "/img/atelier.png"
+
                      },
                     { top: "70.1rem", left: "40.5rem", index: "03", text: "Droit à la déconnexion & temps de travail",
-                        contenu:"Nous prônons l’équilibre vie privée et le droit à la déconnexion. Les notifications sont systématiquement suspendues en dehors des heures de travail et une dizaine de RTT sont données chaque année. "
+                        contenu:"Nous prônons l’équilibre vie privée et le droit à la déconnexion. Les notifications sont systématiquement suspendues en dehors des heures de travail et une dizaine de RTT sont données chaque année. ",
                      }
                 ]
             },

@@ -25,7 +25,9 @@
             <div ref="cardWrapper" class="card__wrapper">
                 <div class="sectionCard" v-for="(item, index) in props.contents" :key="index">
                     <Card v-for="card in item.cards" :cards="item.cards" :key="card.index" :top="card.top"
-                        :left="card.left" :index="card.index" :text="card.text" :colors="item.cardsColors" :categoryId="props.categoryId" :categoryTag="props.categoryTag" :contentIndex="item.text" />
+                        :left="card.left" :index="card.index" :text="card.text" :colors="item.cardsColors"
+                        :categoryId="props.categoryId" :categoryTag="props.categoryTag" :contentIndex="item.text"
+                        :image="card.image" />
                 </div>
             </div>
         </div>
@@ -62,15 +64,6 @@ const props = defineProps({
 });
 
 
-// const firstText = computed(() => {
-//     return props.contents.value[currentIndex.value].text;
-// });
-// const secondText = computed(() => {
-//     return props.contents[currentIndex.value].texts;
-// });
-
-
-
 onMounted(() => {
     const body = document.querySelector('body');
 
@@ -85,8 +78,8 @@ onMounted(() => {
     const lineH = document.querySelectorAll(".line__horizontal")
 
     const openCartTitle = document.querySelectorAll('.open__card__title');
-  const openCardContent = document.querySelectorAll('.open_card__content');
-  const openCardIndex = document.querySelectorAll('.open__card__index');
+    const openCardContent = document.querySelectorAll('.open_card__content');
+    const openCardIndex = document.querySelectorAll('.open__card__index');
 
 
     let cardWrapperHeight = cardWrapper.value.offsetHeight;

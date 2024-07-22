@@ -110,6 +110,11 @@ const props = defineProps({
     type: String,
   },
 
+  image: {
+    type: String,
+    default: '',
+  },
+
 });
 
 function open() {

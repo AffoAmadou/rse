@@ -2,7 +2,7 @@
     <section data-scroll-section class="footer" ref="footerSection">
         <!-- <Marquee id="marquee" text="Made on earth" text2="with heart" /> -->
 
-        <Vue3Marquee>
+        <Vue3Marquee class="marquee">
             <div class="marquee__content">
                 <img class="marquee__image" src="/img/footer.png" alt="">
                 <p class="marquee__text">Made on earth</p>
@@ -84,6 +84,11 @@ onMounted(() => {
     position: relative;
     overflow: hidden;
 
+    @media screen and (max-width: 600px){
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        }
     .footer__card {
         position: absolute;
         width: 43.6rem;
@@ -105,6 +110,12 @@ onMounted(() => {
             margin-top: 2.4rem;
             margin-bottom: 4.5rem;
             line-height: 2.9rem;
+
+            @media screen and (max-width: 600px){
+                margin-top: 1.4rem;
+                margin-bottom: 2.5rem;
+                line-height: 2.3rem;
+            }
         }
 
         .footer__btn {
@@ -123,6 +134,14 @@ onMounted(() => {
 
         }
 
+        @media screen and (max-width: 600px){
+            position: static;
+            width: 95%;
+            font-size: 1.4rem;
+            padding-right: 0;
+            padding-left: 3rem;
+
+        }
     }
 
     .footer__social__card {
@@ -138,6 +157,9 @@ onMounted(() => {
         @extend %column;
         justify-content: space-between;
         z-index: 1;
+  @media screen and (max-width: 600px){
+            position: static;
+        }
 
 
     }
@@ -146,8 +168,7 @@ onMounted(() => {
         @extend %title-35-medium;
         line-height: 4.2rem;
     }
-
-
+  
 }
 
 .footer__social__icons {
@@ -167,9 +188,14 @@ onMounted(() => {
 
     h3 {
         font-size: 10rem;
-
-
     }
+}
+
+.marquee{
+    @media screen and (max-width: 600px){
+            position: absolute;
+            top: 44rem;
+        }
 }
 
 .marquee__content {

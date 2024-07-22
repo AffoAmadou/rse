@@ -13,8 +13,9 @@
                 </div>
 
                 <p v-if="currentCard" v-html="currentCard.contenu" class="open_card__content">
-
                 </p>
+
+                <img v-if="image !== ''" :src="image" alt="" class="open__card__image">
             </div>
             <div class="open__card__bottom">
                 <p v-if="currentCard" v-html="currentCard.index" class="open__card__index"></p>
@@ -53,6 +54,7 @@ const currentCard = computed(() => {
 const categoryId = ref(0);
 const categoryTag = ref('Environnement');
 const contentIndex = ref("textm");
+const image = ref('');
 
 const close = () => {
 
@@ -74,6 +76,8 @@ Signal.on(':openCard', (props) => {
     colorC.value = props.colors.text + " !important";
 
 
+    console.log(props.image);
+    image.value = props.image;
     categoryId.value = props.categoryId;
     categoryTag.value = props.categoryTag;
     contentIndex.value = props.contentIndex.replace(/[^a-zA-Z0-9]/g, '');
@@ -152,6 +156,8 @@ a {
 
     padding-bottom: 5rem;
 
+    height: 90%;
+    overflow: scroll;
 
     padding: 1.943rem 1.957rem 0 5rem;
 
@@ -159,7 +165,18 @@ a {
         padding: 2.8rem 1.917rem 0 2rem;
     }
 }
+.open__card__image{
+    margin-top: 3rem;
+    width: 20rem;
+    height: 20rem;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
 
+    @media screen and (max-width: 600px) {
+        width: 17rem;
+        height: 17rem;
+    }
+}
 .open__card__icons {
     display: flex;
     justify-content: space-between;

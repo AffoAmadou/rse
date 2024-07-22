@@ -20,7 +20,7 @@
       <div class="card__wrapper" ref="cardWrapper">
         <Card v-for="card in props.cards" :cards="props.cards" :key="card.index" :top="card.top" :left="card.left"
           :index="card.index" :text="card.text" :colors="props.cardsColors" :categoryId="props.categoryId"
-          :categoryTag="props.categoryTag" :contentIndex="props.textm" />
+          :categoryTag="props.categoryTag" :contentIndex="props.textm" :image="card.image" />
       </div>
     </div>
   </section>
