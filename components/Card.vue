@@ -123,7 +123,6 @@ const props = defineProps({
 
 });
 
-console.log(props.rellax);
 function open() {
   let body = document.querySelector('body');
   body.style.overflow = 'hidden';

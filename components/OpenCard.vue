@@ -88,7 +88,6 @@ Signal.on(':openCard', (props) => {
     colorC.value = props.colors.text + " !important";
 
 
-    console.log(props.image);
     image.value = props.image;
     categoryId.value = props.categoryId;
     categoryTag.value = props.categoryTag;
@@ -101,7 +100,6 @@ Signal.on(':openCard', (props) => {
         x: 0,
         ease: "power4",
     })
-    // openCard.value.style.color = props.colors.text + " !important";
 });
 
 Signal.on(':sendId', (dynamicId) => {
@@ -109,11 +107,8 @@ Signal.on(':sendId', (dynamicId) => {
 });
 
 const nextCard = () => {
-    // currentcard ++ but check if its the last in the array and restart from 0 usign modulo
     currentIndex.value = (currentIndex.value + 1) % cards.value.length;
-    //update the idCard card--Environnement--02
     idCard.value = `card--${categoryTag.value}--${contentIndex.value}--0${currentIndex.value + 1}`;
-
 };
 
 </script>

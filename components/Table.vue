@@ -88,8 +88,6 @@ const lineAnimation = () => {
     const lines = document.querySelectorAll('.line__vertical');
     const linesHorizontal = document.querySelectorAll('.line__horizontal');
 
-    console.log(lines);
-    console.log(linesHorizontal);
 
     let tl = gsap.timeline();
 
