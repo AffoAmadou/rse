@@ -1,6 +1,6 @@
 <template>
-  <div ref="card" @mouseenter="isHovered = false" @mouseleave="isHovered = true" :id="dynamicId" @click="open"
-    :style="{ top: props.top, left: props.left }" class="card">
+  <div :data-rellax-speed=props.rellax ref="card" @mouseenter="isHovered = false" @mouseleave="isHovered = true"
+    :id="dynamicId" @click="open" :style="{ top: props.top, left: props.left }" class="card rellax">
     <div class="card__top">
       <div class="card__top__wrapper">
         <div :style="{ colors: props.colors.number }" class="card__index">{{ props.index }}</div>
@@ -73,7 +73,8 @@
 <script setup>
 import Plus from './icons/plus.vue';
 import Signal from '~/utils/signal';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import Rellax from 'rellax';
 
 const button = ref();
 const isHovered = ref(false);
@@ -115,8 +116,14 @@ const props = defineProps({
     default: '',
   },
 
+  rellax: {
+    type: Number,
+    default: 1,
+  },
+
 });
 
+console.log(props.rellax);
 function open() {
   let body = document.querySelector('body');
   body.style.overflow = 'hidden';
@@ -125,7 +132,11 @@ function open() {
 }
 const dynamicId = `card--${props.categoryTag}--${props.contentIndex.replace(/[^a-zA-Z0-9]/g, '')}--${props.index}`;
 
+onMounted(() => {
 
+  // var rellax = new Rellax('.rellax');
+
+})
 
 
 

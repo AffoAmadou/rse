@@ -87,8 +87,9 @@ onMounted(() => {
 
   ScrollTrigger.create({
     trigger: contentSection.value,
-    start: "top top",
+    start: "top 30%",
     id: 5,
+
     onEnter: () => {
 
       gsap.to(body, {

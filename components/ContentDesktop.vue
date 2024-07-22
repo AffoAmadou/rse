@@ -27,7 +27,7 @@
                     <Card v-for="card in item.cards" :cards="item.cards" :key="card.index" :top="card.top"
                         :left="card.left" :index="card.index" :text="card.text" :colors="item.cardsColors"
                         :categoryId="props.categoryId" :categoryTag="props.categoryTag" :contentIndex="item.text"
-                        :image="card.image" />
+                        :image="card.image" :rellax="randomNumbers()" />
                 </div>
             </div>
         </div>
@@ -62,6 +62,11 @@ const props = defineProps({
         default: 'Environnement',
     },
 });
+
+const randomNumbers = () => {
+    //from 1 to 3
+    return Math.floor(Math.random() * 2) + 1;
+}
 
 
 onMounted(() => {

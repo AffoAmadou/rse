@@ -93,7 +93,7 @@ onMounted(() => {
 
   ScrollTrigger.create({
     trigger: textSection.value,
-    start: "top 10%",
+    start: "top 70%",
     id: props.index,
     onEnter: () => {
       gsap.to(body, {
