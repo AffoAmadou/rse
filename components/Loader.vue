@@ -68,7 +68,7 @@ onMounted(() => {
     position: fixed;
     background-color: #162040;
     color: #FF90B9;
-    @extend %title-60;
+    @extend %title-60-medium;
     // @extend %center;
 
     position: relative;

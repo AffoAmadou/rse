@@ -38,6 +38,17 @@
     }
   }
   
+  %title-60-medium {
+    font-family: $neue;
+    font-size: 6rem;
+    font-weight: 600;
+
+    @media screen and (max-width: 600px) {
+      font-size: 3.379rem;
+      line-height: 4.5rem;
+    }
+  }
+  
 
   %title-55-medium {
     font-family: $neue;
