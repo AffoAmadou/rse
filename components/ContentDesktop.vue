@@ -33,6 +33,7 @@ import Card from './Card.vue';
 import { onMounted, ref } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -65,11 +66,8 @@ const randomNumbers = () => {
 
 onMounted(() => {
     const body = document.querySelector('body');
-
     const cards = document.querySelectorAll('.card__index');
-
     const carsTexts = document.querySelectorAll('.card__bottom__text');
-
     const btn = document.querySelectorAll('.p__circle');
     const tagItem = document.querySelectorAll('.tag__item');
 
@@ -107,33 +105,50 @@ onMounted(() => {
     let reverseTimeline = gsap.timeline({ paused: true });
 
     function marqueeEnterExit(index) {
-        console.log(index);
-        gsap.to(marquee.value, {
-            keyframes: [{
+        const text = new SplitType(".marquee__text", { types: 'words,chars' });
+
+        // marquee__text
+        // gsap.to(marquee.value, {
+        //     keyframes: [{
+        //         autoAlpha: 0,
+        //         duration: .4,
+        //         ease: 'ease.in',
+        //         // y: -100,
+        //         onComplete: () => {
+        //             console.log(marquee.value, marquee);
+        //             currentIndex.value = index;
+        //             console.log(currentIndex.value);
+        //         }
+        //     },
+        //     {
+        //         autoAlpha: 1,
+        //         duration: .4,
+        //         ease: 'ease.in',
+        //         // y: 0
+        //     }
+        //     ]
+        // });
+        let tl = gsap.timeline();
+        tl.to(".marquee__text", {
+            y: -200,
+            duration: .4,
+            transformOrigin: "top right",
+            onStart: () => {
+                currentIndex.value = index;
+            },
+        }, 0)
+            .to(".marquee__text", {
+                y: 0,
+                duration: .4,
+            },)
+            .to(".marquee__image", {
                 autoAlpha: 0,
                 duration: .4,
-                ease: 'ease.in',
-                // y: -100,
-                onComplete: () => {
-                    console.log(marquee.value, marquee);
-                    currentIndex.value = index;
-                    console.log(currentIndex.value);
-                }
-            },
-            {
+            }, 0)
+            .to(".marquee__image", {
                 autoAlpha: 1,
                 duration: .4,
-                ease: 'ease.in',
-                // y: 0
-            }
-            ]
-        });
-
-        // gsap.to(marquee.value, {
-        //     autoAlpha: 0,
-        //     duration: .4,
-        //     color: 'red',
-        // })
+            },)
     }
     sectionCards.forEach((sectionCard, index) => {
         timeline.to(sectionCard, {
@@ -277,23 +292,16 @@ onMounted(() => {
     overflow: hidden;
 }
 
+
+
 .card__wrapper {
     width: 100%;
-    min-height: 500vh;
+    min-height: 700vh;
     // min-height: 100vh;
     //     height: fit-content;
 
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // position: relative;
-
-    // padding-left: 2.4rem;
-    // padding-right: 2.4rem;
-
-    // //randomize background color
-    // background-color: random-color();
 
 
     @media screen and (max-width: 600px) {
@@ -341,13 +349,16 @@ onMounted(() => {
     width: 100%;
     height: 110vh;
     position: relative;
-    margin-bottom: 20rem;
+    margin-bottom: 40rem;
 
     //last child
     &:last-child {
         margin-bottom: 0;
     }
+    //first child
+
+    &:first-child {
+        margin-top: 40rem;
+    }
 }
-
-
 </style>

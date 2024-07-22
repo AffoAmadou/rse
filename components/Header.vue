@@ -105,9 +105,10 @@ const secondIcon = computed(() => {
 const animateHeader = () => {
     gsap.to([index.value, tag.value, title.value], {
         autoAlpha: 1,
-        visibility: 'visible',
+        // visibility: 'visible',
         duration: 1,
         stagger: .2,
+        delay: .5,
     });
 }
 
@@ -138,6 +139,7 @@ onMounted(() => {
 
         onEnter: () => {
             Signal.emit(':navClick', props.index);
+            animateHeader();
 
             gsap.to(body, {
                 backgroundColor: props.bgColor,
@@ -230,7 +232,7 @@ onMounted(() => {
 
 .index {
     @extend %description-15;
-
+opacity: 0;
 
 }
 
@@ -242,12 +244,16 @@ onMounted(() => {
     margin-bottom: 3.5rem;
     letter-spacing: -.4rem;
     width: 100%;
+    opacity: 0;
+
 }
 
 .header__tag {
     padding: .7rem 3.1rem .7rem 3.1rem;
     border: solid 1.17px $white;
     border-radius: 10rem;
+    opacity: 0;
+
 
     p {
         @extend %description-15;
