@@ -35,7 +35,7 @@ Signal.on(":loaderFinished", (index) => {
         <Header :index="item.header.index" :text="item.header.text" :tag="item.header.tag"
           :bgColor="item.header.bgColor" :txtColor="item.header.txtColor" :lineColor="item.header.lineColor"
           :icons="item.header.icons" :goto="item.header.menuTag" />
-        <TextReveal :bg="item.textReveal.bg" :textColor="item.textReveal.textColor" :text="item.textReveal.text"
+        <TextReveal :bg="item.textReveal.bg" :textColor="item.textReveal.textColor" :text="item.textReveal.text" :textm="item.textReveal.textMobile"
           :icons="item.textReveal.icons" :lineColor="item.textReveal.lineColor" />
 
         <Content v-for="(content, contentIndex) in item.contents" :key="contentIndex" :textm="content.text"
@@ -43,7 +43,7 @@ Signal.on(":loaderFinished", (index) => {
           :bgColor="content.bgColor" :txtColor="content.txtColor" :lineColor="content.lineColor"
           :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
 
-        <ContentDesktop :contents="item.contents"  :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
+        <ContentDesktop :contents="item.contents" :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
       </div>
 
       <Footer />

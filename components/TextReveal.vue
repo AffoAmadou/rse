@@ -43,6 +43,9 @@ const props = defineProps({
   text: {
     type: String,
   },
+  textMobile: {
+    type: String,
+  },
   bg: {
     type: String,
   },
