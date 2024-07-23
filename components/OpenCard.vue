@@ -101,7 +101,6 @@ Signal.on(':openCard', (props) => {
         ease: "power4",
     })
 
-    console.log(cards.value[currentIndex.value].image);
 });
 
 Signal.on(':sendId', (dynamicId) => {
@@ -144,6 +143,8 @@ a {
     @media screen and (max-width: 600px) {
         justify-content: center;
         padding-right: 0;
+        align-items: flex-start;
+        padding-top:5rem ;
 
     }
 }
@@ -177,7 +178,7 @@ a {
     padding-bottom: 5rem;
 
     height: 90%;
-    overflow: scroll;
+    overflow: auto;
 
     padding: 1.943rem 1.957rem 0 5rem;
 
