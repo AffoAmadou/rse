@@ -297,7 +297,7 @@ onMounted(() => {
 
 .card__wrapper {
   width: 100%;
-  height: 150vh;
+  height: 200vh;
 
   display: flex;
   justify-content: center;
