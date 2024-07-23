@@ -217,9 +217,9 @@ onMounted(() => {
       // onScrubComplete: () => {
       //   ScrollTrigger.refresh();
       // },
-      ontouchstart: () => {
-        ScrollTrigger.refresh();
-      },
+      // ontouchstart: () => {
+      //   ScrollTrigger.refresh();
+      // },
       fastScrollEnd: true, // Ensure fast scroll end
       onUpdate: (self) => {
         // Example throttle
