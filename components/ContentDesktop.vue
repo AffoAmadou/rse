@@ -107,27 +107,6 @@ onMounted(() => {
     function marqueeEnterExit(index) {
         const text = new SplitType(".marquee__text", { types: 'words,chars' });
 
-        // marquee__text
-        // gsap.to(marquee.value, {
-        //     keyframes: [{
-        //         autoAlpha: 0,
-        //         duration: .4,
-        //         ease: 'ease.in',
-        //         // y: -100,
-        //         onComplete: () => {
-        //             console.log(marquee.value, marquee);
-        //             currentIndex.value = index;
-        //             console.log(currentIndex.value);
-        //         }
-        //     },
-        //     {
-        //         autoAlpha: 1,
-        //         duration: .4,
-        //         ease: 'ease.in',
-        //         // y: 0
-        //     }
-        //     ]
-        // });
         let tl = gsap.timeline();
         tl.to(".marquee__text", {
             y: -200,
@@ -158,13 +137,7 @@ onMounted(() => {
             ease: "none",
             onStart: () => {
 
-                // currentIndex.value = index;
-
-                //animate marcquee with an exit and enter animation and in the mddle currentIndex.value = index; using keyframes
-
                 marqueeEnterExit(index);
-
-                //update cu
 
                 gsap.to(body, {
                     backgroundColor: props.contents[index].bgColor,
@@ -191,11 +164,6 @@ onMounted(() => {
                     ease: 'ease.in'
                 })
 
-                // gsap.to((openCartTitle, openCardContent, openCardIndex), {
-                //     color: props.contents[index].cardsColors.text,
-                //     duration: .4,
-                //     ease: 'ease.in'
-                // })
 
                 gsap.to(tagItem, {
                     backgroundColor: props.contents[index].cardsColors.text,
@@ -228,7 +196,7 @@ onMounted(() => {
             scrub: true,
             pin: true,
             start: "top top",
-            end: "+=100%",
+            end: "+=600%",
             // onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
                 let progress = self.progress;
