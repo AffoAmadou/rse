@@ -213,7 +213,7 @@ onMounted(() => {
       scrub: true,
       pin: true,
       start: "top top",
-      end: "+=200%",
+      end: endValue,
       onEnter: () => {
         ScrollTrigger.refresh();
       },
