@@ -323,6 +323,7 @@ onMounted(() => {
     &:last-child {
         margin-bottom: 0;
     }
+
     //first child
 
     &:first-child {

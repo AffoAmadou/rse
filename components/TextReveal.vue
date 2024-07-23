@@ -19,7 +19,8 @@
       zIndex: '0',
     }" :is="secondIcon" :color=props.icons[1].fill class="icon" />
 
-    <p ref="textRevealRef" class="text__reveal__content" v-html="props.text"></p>
+    <p v-if="isMobileT" ref="textRevealRef" class="text__reveal__content" v-html="props.textMobile"></p>
+    <p v-else ref="textRevealRef" class="text__reveal__content" v-html="props.text"></p>
   </section>
 </template>
 <!-- :style="{ backgroundColor: bg }"
@@ -29,10 +30,14 @@ import { onMounted, ref } from 'vue';
 import SplitType from 'split-type';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { isMobile } from "mobile-device-detect";
+
 gsap.registerPlugin(ScrollTrigger);
 
 
 const textSection = ref(null);
+const isMobileT = isMobile;
+console.log(isMobileT);
 
 const props = defineProps({
   text: {
@@ -188,6 +193,9 @@ onMounted(() => {
 
   .char {
     opacity: 0.1;
+  }
+
+  @media screen and (max-width: 600px){
   }
 }
 

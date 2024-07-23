@@ -232,7 +232,7 @@ onMounted(() => {
 
 .index {
     @extend %description-15;
-opacity: 0;
+    opacity: 0;
 
 }
 

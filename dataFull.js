@@ -35,7 +35,9 @@ export const data = [
         textReveal: {
             bg: "#9AD8CB",
             textColor: "#005454",
-            text: "En tant qu'acteur du monde numérique, nous veillons à minimiser notre propre impact environnemen -tal & nous engageons dans la promotion de pratiques durables."
+            text: "En tant qu'acteur du monde numérique, nous veillons à minimiser notre propre impact environnemental & nous engageons dans la promotion de pratiques durables.",
+            textMobile: "En tant qu'acteur du monde numérique, nous veillons à minimiser notre propre impact environnemen -tal & nous engageons dans la promotion de pratiques durables."
+
         ,lineColor:"#00545408",
         icons:[
             {
@@ -161,7 +163,9 @@ fill:"#FFFFFF08",
         textReveal: {
             bg: "#ABBFFF",
             textColor: "#312A89",
-            text: "Nous nous efforçons de laisser une empreinte positive sur la société, contribuant à un monde plus juste et équitable, en incarnant des valeurs sociétales exemplaires."
+            text: "Nous nous efforçons de laisser une empreinte positive sur la société, contribuant à un monde plus juste et équitable, en incarnant des valeurs sociétales exemplaires.",
+            textMobile: "Nous nous efforçons de laisser une empreinte positive sur la société, contribuant à un monde plus juste et équitable, en incarnant des valeurs sociétales exemplaires."
+
          ,lineColor:"#00545408",
          icons:[
             {
@@ -272,7 +276,9 @@ fill:"#FFFFFF08",
         textReveal: {
             bg: "#C9BAF9",
             textColor: "#493167",
-            text: "Nous accordons une priorité absolue à la cohésion d'équipe et à la motivation de nos talents en veillant avant tout au bien-être au travail."
+            text: "Nous accordons une priorité absolue à la cohésion d'équipe et à la motivation de nos talents en veillant avant tout au bien-être au travail.",
+            textMobile: "Nous accordons une priorité absolue à la cohésion d'équipe et à la motivation de nos talents en veillant avant tout au bien-être au travail."
+
             ,lineColor:"#49316708",
             icons:[
                 {
@@ -324,7 +330,7 @@ fill:"#FFFFFF08",
                 },
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Organisation de sorties culturelles",
-                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler.<br> Retrouvez-nous <a target='_blank' href='https://www.instagram.com/p/CxZ-tnCM3bY/'>en vidéo lors de la dernière édition</a> "
+                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler.<br> Retrouvez-nous <a target='_blank' href='https://www.instagram.com/p/CxZ-tnCM3bY/'>en vidéo lors de la dernière édition.</a> "
                      },
                     { top: "30.2rem", left: "90rem", index: "02", text: "Organisation de séminaires collaborateurs",
                         contenu:"A la rentrée, nous organisons un séminaire interne pour revenir sur l'année passée, améliorer notre méthodologie et renforcer la cohésion d'équipe, tout en présentant nos ambitions pour l'année à venir. Cette transparence crée un environnement de confiance et un temps de partage pour tous.",
@@ -372,7 +378,9 @@ fill:"#FFFFFF08",
         textReveal: {
             bg: "#FFB4BF",
             textColor: "#E52A41",
-            text: "Nous sommes engagés dans une démarche altruiste de partage des savoirs, des connaissances et de notre temps pour favoriser une société basée sur l’entraide."
+            text: "Nous sommes engagés dans une démarche altruiste de partage des savoirs, des connaissances et de notre temps pour favoriser une société basée sur l’entraide.",
+            textMobile: "Nous sommes engagés dans une démarche altruiste de partage des savoirs, des connaissances et de notre temps pour favoriser une société basée sur l’entraide."
+
         ,lineColor:"#E52A410A",
         icons:[
             {
