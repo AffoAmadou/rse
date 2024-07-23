@@ -193,6 +193,8 @@ onMounted(() => {
             trigger: contentSection.value,
             scrub: true,
             pin: true,
+            pinSpacer: false,
+            pinSpacing: false,
             start: "top top",
             end: "+=600%",
             // onRefresh: () => ScrollTrigger.refresh(),
