@@ -109,7 +109,7 @@ onMounted(() => {
         const text2 = new SplitType(".ms", { types: 'words,chars' });
 
         let tl = gsap.timeline();
-        tl.to([".marquee__text",".marquee__image"], {
+        tl.to([".marquee__text", ".marquee__image"], {
             autoAlpha: 0,
             duration: .4,
             transformOrigin: "top right",
@@ -117,12 +117,12 @@ onMounted(() => {
                 currentIndex.value = index;
             },
         },)
-            .to([".marquee__text",".marquee__image"], {
-                delay:.1, 
+            .to([".marquee__text", ".marquee__image"], {
+                delay: .1,
                 autoAlpha: 1,
                 duration: .4,
             },)
-  
+
     }
 
 
@@ -133,10 +133,10 @@ onMounted(() => {
             ease: "none",
             onStart: () => {
 
-                if(index!==0){
-                    marqueeEnterExit(index);
-                }
-
+                // if(index!==0){
+                //     marqueeEnterExit(index);
+                // }
+                currentIndex.value = index;
                 gsap.to(body, {
                     backgroundColor: props.contents[index].bgColor,
                     color: props.contents[index].txtColor,
