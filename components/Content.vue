@@ -214,7 +214,10 @@ onMounted(() => {
       pin: true,
       start: "top top",
       end: endValue,
-      onScrubComplete: () => {
+      // onScrubComplete: () => {
+      //   ScrollTrigger.refresh();
+      // },
+      ontouchstart: () => {
         ScrollTrigger.refresh();
       },
     },
