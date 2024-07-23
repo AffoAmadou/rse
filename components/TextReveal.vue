@@ -61,7 +61,7 @@ const props = defineProps({
     default: () => [],
   },
 });
-
+console.log(props.textMobile);
 const textRevealRef = ref(null);
 
 // Define the components using async imports
