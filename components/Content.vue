@@ -87,7 +87,7 @@ onMounted(() => {
 
   ScrollTrigger.create({
     trigger: contentSection.value,
-    start: "top 30%",
+    start: "top top",
     id: 5,
 
     onEnter: () => {
@@ -212,7 +212,7 @@ onMounted(() => {
       trigger: contentSection.value,
       scrub: true,
       pin: true,
-      start: "top top",
+      start: "top 10%",
       end: "+=150%",
       // onScrubComplete: () => {
       //   ScrollTrigger.refresh();
