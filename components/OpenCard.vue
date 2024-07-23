@@ -68,7 +68,8 @@ const close = () => {
 
     });
     let body = document.querySelector('body');
-    body.style.overflow = 'auto';
+    gsap.set(body, { overflow: 'auto' });
+    // body.style.overflow = 'auto';
     ScrollTrigger.refresh();
     gsap.to(card.value, {
         duration: 1.3,
@@ -95,6 +96,7 @@ Signal.on(':openCard', (props) => {
 
 
     openCard.value.style.display = 'flex';
+   
     gsap.to(card.value, {
         duration: 1.3,
         x: 0,
@@ -137,6 +139,7 @@ a {
     padding-right: 2.1rem;
 
     //dont consider mouse events
+    pointer-events: none;
 
 
 
@@ -161,6 +164,9 @@ a {
     justify-content: space-between;
 
     transform: translate(70rem);
+
+    //consider mouse events
+    pointer-events: all;
 
     @media screen and (max-width: 600px) {
         width: 34rem;

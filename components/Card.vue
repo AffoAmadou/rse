@@ -72,6 +72,7 @@
 import Plus from './icons/plus.vue';
 import Signal from '~/utils/signal';
 import { ref, onMounted } from 'vue';
+import { gsap } from 'gsap';
 import Rellax from 'rellax';
 
 const button = ref();
@@ -121,9 +122,10 @@ const props = defineProps({
 
 });
 
-function open() {
+const open = () => {
   let body = document.querySelector('body');
-  body.style.overflow = 'hidden';
+  gsap.set(body, { overflow: 'hidden !important' });
+  // body.style.overflow = 'hidden';
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);
 }
