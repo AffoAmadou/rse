@@ -5,9 +5,9 @@
             <Vue3Marquee class="rf">
                 <div class="marquee__content">
                     <img class="marquee__image" src="/public/img/locaux.png" alt="">
-                    <p class="marquee__text">{{ props.contents[currentIndex].text }}</p>
+                    <p class="marquee__text mf">{{ props.contents[currentIndex].text }}</p>
                     <img class="marquee__image" :src=props.contents[currentIndex].image alt="">
-                    <p class="marquee__text">{{ props.contents[currentIndex].texts }}</p>
+                    <p class="marquee__text ms">{{ props.contents[currentIndex].texts }}</p>
                 </div>
             </Vue3Marquee>
 
@@ -105,39 +105,37 @@ onMounted(() => {
     let reverseTimeline = gsap.timeline({ paused: true });
 
     function marqueeEnterExit(index) {
-        const text = new SplitType(".marquee__text", { types: 'words,chars' });
+        const text = new SplitType(".mf", { types: 'words,chars' });
+        const text2 = new SplitType(".ms", { types: 'words,chars' });
 
         let tl = gsap.timeline();
-        tl.to(".marquee__text", {
-            y: -200,
+        tl.to([".marquee__text",".marquee__image"], {
+            autoAlpha: 0,
             duration: .4,
             transformOrigin: "top right",
-            onStart: () => {
+            onComplete: () => {
                 currentIndex.value = index;
             },
-        }, 0)
-            .to(".marquee__text", {
-                y: 0,
-                duration: .4,
-            },)
-            .to(".marquee__image", {
-                autoAlpha: 0,
-                duration: .4,
-            }, 0)
-            .to(".marquee__image", {
+        },)
+            .to([".marquee__text",".marquee__image"], {
+                delay:.1, 
                 autoAlpha: 1,
                 duration: .4,
             },)
+  
     }
+
+
     sectionCards.forEach((sectionCard, index) => {
         timeline.to(sectionCard, {
 
-            markers: true,
             id: index,
             ease: "none",
             onStart: () => {
 
-                marqueeEnterExit(index);
+                if(index!==0){
+                    marqueeEnterExit(index);
+                }
 
                 gsap.to(body, {
                     backgroundColor: props.contents[index].bgColor,

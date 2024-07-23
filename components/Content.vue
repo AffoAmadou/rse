@@ -306,6 +306,7 @@ onMounted(() => {
 
   padding-left: 2.4rem;
   padding-right: 2.4rem;
+  will-change: transform;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;

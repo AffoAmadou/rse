@@ -135,7 +135,6 @@ onMounted(() => {
         trigger: headerSection.value,
         start: "top 70%",
         id: props.index,
-        markers: true,
 
         onEnter: () => {
             Signal.emit(':navClick', props.index);
