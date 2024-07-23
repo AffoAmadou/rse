@@ -78,6 +78,7 @@ onMounted(() => {
 
 .nav__wrapper {
     max-width: 56.3rem;
+    max-height: 5.6rem;
     padding: 1rem 1.1rem 1rem 1.1rem;
     background-color: white;
     border-radius: 10rem;
