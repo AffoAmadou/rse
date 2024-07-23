@@ -37,6 +37,7 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  z-index: 100;
 
   @media screen and (max-width: 600px) {
     width: 25.5rem;
@@ -46,7 +47,6 @@
 }
 
 .card__top__wrapper {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +58,6 @@
 
   @media screen and (max-width: 600px) {
     max-width: 16.2rem;
-
   }
 }
 
@@ -66,7 +65,6 @@
   @extend %title-60;
 
   font-size: 4.708rem;
-
 }
 </style>
 
@@ -136,7 +134,5 @@ onMounted(() => {
   // var rellax = new Rellax('.rellax');
 
 })
-
-
 
 </script>
