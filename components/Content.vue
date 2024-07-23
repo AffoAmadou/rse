@@ -240,7 +240,7 @@ onMounted(() => {
       scrub: true,
       pin: true,
       start: "top top",
-      end: endValue,
+      end: "+=100%",
     },
     y: `-=${cardWrapperHeight / 2}`,
     ease: "none"
@@ -297,7 +297,7 @@ onMounted(() => {
 
 .card__wrapper {
   width: 100%;
-  height: 200vh;
+  height: 150vh;
 
   display: flex;
   justify-content: center;

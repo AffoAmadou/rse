@@ -108,7 +108,7 @@ const animateHeader = () => {
         // visibility: 'visible',
         duration: 1,
         stagger: .2,
-        delay: .5,
+        delay: .2,
     });
 }
 
