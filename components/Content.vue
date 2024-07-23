@@ -220,6 +220,16 @@ onMounted(() => {
       ontouchstart: () => {
         ScrollTrigger.refresh();
       },
+      fastScrollEnd: true, // Ensure fast scroll end
+          onUpdate: (self) => {
+            // Example throttle
+            if (!self.throttled) {
+              self.throttled = true;
+              setTimeout(() => {
+                self.throttled = false;
+              }, 100); // Adjust timeout for desired throttling
+            }
+          }
     },
     y: `-=${cardWrapperHeight / 2}`,
     ease: "none"
