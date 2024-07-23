@@ -240,7 +240,7 @@ onMounted(() => {
       scrub: true,
       pin: true,
       start: "top top",
-      end: endValue,
+      end: "+=200%",
     },
     y: `-=${cardWrapperHeight / 2}`,
     ease: "none"
