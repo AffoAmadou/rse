@@ -136,7 +136,7 @@ a {
     padding-right: 2.1rem;
 
     //dont consider mouse events
-    pointer-events: none;
+
 
 
     @media screen and (max-width: 600px) {
@@ -158,6 +158,7 @@ a {
     justify-content: space-between;
 
     transform: translate(70rem);
+
     @media screen and (max-width: 600px) {
         width: 34rem;
         height: 80%;
@@ -266,6 +267,12 @@ a {
     display: flex;
     align-items: center;
     background-color: transparent;
+    gap: 1rem;
+    transition: all .3s ease;
+
+    &:hover {
+        gap: 2rem;
+    }
 
     @media screen and (max-width: 600px) {
         font-size: 1.8rem;

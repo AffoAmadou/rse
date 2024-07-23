@@ -324,10 +324,10 @@ fill:"#FFFFFF08",
                 },
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Organisation de sorties culturelles",
-                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler. Retrouvez nous <a target='_blank' href='https://www.instagram.com/p/CxZ-tnCM3bY/'>en vidéo lors de la dernière édition</a> "
+                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler.<br> Retrouvez-nous <a target='_blank' href='https://www.instagram.com/p/CxZ-tnCM3bY/'>en vidéo lors de la dernière édition</a> "
                      },
                     { top: "30.2rem", left: "90rem", index: "02", text: "Organisation de séminaires collaborateurs",
-                        contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler. Retrouvez nos en images lors de la dernière édition : ",
+                        contenu:"A la rentrée, nous organisons un séminaire interne pour revenir sur l'année passée, améliorer notre méthodologie et renforcer la cohésion d'équipe, tout en présentant nos ambitions pour l'année à venir. Cette transparence crée un environnement de confiance et un temps de partage pour tous.",
                         image: "/img/atelier.png"
 
                      },
