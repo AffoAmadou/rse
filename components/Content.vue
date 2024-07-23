@@ -135,12 +135,6 @@ onMounted(() => {
         stagger: .1,
       });
 
-      // gsap.to((openCartTitle, openCardContent, openCardIndex), {
-      //   color: props.cardsColors.text,
-      //   duration: .4,
-      //   ease: 'ease.in'
-      // })
-
     },
     onEnterBack: () => {
       gsap.to(body, {
@@ -149,12 +143,6 @@ onMounted(() => {
         duration: .4,
         ease: 'ease.in'
       });
-
-      // gsap.to((openCartTitle, openCardContent, openCardIndex), {
-      //   color: props.contents[index].cardsColors.text,
-      //   duration: .4,
-      //   ease: 'ease.in'
-      // })
 
       gsap.to(tagItem, {
         backgroundColor: props.cardsColors.text,
@@ -197,24 +185,8 @@ onMounted(() => {
 
 
 
-  // let ContentCards = gsap.utils.toArray(contentSection.value.querySelectorAll('.card'));
 
 
-  // gsap.to(cardWrapper.value, {
-  //   scrollTrigger: {
-  //     trigger: contentSection.value,
-  //     scrub: true,
-  //     pin: true,
-  //     start: "top top",
-  //     end: "+=100%",
-
-  //   },
-  //   y: `-=${cardWrapperHeight / 2}`,
-  //   ease: "none"
-  // });
-
-
-  // Assuming you have the `contentSection` and `cardWrapper` already defined and set up
 
   // Get all cards inside the content section
   let ContentCards = gsap.utils.toArray(contentSection.value.querySelectorAll('.card'));
@@ -236,11 +208,15 @@ onMounted(() => {
 
   gsap.to(cardWrapper.value, {
     scrollTrigger: {
+
       trigger: contentSection.value,
       scrub: true,
       pin: true,
       start: "top top",
       end: "+=200%",
+      onEnter: () => {
+        ScrollTrigger.refresh();
+      },
     },
     y: `-=${cardWrapperHeight / 2}`,
     ease: "none"
