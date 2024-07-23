@@ -27,6 +27,12 @@ body{
   background-color: #005454;
   color: #9AD8CB;
   overscroll-behavior: none;
+
+  //max width 600pxorientacion horizontal
+  @media screen and (max-width: 600px) and (orientation: landscape){
+  background-color: none;
+  color: #005454;
+  }
 }
 
 section{
