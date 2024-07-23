@@ -87,7 +87,7 @@ onMounted(() => {
 
   ScrollTrigger.create({
     trigger: contentSection.value,
-    start: "top top",
+    start: "top 30%",
     id: 5,
 
     onEnter: () => {
@@ -212,14 +212,14 @@ onMounted(() => {
       trigger: contentSection.value,
       scrub: true,
       pin: true,
-      start: "top 10%",
+      start: "top top",
       end: "+=150%",
       // onScrubComplete: () => {
       //   ScrollTrigger.refresh();
       // },
-      // ontouchstart: () => {
-      //   ScrollTrigger.refresh();
-      // },
+      ontouchstart: () => {
+        ScrollTrigger.refresh();
+      },
       fastScrollEnd: true, // Ensure fast scroll end
       onUpdate: (self) => {
         // Example throttle
@@ -286,7 +286,7 @@ onMounted(() => {
 
 .card__wrapper {
   width: 100%;
-  height: 200vh;
+  height: 260vh;
 
   display: flex;
   justify-content: center;
