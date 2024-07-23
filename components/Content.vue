@@ -213,7 +213,7 @@ onMounted(() => {
       scrub: true,
       pin: true,
       start: "top top",
-      end: endValue,
+      end: "+=150%",
       // onScrubComplete: () => {
       //   ScrollTrigger.refresh();
       // },
@@ -221,15 +221,15 @@ onMounted(() => {
         ScrollTrigger.refresh();
       },
       fastScrollEnd: true, // Ensure fast scroll end
-          onUpdate: (self) => {
-            // Example throttle
-            if (!self.throttled) {
-              self.throttled = true;
-              setTimeout(() => {
-                self.throttled = false;
-              }, 100); // Adjust timeout for desired throttling
-            }
-          }
+      onUpdate: (self) => {
+        // Example throttle
+        if (!self.throttled) {
+          self.throttled = true;
+          setTimeout(() => {
+            self.throttled = false;
+          }, 100); // Adjust timeout for desired throttling
+        }
+      }
     },
     y: `-=${cardWrapperHeight / 2}`,
     ease: "none"
