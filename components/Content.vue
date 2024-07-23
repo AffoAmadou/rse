@@ -69,6 +69,7 @@ const props = defineProps({
 
 
 onMounted(() => {
+  ScrollTrigger.normalizeScroll(true);
   const body = document.querySelector('body');
 
   const cards = document.querySelectorAll('.card__index');

@@ -211,8 +211,8 @@ onMounted(() => {
     position: relative;
 
     @media screen and (max-width: 600px) {
-        overflow: hidden;
-
+        // overflow: hidden;
+        height: 70vh;
     }
 
 }
