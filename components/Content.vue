@@ -219,9 +219,7 @@ onMounted(() => {
       //   ScrollTrigger.refresh();
       // },
       ontouchstart: () => {
-        ScrollTrigger.normalizeScroll(true);
       },
-      fastScrollEnd: true, // Ensure fast scroll end
       
     },
     y: `-=${cardWrapperHeight / 2}`,

@@ -25,18 +25,19 @@ Signal.on(":loaderFinished", (index) => {
 <template>
   <div class="full__Content">
     <Logo />
-    <Nav :data=data />
     <Table />
 
     <div v-if="!isLoading">
+      <Nav :data=data />
       <OpenCard />
 
       <div v-for="(item, index) in data" :key="index">
         <Header :index="item.header.index" :text="item.header.text" :tag="item.header.tag"
           :bgColor="item.header.bgColor" :txtColor="item.header.txtColor" :lineColor="item.header.lineColor"
           :icons="item.header.icons" :goto="item.header.menuTag" />
-        <TextReveal :bg="item.textReveal.bg" :textColor="item.textReveal.textColor" :text="item.textReveal.text" :textMobile="item.textReveal.textMobile"
-          :icons="item.textReveal.icons" :lineColor="item.textReveal.lineColor" />
+        <TextReveal :bg="item.textReveal.bg" :textColor="item.textReveal.textColor" :text="item.textReveal.text"
+          :textMobile="item.textReveal.textMobile" :icons="item.textReveal.icons"
+          :lineColor="item.textReveal.lineColor" />
 
         <Content v-for="(content, contentIndex) in item.contents" :key="contentIndex" :textm="content.text"
           :texts="content.texts" :cards="content.cards" :cardsColors="content.cardsColors" :image="content.image"
