@@ -196,7 +196,7 @@ onMounted(() => {
             // pinSpacer: false,
             // pinSpacing: false,
             start: "top top",
-            end: "+=600%",
+            end: "+=400%",
             // onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
                 let progress = self.progress;

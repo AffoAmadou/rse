@@ -412,11 +412,11 @@ fill:"#FFFFFF08",
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Réalisation de projets pro-bono",
                         contenu:"Tous les ans, nous sélectionnons et votons pour un projet éthique ou caritatif auquel nous participons, sous forme de mécénat de compétences. Cette année, c’est aux côtés de Pure Océan que nous nous engageons, en devenant leur agence conseil en communication digitale."
                      },
-                    { top: "30.2rem", left: "90rem", index: "02", text: "Actions de bénévolat",
+                    { top: "60.2rem", left: "90rem", index: "02", text: "Actions de bénévolat",
                         contenu:"Nous encourageons les collaborateurs à s’impliquer dans des actions sociales, comme le bénévolat ou la participation à des projets solidaires."
                      },
-                    { top: "60.1rem", left: "40.5rem", index: "03", text: "Sélection de partenaires locaux",contenu:"Nous favorisons des partenaires nationaux voire locaux, y compris pour l’hébergement de nos développements. " },
-                    { top: "70.1rem", left: "80.5rem", index: "04", text: "Choix de l’open source",contenu:"Nos développements sont basés sur les logiciels et technologies open-source pour une utilisation plus efficace et durable des ressources et l’encouragement d’une économie circulaire." }
+                    { top: "90.1rem", left: "30.5rem", index: "03", text: "Sélection de partenaires locaux",contenu:"Nous favorisons des partenaires nationaux voire locaux, y compris pour l’hébergement de nos développements. " },
+                    { top: "110.1rem", left: "80.5rem", index: "04", text: "Choix de l’open source",contenu:"Nos développements sont basés sur les logiciels et technologies open-source pour une utilisation plus efficace et durable des ressources et l’encouragement d’une économie circulaire." }
 
                 ]
             }
