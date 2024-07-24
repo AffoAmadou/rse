@@ -227,4 +227,9 @@ onMounted(() => {
     padding-left: 4rem;
     align-self: flex-end;
 }
+
+.footer__social__icons{
+    display: flex;
+    gap: 1rem;
+}
 </style>
