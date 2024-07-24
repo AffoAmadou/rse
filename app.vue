@@ -39,10 +39,10 @@ Signal.on(":loaderFinished", (index) => {
           :textMobile="item.textReveal.textMobile" :icons="item.textReveal.icons"
           :lineColor="item.textReveal.lineColor" />
 
-        <Content v-for="(content, contentIndex) in item.contents" :key="contentIndex" :textm="content.text"
+        <!-- <Content v-for="(content, contentIndex) in item.contents" :key="contentIndex" :textm="content.text"
           :texts="content.texts" :cards="content.cards" :cardsColors="content.cardsColors" :image="content.image"
           :bgColor="content.bgColor" :txtColor="content.txtColor" :lineColor="content.lineColor"
-          :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
+          :categoryId="item.header.index" :categoryTag="item.header.menuTag" /> -->
 
         <ContentDesktop :contents="item.contents" :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
       </div>

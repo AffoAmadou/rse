@@ -3,7 +3,7 @@ export const data = [
         header: {
             index: 0,
             text: "Engagés <br/> pour préserver<br/> la planète",
-            tag: "RESPONSABILITÉ ENVIRONNEMENTALE",
+            tag: "Environnement",
             menuTag: "Environnement",
             bgColor: "#005454",
             txtColor: "#9AD8CB",

@@ -59,7 +59,6 @@ onMounted(() => {
         trigger: footerSection.value,
         start: "top 70%",
         id: 5,
-        markers: true,
         onEnter: () => {
             gsap.to(body, {
                 backgroundColor: '#162040',

@@ -124,8 +124,8 @@ const props = defineProps({
 
 const open = () => {
   let body = document.querySelector('body');
-  gsap.set(body, { overflow: 'hidden !important' });
-  // body.style.overflow = 'hidden';
+  // gsap.set(body, { overflow: 'hidden !important' });
+  body.style.overflow = 'hidden';
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);
 }

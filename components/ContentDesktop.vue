@@ -232,7 +232,7 @@ onMounted(() => {
     z-index: 1;
 
     @media screen and (max-width: 600px) {
-        display: none;
+        // display: none;
     }
 }
 
@@ -328,6 +328,15 @@ onMounted(() => {
 
     &:first-child {
         margin-top: 40rem;
+    }
+
+
+    @media screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        height: 136vh;
+        margin-bottom: 0;
     }
 }
 </style>

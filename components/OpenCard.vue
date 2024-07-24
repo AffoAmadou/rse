@@ -68,8 +68,8 @@ const close = () => {
 
     });
     let body = document.querySelector('body');
-    gsap.set(body, { overflow: 'auto' });
-    // body.style.overflow = 'auto';
+    // gsap.set(body, { overflow: 'auto' });
+    body.style.overflow = 'auto';
     ScrollTrigger.refresh();
     gsap.to(card.value, {
         duration: 1.3,

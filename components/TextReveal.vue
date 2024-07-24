@@ -182,7 +182,9 @@ onMounted(() => {
 
   @media screen and (max-width: 600px) {
     overflow: hidden;
-    padding: 14.269rem 2.2rem 5rem 2.1rem;
+    padding: 14.269rem 2.2rem 0rem 2.1rem;
+
+    margin-bottom: 0;
   }
 }
 
@@ -198,8 +200,7 @@ onMounted(() => {
     opacity: 0.1;
   }
 
-  @media screen and (max-width: 600px){
-  }
+  @media screen and (max-width: 600px) {}
 }
 
 .icon {

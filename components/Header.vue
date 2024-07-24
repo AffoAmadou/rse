@@ -27,9 +27,7 @@
                 <p>{{ props.tag }}</p>
             </div>
         </div>
-
     </section>
-
 </template>
 
 <script setup>
@@ -81,6 +79,7 @@ const tag = ref(null);
 const title = ref(null);
 
 const displayIndex = props.index + 1;
+console.log(displayIndex);
 
 const components = [
     defineAsyncComponent(() => import('../components/icons/environnement.vue')),
@@ -108,7 +107,7 @@ const animateHeader = () => {
         // visibility: 'visible',
         duration: 1,
         stagger: .2,
-        delay: .2,
+        delay: .05,
     });
 }
 
@@ -117,11 +116,6 @@ onMounted(() => {
     const body = document.querySelector('body');
     const lineV = document.querySelectorAll(".line__vertical")
     const lineH = document.querySelectorAll(".line__horizontal")
-
-    // gsap.set([index.value, tag.value, title.value], {
-    //     autoAlpha: 0,
-    // });
-
 
     //get all svgs from headerSection
     let svgs = headerSection.value.querySelectorAll('svg');
@@ -135,6 +129,8 @@ onMounted(() => {
         trigger: headerSection.value,
         start: "top 70%",
         id: props.index,
+
+        markers: true,
 
         onEnter: () => {
             Signal.emit(':navClick', props.index);
@@ -213,8 +209,20 @@ onMounted(() => {
     @media screen and (max-width: 600px) {
         overflow: hidden;
 
+        height: fit-content;
+        // padding-top: 5rem;
+        // padding-bottom: 5rem;
+
+        margin: 0;
+
     }
 
+}
+
+.header--0 {
+    @media screen and (max-width: 600px) {
+        height: 100vh;
+    }
 }
 
 .header__content {
