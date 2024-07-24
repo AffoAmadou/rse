@@ -70,6 +70,8 @@ const close = () => {
     let body = document.querySelector('body');
     // gsap.set(body, { overflow: 'auto' });
     body.style.overflow = 'auto';
+    //body pointer events all 
+    body.style.pointerEvents = 'all';
     ScrollTrigger.refresh();
     // gsap.to(card.value, {
     //     duration: 1.3,
@@ -166,7 +168,7 @@ a {
     padding-right: 2.1rem;
 
     //dont consider mouse events
-    pointer-events: none;
+    pointer-events: all;
     opacity: 0;
 
     transform: translate(170rem);

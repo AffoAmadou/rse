@@ -126,6 +126,7 @@ const open = () => {
   let body = document.querySelector('body');
   // gsap.set(body, { overflow: 'hidden !important' });
   body.style.overflow = 'hidden';
+  body.style.pointerEvents = 'none';
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);
 }
