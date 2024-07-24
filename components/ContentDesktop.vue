@@ -194,7 +194,8 @@ onMounted(() => {
             scrub: true,
             pin: true,
             // pinSpacer: false,
-            // pinSpacing: false,
+            pinSpacing: true,
+            markers: true,
             start: "top top",
             end: "+=400%",
             // onRefresh: () => ScrollTrigger.refresh(),
@@ -207,6 +208,9 @@ onMounted(() => {
                 if (self.direction === -1) {
                     timeline.progress(1 - progress);
                 }
+            },
+            onLeaveBack: () => {
+                timeline.progress(0);
             }
         },
         y: `-=${cardWrapperHeight / 1.8}`,

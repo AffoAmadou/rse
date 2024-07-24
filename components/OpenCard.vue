@@ -37,10 +37,9 @@ import Signal from '~/utils/signal';
 import TagItem from './TagItem.vue';
 import Close from './icons/close.vue';
 import Arrow from './icons/arrow.vue';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.normalizeScroll(true);
 
 const openCard = ref(null);
