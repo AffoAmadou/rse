@@ -64,5 +64,10 @@
         height: 1.9rem;
         aspect-ratio: 126/19;
     }
+
+    @media screen and (max-width: 600px){
+        z-index: 1;
+        
+    }
 }
 </style>
