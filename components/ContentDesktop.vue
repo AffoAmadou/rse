@@ -4,10 +4,10 @@
         <div ref="marquee" class="marquee__wrapper">
             <Vue3Marquee class="rf">
                 <div class="marquee__content">
-                    <img class="marquee__image" src="/public/img/locaux.png" alt="">
                     <p class="marquee__text mf">{{ props.contents[currentIndex].text }}</p>
-                    <img class="marquee__image" :src=props.contents[currentIndex].image alt="">
+                    <img class="marquee__image " :src=props.contents[currentIndex].image alt="">
                     <p class="marquee__text ms">{{ props.contents[currentIndex].texts }}</p>
+                    <img style="margin-right: 5rem;" class="marquee__image mis" src="/public/img/locaux.png" alt="">
                 </div>
             </Vue3Marquee>
 
@@ -342,5 +342,9 @@ onMounted(() => {
         height: 136vh;
         margin-bottom: 0;
     }
+}
+
+.msi {
+    margin-left: 3rem;
 }
 </style>
