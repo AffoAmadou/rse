@@ -74,6 +74,7 @@ import Signal from '~/utils/signal';
 import { ref, onMounted } from 'vue';
 import { gsap } from 'gsap';
 import Rellax from 'rellax';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 const button = ref();
 const isHovered = ref(false);
@@ -127,6 +128,7 @@ const open = () => {
   // gsap.set(body, { overflow: 'hidden !important' });
   body.style.overflow = 'hidden';
   // body.style.pointerEvents = 'none';
+  disableBodyScroll(body);
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);
 }

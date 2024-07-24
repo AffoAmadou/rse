@@ -39,6 +39,8 @@ import Close from './icons/close.vue';
 import Arrow from './icons/arrow.vue';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+
 gsap.registerPlugin(ScrollTrigger);
 // ScrollTrigger.normalizeScroll(true);
 
@@ -70,6 +72,7 @@ const close = () => {
     let body = document.querySelector('body');
     // gsap.set(body, { overflow: 'auto' });
     body.style.overflow = 'auto';
+    enableBodyScroll(body);
     //body pointer events all 
     // body.style.pointerEvents = 'all';
     ScrollTrigger.refresh();
