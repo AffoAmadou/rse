@@ -40,7 +40,7 @@ import Arrow from './icons/arrow.vue';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.normalizeScroll(true);
+// ScrollTrigger.normalizeScroll(true);
 
 const openCard = ref(null);
 const cards = ref([]);

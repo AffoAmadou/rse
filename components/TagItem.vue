@@ -1,8 +1,8 @@
 <template>
-    <button @click="onClick(text)" class="tag__item">
+    <div  class="tag__item">
         <component :animation=false :is="currentComponent" :color="whiteColor" />
         <div class="nav__item__text">{{ text }}</div>
-    </button>
+    </div>
 </template>
 
 <script setup>
