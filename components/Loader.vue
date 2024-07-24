@@ -44,7 +44,7 @@ onMounted(() => {
         .to(p2.value, { opacity: 0, duration: 2 }, "<")
         .to(p3.value, { opacity: 0, duration: 1 },)
         .to(loader.value, {
-            opacity: 0, backgroundColor: "#005454", duration: 1,
+            opacity: 0, duration: 1,
             onComplete: () => {
                 Signal.emit(":loaderFinished", "hey")
                 Signal.emit(":showContent", "hey");
