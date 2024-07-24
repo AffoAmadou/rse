@@ -57,7 +57,7 @@
     width: 100%;
     left: 0;
     top: 5.1rem;
-    z-index: 1;
+    z-index: 2;
 
     svg {
         width: 12.6rem;
