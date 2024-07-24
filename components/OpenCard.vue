@@ -184,7 +184,7 @@ a {
 .card__wrapper {
     width: 57.4rem;
     height: 90%;
-
+    overscroll-behavior: contain;
     border-radius: 2rem;
 
     background-color: white;

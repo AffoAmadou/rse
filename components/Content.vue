@@ -291,6 +291,7 @@ onMounted(() => {
   @media screen and (max-width: 600px) {
     flex-direction: column;
     gap: 12rem;
+    will-change: transform;
 
     .card {
 
