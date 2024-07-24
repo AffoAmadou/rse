@@ -72,7 +72,7 @@ const close = () => {
     let body = document.querySelector('body');
     // gsap.set(body, { overflow: 'auto' });
     body.style.overflow = 'auto';
-    enableBodyScroll(body);
+    // enableBodyScroll(body);
     //body pointer events all 
     // body.style.pointerEvents = 'all';
     ScrollTrigger.refresh();

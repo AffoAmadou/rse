@@ -128,7 +128,7 @@ const open = () => {
   // gsap.set(body, { overflow: 'hidden !important' });
   body.style.overflow = 'hidden';
   // body.style.pointerEvents = 'none';
-  disableBodyScroll(body);
+  // disableBodyScroll(body);
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);
 }

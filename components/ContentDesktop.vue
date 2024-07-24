@@ -191,11 +191,14 @@ onMounted(() => {
 
     gsap.to(cardWrapper.value, {
         scrollTrigger: {
+            onEnter: () => {
+                ScrollTrigger.refresh();
+            },
             trigger: contentSection.value,
             scrub: true,
             pin: true,
             // pinSpacer: false,
-            pinSpacing: true,
+            // pinSpacing: true,
             markers: true,
             start: "top top",
             end: "+=400%",
@@ -214,7 +217,7 @@ onMounted(() => {
                 timeline.progress(0);
             }
             ,
-            
+
         },
         y: `-=${cardWrapperHeight / 1.8}`,
         ease: "none"

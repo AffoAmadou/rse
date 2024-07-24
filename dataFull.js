@@ -75,7 +75,7 @@ export const data = [
                     { top: "68.7rem", left: "38.6rem", index: "03", text: "Chauffage modéré",
                         contenu:"Nous établissons une température ambiante raisonnable dans les bureaux en encourageant les apports naturels de chaleur, pour réduire la consommation énergétique."
                      },
-                    { top: "68.7rem", left: "98.6rem", index: "04", text: "Contrat énergie verte",
+                    { top: "98.7rem", left: "98.6rem", index: "04", text: "Contrat énergie verte",
                         contenu:"Nous avons fait le choix d’un fournisseur d'énergie renouvelable en privilégiant les sources locales et en vérifiant les garanties de production et d'impact environnemental : <a target='_blank' href='https://ohm-energie.com/'>ohm-energie.com</a>  (pour <a target='_blank' href='https://ohm-energie.com/?utm_source=adssn&gad_source=1&gclid=Cj0KCQjwv7O0BhDwARIsAC0sjWM3E9UoroiUJQX6Bgui8QiLbrFkG1lFFRm6BJLYUxU5nhLOnUim3OYaAnxnEALw_wcB'>en savoir plus</a>  sur leurs engagements)."
                     ,image: "/img/arbre.png",
                     }
@@ -230,10 +230,10 @@ fill:"#FFFFFF08",
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Parité & équité",
                         contenu:"Étant une entreprise fondée par deux femmes, nous portons une grande attention à la parité au sein de l’agence : notre équipe est composée d’autant d' hommes que de femmes.Les salaires sont également connus de tous et réévalués chaque année."
                      },
-                    { top: "30.2rem", left: "90rem", index: "02", text: "Egalité des chances",
+                    { top: "60.2rem", left: "90rem", index: "02", text: "Egalité des chances",
                         contenu:"Nous recrutons dans toute la France pour favoriser l’égalité des chances. La pratique du télétravail est encouragée au sein de l’agence. Nous n’imposons pas non plus de diplômes ou un niveau d’études dans les postes à pourvoir : nous valorisons l’expérience et le vécu de chacun."
                      },
-                    { top: "70.1rem", left: "40.5rem", index: "03", text: "Priorité aux contrats CDI",
+                    { top: "120.1rem", left: "40.5rem", index: "03", text: "Priorité aux contrats CDI",
                         contenu:"80% de nos collaborateurs sont en CDI, pour notamment assurer la stabilité et l’efficacité de notre équipe."
                      }
                 ]
@@ -311,7 +311,7 @@ fill:"#FFFFFF08",
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Encourager la formation",
                         contenu:"Tous nos collaborateurs sont formés sur les sujets de leur choix, au moins une fois par an.<br>Cet investissement dans le capital humain de notre équipe favorise leur enrichissement personnel et nous permet d'innover sans cesse grâce à l'acquisition de nouvelles connaissances."
                      },
-                    { top: "30.2rem", left: "90rem", index: "02", text: "Crédit temps pour former les autres",
+                    { top: "60.2rem", left: "90rem", index: "02", text: "Crédit temps pour former les autres",
                         contenu:"Nous incitons les collaborateurs à donner de leur temps pour partager leurs expertises, comme donner des cours ou être membre de jurys. Tous les collaborateurs en contrat à durée indéterminée (CDI) sont incités à s’impliquer dans cette mission de transmission."
                      },
                 ]
@@ -332,12 +332,12 @@ fill:"#FFFFFF08",
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Organisation de sorties culturelles",
                         contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler.<br> Retrouvez-nous <a target='_blank' href='https://www.instagram.com/p/CxZ-tnCM3bY/'>en vidéo lors de la dernière édition.</a> "
                      },
-                    { top: "30.2rem", left: "90rem", index: "02", text: "Organisation de séminaires collaborateurs",
+                    { top: "90.2rem", left: "90rem", index: "02", text: "Organisation de séminaires collaborateurs",
                         contenu:"A la rentrée, nous organisons un séminaire interne pour revenir sur l'année passée, améliorer notre méthodologie et renforcer la cohésion d'équipe, tout en présentant nos ambitions pour l'année à venir. Cette transparence crée un environnement de confiance et un temps de partage pour tous.",
                         image: "/img/atelier.png"
 
                      },
-                    { top: "70.1rem", left: "40.5rem", index: "03", text: "Droit à la déconnexion & temps de travail",
+                    { top: "150.1rem", left: "40.5rem", index: "03", text: "Droit à la déconnexion & temps de travail",
                         contenu:"Nous prônons l’équilibre vie privée et le droit à la déconnexion. Les notifications sont systématiquement suspendues en dehors des heures de travail et une dizaine de RTT sont données chaque année. ",
                      }
                 ]
@@ -412,11 +412,11 @@ fill:"#FFFFFF08",
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Réalisation de projets pro-bono",
                         contenu:"Tous les ans, nous sélectionnons et votons pour un projet éthique ou caritatif auquel nous participons, sous forme de mécénat de compétences. Cette année, c’est aux côtés de Pure Océan que nous nous engageons, en devenant leur agence conseil en communication digitale."
                      },
-                    { top: "60.2rem", left: "90rem", index: "02", text: "Actions de bénévolat",
+                    { top: "90.2rem", left: "90rem", index: "02", text: "Actions de bénévolat",
                         contenu:"Nous encourageons les collaborateurs à s’impliquer dans des actions sociales, comme le bénévolat ou la participation à des projets solidaires."
                      },
-                    { top: "90.1rem", left: "30.5rem", index: "03", text: "Sélection de partenaires locaux",contenu:"Nous favorisons des partenaires nationaux voire locaux, y compris pour l’hébergement de nos développements. " },
-                    { top: "110.1rem", left: "80.5rem", index: "04", text: "Choix de l’open source",contenu:"Nos développements sont basés sur les logiciels et technologies open-source pour une utilisation plus efficace et durable des ressources et l’encouragement d’une économie circulaire." }
+                    { top: "160.1rem", left: "30.5rem", index: "03", text: "Sélection de partenaires locaux",contenu:"Nous favorisons des partenaires nationaux voire locaux, y compris pour l’hébergement de nos développements. " },
+                    { top: "240.1rem", left: "80.5rem", index: "04", text: "Choix de l’open source",contenu:"Nos développements sont basés sur les logiciels et technologies open-source pour une utilisation plus efficace et durable des ressources et l’encouragement d’une économie circulaire." }
 
                 ]
             }
