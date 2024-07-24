@@ -57,8 +57,9 @@ onMounted(() => {
 
     ScrollTrigger.create({
         trigger: footerSection.value,
-        start: "top 10%",
+        start: "top 70%",
         id: 5,
+        markers: true,
         onEnter: () => {
             gsap.to(body, {
                 backgroundColor: '#162040',
@@ -167,6 +168,13 @@ onMounted(() => {
     .footer__title {
         @extend %title-35-medium;
         line-height: 4.2rem;
+
+        @media screen and (max-width: 600px){
+            font-size: 2.7rem;
+            font-weight: 700;
+            width: 80%;
+            line-height: 3.323rem;
+        }
     }
   
 }
