@@ -117,6 +117,7 @@ onMounted(() => {
     const lineV = document.querySelectorAll(".line__vertical")
     const lineH = document.querySelectorAll(".line__horizontal")
 
+    ScrollTrigger.refresh();
     //get all svgs from headerSection
     let svgs = headerSection.value.querySelectorAll('svg');
     gsap.to([svgs], {

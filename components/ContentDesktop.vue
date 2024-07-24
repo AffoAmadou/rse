@@ -198,7 +198,7 @@ onMounted(() => {
             markers: true,
             start: "top top",
             end: "+=400%",
-            // onRefresh: () => ScrollTrigger.refresh(),
+            onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
                 let progress = self.progress;
                 if (self.direction === 1) {

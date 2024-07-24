@@ -91,13 +91,11 @@ const secondIcon = computed(() => {
 onMounted(() => {
   const text = new SplitType(textRevealRef.value, { types: 'words,chars' });
 
-
   const body = document.querySelector('body');
   const lineV = document.querySelectorAll(".line__vertical")
   const lineH = document.querySelectorAll(".line__horizontal")
 
   gsap.set(text.chars, { autoAlpha: 0.1 });
-
 
   ScrollTrigger.create({
     trigger: textSection.value,
