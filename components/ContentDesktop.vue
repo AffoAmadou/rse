@@ -213,6 +213,8 @@ onMounted(() => {
             onLeaveBack: () => {
                 timeline.progress(0);
             }
+            ,
+            
         },
         y: `-=${cardWrapperHeight / 1.8}`,
         ease: "none"

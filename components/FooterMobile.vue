@@ -128,7 +128,7 @@ onMounted(() => {
     .marquee__image {
         width: 23.3rem;
         height: 14.995rem;
-        border-radius: 3rem;
+        border-radius: 1rem;
 
         @media screen and (max-width: 600px) {
             width: 10.24rem;
@@ -159,7 +159,7 @@ onMounted(() => {
 
     border-radius: 1.318rem;
     padding: 6.5rem 5rem 6.1rem 5rem;
-    margin-bottom: 50rem;
+    margin-bottom: 45rem;
 
     .footer__text {
         @extend %description-20;
