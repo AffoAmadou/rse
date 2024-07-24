@@ -84,11 +84,13 @@ onMounted(() => {
     position: relative;
     overflow: hidden;
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        }
+        display: none;
+    }
+
     .footer__card {
         position: absolute;
         width: 43.6rem;
@@ -111,7 +113,7 @@ onMounted(() => {
             margin-bottom: 4.5rem;
             line-height: 2.9rem;
 
-            @media screen and (max-width: 600px){
+            @media screen and (max-width: 600px) {
                 margin-top: 1.4rem;
                 margin-bottom: 2.5rem;
                 line-height: 2.3rem;
@@ -134,7 +136,7 @@ onMounted(() => {
 
         }
 
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 600px) {
             position: static;
             width: 95%;
             font-size: 1.4rem;
@@ -157,7 +159,8 @@ onMounted(() => {
         @extend %column;
         justify-content: space-between;
         z-index: 1;
-  @media screen and (max-width: 600px){
+
+        @media screen and (max-width: 600px) {
             position: static;
         }
 
@@ -168,14 +171,14 @@ onMounted(() => {
         @extend %title-35-medium;
         line-height: 4.2rem;
 
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 600px) {
             font-size: 2.7rem;
             font-weight: 700;
             width: 80%;
             line-height: 3.323rem;
         }
     }
-  
+
 }
 
 .footer__social__icons {
@@ -198,11 +201,11 @@ onMounted(() => {
     }
 }
 
-.marquee{
-    @media screen and (max-width: 600px){
-            position: absolute;
-            top: 44rem;
-        }
+.marquee {
+    @media screen and (max-width: 600px) {
+        position: absolute;
+        top: 44rem;
+    }
 }
 
 .marquee__content {

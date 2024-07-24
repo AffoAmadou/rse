@@ -12,7 +12,8 @@ import Table from './components/Table.vue';
 import Logo from './components/Logo.vue';
 import Loader from "./components/Loader.vue";
 import OpenCard from './components/OpenCard.vue';
-
+import FooterMobile from './components/FooterMobile.vue';
+import { isMobile } from 'mobile-device-detect';
 const isLoading = ref(true); // Initial loading state
 
 
@@ -47,7 +48,8 @@ Signal.on(":loaderFinished", (index) => {
         <ContentDesktop :contents="item.contents" :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
       </div>
 
-      <Footer />
+      <Footer v-if="!isMobile" />
+      <FooterMobile v-else />
     </div>
     <div v-else>
       <Loader />

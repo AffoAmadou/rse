@@ -37,6 +37,7 @@ import SplitType from 'split-type';
 
 
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.refresh();
 
 const contentSection = ref(null);
 const contentWrapper = ref(null);
@@ -198,7 +199,7 @@ onMounted(() => {
             markers: true,
             start: "top top",
             end: "+=400%",
-            onRefresh: () => ScrollTrigger.refresh(),
+            // onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
                 let progress = self.progress;
                 if (self.direction === 1) {
