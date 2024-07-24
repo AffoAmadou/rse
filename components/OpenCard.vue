@@ -41,6 +41,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 gsap.registerPlugin(ScrollToPlugin);
+ScrollTrigger.normalizeScroll(true);
 
 const openCard = ref(null);
 const cards = ref([]);
@@ -71,13 +72,35 @@ const close = () => {
     // gsap.set(body, { overflow: 'auto' });
     body.style.overflow = 'auto';
     ScrollTrigger.refresh();
-    gsap.to(card.value, {
-        duration: 1.3,
-        x: "70rem",
+    // gsap.to(card.value, {
+    //     duration: 1.3,
+    //     x: "70rem",
+    //     ease: "power4",
+    //     onComplete: () => {
+    //         let tl = gsap.timeline();
+    //         tl.to(openCard.value, {
+    //             duration: 0.3,
+    //             autoAlpha: 0,
+
+    //         }, 0)
+    //             .to(openCard.value, {
+    //                 duration: 0.3,
+    //                 autoAlpha: 0,
+    //                 onComplete: () => {
+    //                     openCard.value.style.display = 'none';
+    //                 }
+    //             }, 0)
+
+
+    // }
+    // })
+
+    gsap.to(openCard.value, {
+        duration: 0.3,
+        x: "170rem",
+        autoAlpha: 0,
         ease: "power4",
-        onComplete: () => {
-            openCard.value.style.display = 'none';
-        }
+
     })
 
 
@@ -96,12 +119,17 @@ Signal.on(':openCard', (props) => {
 
 
     openCard.value.style.display = 'flex';
-   
-    gsap.to(card.value, {
-        duration: 1.3,
+    let tl = gsap.timeline();
+    tl.to(openCard.value, {
+        duration: 0.3,
         x: 0,
         ease: "power4",
     })
+
+        .to(openCard.value, {
+            autoAlpha: 1,
+            ease: "power4",
+        })
 
 });
 
@@ -129,7 +157,7 @@ a {
 .open__card {
     width: 100%;
     height: 100vh;
-    display: none;
+    // display: none;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.296);
     z-index: 101;
@@ -140,14 +168,16 @@ a {
 
     //dont consider mouse events
     pointer-events: none;
+    opacity: 0;
 
+    transform: translate(170rem);
 
 
     @media screen and (max-width: 600px) {
         justify-content: center;
         padding-right: 0;
         align-items: flex-start;
-        padding-top:5rem ;
+        padding-top: 5rem;
 
     }
 }
@@ -163,7 +193,6 @@ a {
     flex-direction: column;
     justify-content: space-between;
 
-    transform: translate(70rem);
 
     //consider mouse events
     pointer-events: all;
