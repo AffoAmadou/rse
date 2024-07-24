@@ -71,7 +71,7 @@ const close = () => {
     // gsap.set(body, { overflow: 'auto' });
     body.style.overflow = 'auto';
     //body pointer events all 
-    body.style.pointerEvents = 'all';
+    // body.style.pointerEvents = 'all';
     ScrollTrigger.refresh();
     // gsap.to(card.value, {
     //     duration: 1.3,
