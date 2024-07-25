@@ -45,6 +45,7 @@ const cardWrapper = ref(null);
 const currentIndex = ref(0);
 const marquee = ref(null);
 
+
 let tl;
 
 const props = defineProps({
@@ -134,11 +135,13 @@ onMounted(() => {
             ease: "none",
             onStart: () => {
 
-                // if(index!==0){
-                //     marqueeEnterExit(index);
-                // }
-                currentIndex.value = index;
+                if (index !== 0) {
+                    // marqueeEnterExit(index);
+                    currentIndex.value = index;
+                }
+
                 console.log(index);
+
                 gsap.to(body, {
                     backgroundColor: props.contents[index].bgColor,
                     color: props.contents[index].txtColor,
