@@ -97,31 +97,31 @@ onMounted(() => {
         backgroundColor: props.bgColor,
         color: props.txtColor,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       });
 
       gsap.to(tagItem, {
         backgroundColor: props.cardsColors.text,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       })
 
       gsap.to(cards, {
         color: props.cardsColors.number,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       });
 
       gsap.to(carsTexts, {
         color: props.cardsColors.text,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       })
 
       gsap.to(btn, {
         fill: props.cardsColors.text,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       })
 
       gsap.to(lineV, {
@@ -142,30 +142,30 @@ onMounted(() => {
         backgroundColor: props.bgColor,
         color: props.txtColor,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       });
 
       gsap.to(tagItem, {
         backgroundColor: props.cardsColors.text,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       })
       gsap.to(cards, {
         color: props.cardsColors.number,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       });
 
       gsap.to(carsTexts, {
         color: props.cardsColors.text,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       })
 
       gsap.to(btn, {
         fill: props.cardsColors.text,
         duration: .4,
-        ease: 'ease.in'
+        ease: 'ease.inout'
       })
 
       gsap.to(lineV, {

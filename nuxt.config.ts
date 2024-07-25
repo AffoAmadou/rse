@@ -18,13 +18,15 @@ export default defineNuxtConfig({
     '@/assets/scss/index.scss',
 
   ],
-
+  
   nitro: {
     routeRules: {
       "/img/**": { headers: { 'cache-control': `public,max-age=${2024},s-maxage=${2024}` } },
       "/_nuxt/**": { headers: { 'cache-control': `public,max-age=${2024},s-maxage=${2024}` } },
     }
   }
+
+
 
 })
 

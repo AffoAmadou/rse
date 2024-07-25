@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt-modules/compression": "^0.1.0",
     "@nuxt/image": "^1.7.0",
     "@nuxt/kit": "^3.4.2",
     "@nuxt/schema": "^3.4.2",
@@ -18,10 +19,17 @@
     "gsap": "^3.12.5",
     "mobile-device-detect": "^0.4.3",
     "nuxt": "^3.12.3",
+    "nuxt-compress": "^5.0.0",
     "rellax": "^1.12.1",
     "sass": "^1.77.6",
     "split-type": "^0.3.4",
     "vue": "latest",
     "vue3-marquee": "^4.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "globals": "^15.8.0"
   }
 }

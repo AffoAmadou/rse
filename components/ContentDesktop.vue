@@ -112,7 +112,7 @@ onMounted(() => {
         let tl = gsap.timeline();
         tl.to([".marquee__text", ".marquee__image"], {
             autoAlpha: 0,
-            duration: .4,
+            duration: 1.4,
             transformOrigin: "top right",
             onComplete: () => {
                 currentIndex.value = index;
@@ -121,7 +121,7 @@ onMounted(() => {
             .to([".marquee__text", ".marquee__image"], {
                 delay: .1,
                 autoAlpha: 1,
-                duration: .4,
+                duration: 1.4,
             },)
 
     }
@@ -141,33 +141,33 @@ onMounted(() => {
                 gsap.to(body, {
                     backgroundColor: props.contents[index].bgColor,
                     color: props.contents[index].txtColor,
-                    duration: .4,
-                    ease: 'ease.in'
+                    duration: 1.4,
+                    ease: 'ease.inout'
                 });
 
                 gsap.to(cards, {
                     color: props.contents[index].cardsColors.number,
-                    duration: .4,
-                    ease: 'ease.in'
+                    duration: 1.4,
+                    ease: 'ease.inout'
                 });
 
                 gsap.to(carsTexts, {
                     color: props.contents[index].cardsColors.text,
-                    duration: .4,
-                    ease: 'ease.in'
+                    duration: 1.4,
+                    ease: 'ease.inout'
                 })
 
                 gsap.to(btn, {
                     fill: props.contents[index].cardsColors.text,
-                    duration: .4,
-                    ease: 'ease.in'
+                    duration: 1.4,
+                    ease: 'ease.inout'
                 })
 
 
                 gsap.to(tagItem, {
                     backgroundColor: props.contents[index].cardsColors.text,
-                    duration: .4,
-                    ease: 'ease.in'
+                    duration: 1.4,
+                    ease: 'ease.inout'
                 })
 
 

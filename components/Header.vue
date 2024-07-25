@@ -140,8 +140,8 @@ onMounted(() => {
             gsap.to(body, {
                 backgroundColor: props.bgColor,
                 color: props.txtColor,
-                duration: .4,
-                ease: "ease.in",
+                duration: 1.4,
+                ease: "ease.inout",
             });
 
             gsap.to(lineV, {
@@ -162,8 +162,8 @@ onMounted(() => {
             gsap.to(body, {
                 backgroundColor: props.bgColor,
                 color: props.txtColor,
-                duration: .4,
-                ease: "ease.in",
+                duration: 1.4,
+                ease: "ease.inout",
             });
 
             gsap.to(lineV, {

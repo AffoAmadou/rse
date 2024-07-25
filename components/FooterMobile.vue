@@ -56,8 +56,8 @@ onMounted(() => {
             gsap.to(body, {
                 backgroundColor: '#162040',
                 color: '#FF90B9',
-                duration: .4,
-                ease: 'ease.in'
+                duration: 1.4,
+                ease: 'ease.inout'
             });
         },
     });
