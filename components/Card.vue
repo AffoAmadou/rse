@@ -73,8 +73,8 @@ import Plus from './icons/plus.vue';
 import Signal from '~/utils/signal';
 import { ref, onMounted } from 'vue';
 import { gsap } from 'gsap';
-import Rellax from 'rellax';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 const button = ref();
 const isHovered = ref(false);
@@ -125,9 +125,14 @@ const props = defineProps({
 
 const open = () => {
   let body = document.querySelector('body');
-  // gsap.set(body, { overflow: 'hidden !important' });
+  let element = document.getElementById("idCard");
   body.style.overflow = 'hidden';
-  // body.style.pointerEvents = 'none';
+
+  ScrollTrigger.refresh();
+  //element pointer events none
+  //  body.style.pointerEvents = 'none';
+
+
   // disableBodyScroll(body);
   Signal.emit(':openCard', (props));
   Signal.emit(':sendId', dynamicId);

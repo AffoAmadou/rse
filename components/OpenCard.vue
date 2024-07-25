@@ -39,8 +39,7 @@ import Close from './icons/close.vue';
 import Arrow from './icons/arrow.vue';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-
+import { isMobile } from 'mobile-device-detect';
 gsap.registerPlugin(ScrollTrigger);
 // ScrollTrigger.normalizeScroll(true);
 
@@ -63,42 +62,19 @@ const card = ref(null);
 const close = () => {
 
     let id = "#" + idCard.value;
-    gsap.to(window, {
-        duration: 1.3,
-        scrollTo: id,
-        ease: "power4",
+        gsap.to(window, {
+            duration: 1.3,
+            scrollTo: id,
+            ease: "power4",
 
-    });
+        });
     let body = document.querySelector('body');
     // gsap.set(body, { overflow: 'auto' });
     body.style.overflow = 'auto';
-    // enableBodyScroll(body);
-    //body pointer events all 
-    // body.style.pointerEvents = 'all';
+    // body.style.pointerEvents = 'auto';
+    
     ScrollTrigger.refresh();
-    // gsap.to(card.value, {
-    //     duration: 1.3,
-    //     x: "70rem",
-    //     ease: "power4",
-    //     onComplete: () => {
-    //         let tl = gsap.timeline();
-    //         tl.to(openCard.value, {
-    //             duration: 0.3,
-    //             autoAlpha: 0,
-
-    //         }, 0)
-    //             .to(openCard.value, {
-    //                 duration: 0.3,
-    //                 autoAlpha: 0,
-    //                 onComplete: () => {
-    //                     openCard.value.style.display = 'none';
-    //                 }
-    //             }, 0)
-
-
-    // }
-    // })
-
+   
     gsap.to(openCard.value, {
         duration: 0.3,
         x: "170rem",
