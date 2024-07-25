@@ -1,12 +1,12 @@
 <template>
-    <div  class="tag__item">
+    <div class="tag__item">
         <component :animation=false :is="currentComponent" :color="whiteColor" />
         <div class="nav__item__text">{{ text }}</div>
     </div>
 </template>
 
 <script setup>
-import { computed, defineAsyncComponent,ref } from 'vue';
+import { computed, defineAsyncComponent, ref } from 'vue';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import Signal from '~/utils/signal';
@@ -69,6 +69,7 @@ function onClick(text) {
     border-radius: 10rem;
     gap: .5rem;
     font-size: 1.404rem;
+    height: 3.628rem;
 
     .nav__item__text {
         color: white !important;
