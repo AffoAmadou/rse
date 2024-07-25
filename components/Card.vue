@@ -128,7 +128,7 @@ const open = () => {
   let element = document.getElementById("idCard");
   body.style.overflow = 'hidden';
 
-  ScrollTrigger.refresh();
+  // ScrollTrigger.refresh();
   //element pointer events none
   //  body.style.pointerEvents = 'none';
 

@@ -140,7 +140,7 @@ a {
     // display: none;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.296);
-    z-index: 101;
+    z-index: 1010;
     // display: flex;
     justify-content: end;
     align-items: center;
