@@ -70,6 +70,7 @@ function onClick(text) {
     gap: .5rem;
     font-size: 1.404rem;
     height: 3.628rem;
+    max-width: 15.752rem;
 
     .nav__item__text {
         color: white !important;
