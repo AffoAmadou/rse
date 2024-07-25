@@ -2,10 +2,11 @@
     <div ref="footerSection" class="footerMobile">
         <Vue3Marquee class="marquee">
             <div class="marquee__content">
-                <img class="marquee__image" src="/img/footer.png" alt="">
                 <p class="marquee__text">Made on earth</p>
                 <img class="marquee__image" src="/img/footer.png" alt="">
                 <p class="marquee__text">with heart</p>
+                <img style="margin-right: 5rem;" class="marquee__image" src="/img/footer.png" alt="">
+
             </div>
         </Vue3Marquee>
 
@@ -71,9 +72,9 @@ onMounted(() => {
             scrub: true,
             pin: true,
             start: "top top",
-            end: "+=70%"
+            end: "+=40%"
         },
-        y: `-=${cardWrapperHeight / 2.3}`,
+        y: `-=${cardWrapperHeight / 2.8}`,
         ease: "none"
     })
 });
@@ -143,10 +144,11 @@ onMounted(() => {
 .footer__content {
     position: absolute;
     z-index: 2;
-
-    height: 200%;
+    display: flex;
+    height: 160%;
     top: 0;
     left: 0;
+    flex-direction: column;
 
     padding: 20rem 3rem 1rem 3rem;
 
@@ -159,7 +161,7 @@ onMounted(() => {
 
     border-radius: 1.318rem;
     padding: 6.5rem 5rem 6.1rem 5rem;
-    margin-bottom: 45rem;
+    margin-bottom: 25rem;
 
     .footer__text {
         @extend %description-20;
@@ -228,7 +230,7 @@ onMounted(() => {
     align-self: flex-end;
 }
 
-.footer__social__icons{
+.footer__social__icons {
     display: flex;
     gap: 1rem;
 }

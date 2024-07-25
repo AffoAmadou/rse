@@ -138,6 +138,7 @@ onMounted(() => {
                 //     marqueeEnterExit(index);
                 // }
                 currentIndex.value = index;
+                console.log(index);
                 gsap.to(body, {
                     backgroundColor: props.contents[index].bgColor,
                     color: props.contents[index].txtColor,
