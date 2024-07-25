@@ -28,7 +28,7 @@ Signal.on(":loaderFinished", (index) => {
     <Logo />
     <Table />
 
-    <div v-show="!isLoading">
+    <div v-if="!isLoading">
       <Nav :data=data />
       <OpenCard />
 

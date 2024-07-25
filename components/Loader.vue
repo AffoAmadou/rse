@@ -3,13 +3,10 @@
         <div ref="container" class="loader__content">
             <p ref="p1">Bienvenue !</p>
             <p ref="p2">
-                Nous allons découvrir les actions RSE
-                mises en place par notre agence.
+                L’agence s’engage à une démarche RSE ambitieuse et croit en l’impact positif de la communication sur le monde.
             </p>
             <p ref="p3">
-                Ensemble, nous analyserons comment
-                ces actions concrètes contribuent
-                à un avenir meilleur.
+                En collaborant avec nous, vous choisissez une vision porteuse de sens et contribuez à un avenir plus juste et durable.
             </p>
         </div>
     </div>
