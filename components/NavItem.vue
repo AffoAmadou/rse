@@ -86,7 +86,7 @@ function onClick(text) {
   // color: black !important;
   @media screen and (max-width: 600px) {
     // padding: 0;
-    padding: .9rem 1.5rem .928rem 1.5rem;
+    // padding: .9rem 1.5rem .928rem 1.5rem;
 
     width: 6.2rem;
     height: 3.628rem;
