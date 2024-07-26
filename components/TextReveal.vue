@@ -198,7 +198,16 @@ onMounted(() => {
     opacity: 0.1;
   }
 
-  @media screen and (max-width: 600px) {}
+  @media screen and (max-width: 912px) {
+    font-size: 12rem;
+    line-height: 11.481rem;
+    font-weight: 600;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 5rem;
+    line-height: 5.481rem;
+
+  }
 }
 
 .icon {

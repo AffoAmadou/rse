@@ -1,13 +1,8 @@
 <template>
     <div class="nav " :class="{ 'is-visible': navVisible }">
         <div class="nav__wrapper">
-            <NavItem v-for="item in computedData" 
-            :key="item.index" 
-            :text="item.menuTag" 
-            :index="item.index " 
-            :bgColor="item.backgroundColor"
-            :active="item.index === activeIndex"
-            />
+            <NavItem v-for="item in computedData" :key="item.index" :text="item.menuTag" :index="item.index"
+                :bgColor="item.backgroundColor" :active="item.index === activeIndex" />
         </div>
 
     </div>
@@ -84,5 +79,17 @@ onMounted(() => {
     border-radius: 10rem;
     display: flex;
     gap: 0.54rem;
+
+    @media screen and (max-width: 912px) {
+        max-width: 96.3rem;
+        max-height: 9.6rem;
+        padding: 1rem 1.1rem 1rem 1.1rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        max-width: 56.3rem;
+        max-height: 5.6rem;
+        padding: 1rem 1.1rem 1rem 1.1rem;
+    }
 }
 </style>

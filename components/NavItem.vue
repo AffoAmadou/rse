@@ -72,6 +72,17 @@ function onClick(text) {
   height: 3.628rem;
   text-transform: capitalize;
 
+  @media screen and (max-width: 912px) {
+    // padding: 0;
+
+    max-width:25.2rem;
+    font-size: 2rem;
+    height: 4.628rem;
+
+   
+
+  }
+
   // color: black !important;
   @media screen and (max-width: 600px) {
     // padding: 0;

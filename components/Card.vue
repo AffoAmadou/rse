@@ -39,6 +39,10 @@
   cursor: pointer;
   z-index: 100;
 
+  @media screen and (max-width: 912px) {
+    width: 38.5rem;
+   
+  }
   @media screen and (max-width: 600px) {
     width: 25.5rem;
     position: static;

@@ -209,15 +209,10 @@ onMounted(() => {
 
     @media screen and (max-width: 600px) {
         overflow: hidden;
-
         height: fit-content;
-        // padding-top: 5rem;
-        // padding-bottom: 5rem;
-
         margin: 0;
 
     }
-
 }
 
 .header--0 {
@@ -253,6 +248,8 @@ onMounted(() => {
     letter-spacing: -.4rem;
     width: 100%;
     opacity: 0;
+
+    
 
 }
 

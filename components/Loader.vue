@@ -84,6 +84,12 @@ onMounted(() => {
     top: 36rem;
     left: 15.5rem;
 
+    @media screen and (max-width: 912px) {
+        width: 78%;
+        top: 90rem;
+        left: 2.5rem;
+    }
+
     @media screen and (max-width: 600px) {
         width: 34.5rem;
         top: 40rem;

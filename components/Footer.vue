@@ -104,7 +104,9 @@ onMounted(() => {
         color: #162040;
         z-index: 1;
 
-
+        @media screen and (max-width: 912px) {
+           top: 46rem;
+        }
 
         .footer__text {
             @extend %description-20;
@@ -159,6 +161,11 @@ onMounted(() => {
         @extend %column;
         justify-content: space-between;
         z-index: 1;
+
+        @media screen and (max-width: 912px) {
+           top: 136rem;
+        }
+
 
         @media screen and (max-width: 600px) {
             position: static;
