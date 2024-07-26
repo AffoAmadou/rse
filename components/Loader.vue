@@ -37,9 +37,9 @@ onMounted(() => {
         .to(p1.value, { opacity: 0, duration: 2, delay: 0.2 }, "<")
         .to(p2.value, { opacity: 1, duration: 3, delay: 0.2 }, "<")
         .to(container.value, { y: `-=${p3Height}`, duration: 2.5, ease: "expo.inOut" })
-        .to(p3.value, { opacity: 1, duration: 3 }, "<")
+        .to(p3.value, { opacity: 1, duration: 4 }, "<")
         .to(p2.value, { opacity: 0, duration: 2 }, "<")
-        .to(p3.value, { opacity: 0, duration: 1 },)
+        .to(p3.value, { opacity: 0, duration: 2 },)
         .to(loader.value, {
             opacity: 0, duration: 1,
             onComplete: () => {
