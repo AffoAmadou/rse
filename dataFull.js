@@ -36,7 +36,7 @@ export const data = [
             bg: "#9AD8CB",
             textColor: "#005454",
             text: "En tant qu'acteur du monde numérique, nous veillons à minimiser notre propre impact environnemental & nous engageons dans la promotion de pratiques durables.",
-            textMobile: "En tant qu'acteur du monde numérique, nous veillons à minimiser notre propre impact environnemen -tal & nous engageons dans la promotion de pratiques durables."
+            textMobile: "En tant qu'acteur du monde numérique, nous veillons à minimiser notre propre impact environnem- ental & nous engageons dans la promotion de pratiques durables."
 
         ,lineColor:"#00545408",
         icons:[

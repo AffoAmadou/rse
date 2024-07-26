@@ -229,7 +229,7 @@ onMounted(() => {
     align-items: center;
 
     @media screen and (max-width: 600px) {
-        max-width: 33.6rem;
+        max-width: 100%;
     }
 }
 
@@ -245,7 +245,7 @@ onMounted(() => {
     text-transform: uppercase;
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
-    letter-spacing: -.4rem;
+    letter-spacing: -.2rem;
     width: 100%;
     opacity: 0;
 

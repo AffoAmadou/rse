@@ -204,9 +204,10 @@ onMounted(() => {
     font-weight: 600;
   }
   @media screen and (max-width: 600px) {
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 5.481rem;
-
+    font-weight: 600;
+    line-height: 5.3rem !important;
   }
 }
 
