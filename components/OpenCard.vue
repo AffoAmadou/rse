@@ -101,7 +101,7 @@ Signal.on(':openCard', (props) => {
     openCard.value.style.display = 'flex';
     let tl = gsap.timeline();
     tl.to(openCard.value, {
-        duration: 0.3,
+        duration: 0.5,
         x: 0,
         ease: "power4",
     })
