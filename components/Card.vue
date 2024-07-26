@@ -41,8 +41,9 @@
 
   @media screen and (max-width: 912px) {
     width: 38.5rem;
-   
+
   }
+
   @media screen and (max-width: 600px) {
     width: 25.5rem;
     position: static;
@@ -54,6 +55,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    padding-bottom: .2rem;
+    padding-top: .2rem;
+    padding-right: .2rem;
+
+  }
 }
 
 .card__bottom__wrapper {

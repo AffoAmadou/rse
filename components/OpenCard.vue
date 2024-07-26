@@ -62,19 +62,19 @@ const card = ref(null);
 const close = () => {
 
     let id = "#" + idCard.value;
-        gsap.to(window, {
-            duration: 1.3,
-            scrollTo: id,
-            ease: "power4",
+    gsap.to(window, {
+        duration: 1.3,
+        scrollTo: id,
+        ease: "power4",
 
-        });
+    });
     let body = document.querySelector('body');
     // gsap.set(body, { overflow: 'auto' });
     body.style.overflow = 'auto';
     // body.style.pointerEvents = 'auto';
-    
+
     ScrollTrigger.refresh();
-   
+
     gsap.to(openCard.value, {
         duration: 0.3,
         x: "170rem",
@@ -219,6 +219,10 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+        padding: .2rem .2rem .2rem 0;
+    }
 }
 
 .open__card__title {
