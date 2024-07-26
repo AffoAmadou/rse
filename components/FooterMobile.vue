@@ -72,9 +72,9 @@ onMounted(() => {
             scrub: true,
             pin: true,
             start: "top top",
-            end: "+=40%"
+            end: "+=10%"
         },
-        y: `-=${cardWrapperHeight / 2.8}`,
+        y: `-=${cardWrapperHeight / 3.8}`,
         ease: "none"
     })
 });
@@ -202,6 +202,11 @@ onMounted(() => {
 
     }
 
+
+    @media screen and (max-width: 600px) {
+       
+        margin-bottom: 5rem;
+    }
 }
 
 .footer__title {
