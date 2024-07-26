@@ -176,7 +176,7 @@ onMounted(() => {
   padding-left: 15.5rem;
   padding-bottom: 10rem;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 
   @media screen and (max-width: 600px) {
     overflow: hidden;
