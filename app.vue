@@ -45,7 +45,7 @@ Signal.on(":loaderFinished", (index) => {
           :bgColor="content.bgColor" :txtColor="content.txtColor" :lineColor="content.lineColor"
           :categoryId="item.header.index" :categoryTag="item.header.menuTag" /> -->
 
-        <ContentDesktop :contents="item.contents" :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
+        <ContentDesktop :mobileScroll="item.mobileScroll" :contents="item.contents" :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
       </div>
 
       <Footer v-if="!isMobile" />

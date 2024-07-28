@@ -16,7 +16,8 @@
         <div class="content__wrapper" ref="contentWrapper">
 
             <div ref="cardWrapper" class="card__wrapper">
-                <div class="sectionCard" v-for="(item, index) in props.contents" :key="index">
+                <div class="sectionCard" v-for="(item, index) in props.contents" :key="index"
+                    :style="{ height: isMobile ? item.sectionCardHeight : '110vh' }">
                     <Card v-for="card in item.cards" :cards="item.cards" :key="card.index" :top="card.top"
                         :left="card.left" :index="card.index" :text="card.text" :colors="item.cardsColors"
                         :categoryId="props.categoryId" :categoryTag="props.categoryTag" :contentIndex="item.text"
@@ -34,6 +35,7 @@ import { onMounted, ref } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
+import { isMobile } from 'mobile-device-detect';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -57,6 +59,10 @@ const props = defineProps({
     categoryTag: {
         type: String,
         default: 'Environnement',
+    },
+    mobileScroll: {
+        type: Number,
+        default: 2,
     },
 });
 
@@ -140,7 +146,6 @@ onMounted(() => {
                     currentIndex.value = index;
                 }
 
-                console.log(index);
 
                 gsap.to(body, {
                     backgroundColor: props.contents[index].bgColor,
@@ -192,6 +197,10 @@ onMounted(() => {
 
     });
 
+    let end = isMobile ? "+=400%" : "+=200%";
+
+    let y = isMobile ? props.mobileScroll : 1.8;
+    console.log(y);
 
     gsap.to(cardWrapper.value, {
         scrollTrigger: {
@@ -205,7 +214,7 @@ onMounted(() => {
             // pinSpacing: true,
             markers: true,
             start: "top top",
-            end: "+=400%",
+            end: end,
             // onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
                 let progress = self.progress;
@@ -223,7 +232,7 @@ onMounted(() => {
             ,
 
         },
-        y: `-=${cardWrapperHeight / 1.8}`,
+        y: `-=${cardWrapperHeight / y}`,
         ease: "none"
     });
 
@@ -289,6 +298,7 @@ onMounted(() => {
     @media screen and (max-width: 600px) {
         flex-direction: column;
         gap: 12rem;
+        height: 500vh;
 
         .card {
 
@@ -350,6 +360,7 @@ onMounted(() => {
         flex-direction: column;
         gap: 4rem;
         height: 136vh;
+
         margin-bottom: 0;
     }
 }

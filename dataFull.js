@@ -53,6 +53,7 @@ export const data = [
         ]
         }
         ,
+        mobileScroll: 2.1,
         contents: [
             {
                 text: "LOCAUX DE L’AGENCE",
@@ -65,6 +66,7 @@ export const data = [
                     number:"#9AD8CB",
                     text:"#005454"
                 },
+                sectionCardHeight: "136rem",
                 cards: [
                     { top: "10.1rem", left: "15.5rem", index: "01", text: "Eco-gestion du matériel de bureau",
                         contenu:'Notre matériel de bureau est acheté en seconde main, sur des sites comme  <a target="_blank" href="https://www.backmarket.fr/fr-fr">backmarket.fr</a>.<br>Tous nos équipements sont recyclés à leur tour. Nous privilégions également des fournitures écologiques.'
@@ -94,6 +96,8 @@ export const data = [
                     number:"#9AD8CB",
                     text:"#005454"
                 },
+                sectionCardHeight: "90rem",
+
                 cards: [
                     { top: "14.1rem", left: "25.5rem", index: "01", text: "Favoriser le télétravail", 
                         contenu:"Selon une étude de l'ADEME, le télétravail pourrait permettre de réduire de 20% les émissions de particules fines liées aux trajets. Nous encourageons le télétravail <br> 2 jours par semaine minimum, ce qui réduit considérablement nos déplacements et améliore le bien-être des équipes." },
@@ -116,6 +120,8 @@ export const data = [
                     number:"#9AD8CB",
                     text:"#005454"
                 },
+                sectionCardHeight: "70rem",
+
                 cards: [
                     { top: "14.1rem", left: "25.5rem", index: "01", text: "Education de nos clients",
                         contenu:"En tant qu’acteur engagé du numérique, notre responsabilité est grande dans l’éducation de nos clients. Nous recommandons systématiquement des solutions et bonnes pratiques éco-responsables dans la mise en place de nos projets : hébergement, éco-conception, limitation de l’utilisation des ressources, etc."
@@ -190,6 +196,7 @@ fill:"#FFFFFF08",
             }
         ]
         },
+        mobileScroll: 3.6,
         contents: [
             {
                 text: "ethique des affaires",
@@ -203,6 +210,8 @@ fill:"#FFFFFF08",
                     number:"#ABBFFF",
                     text:"#312A89"
                 },
+                sectionCardHeight: "90rem",
+
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Mise en place d'un code de conduite",
                         contenu:"Nous avons établi des normes claires de comportement et d'éthique professionnelle attendues de la part de toute l’équipe. Ce code de conduite sert de cadre aux décisions et aux actions des collaborateurs et participe à la promotion d'une culture d'entreprise responsable."
@@ -226,6 +235,8 @@ fill:"#FFFFFF08",
                     number:"#ABBFFF",
                     text:"#312A89"
                 },
+                sectionCardHeight: "90rem",
+
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Parité & équité",
                         contenu:"Étant une entreprise fondée par deux femmes, nous portons une grande attention à la parité au sein de l’agence : notre équipe est composée d’autant d' hommes que de femmes.Les salaires sont également connus de tous et réévalués chaque année."
@@ -294,6 +305,7 @@ fill:"#FFFFFF08",
             ]
 
         },
+        mobileScroll: 4.3,
         contents: [
             {
                 text: "formations et certifications",
@@ -307,6 +319,8 @@ fill:"#FFFFFF08",
                     number:"#C9BAF9",
                     text:"#493167"
                 },
+                sectionCardHeight: "70rem",
+
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Encourager la formation",
                         contenu:"Tous nos collaborateurs sont formés sur les sujets de leur choix, au moins une fois par an.<br>Cet investissement dans le capital humain de notre équipe favorise leur enrichissement personnel et nous permet d'innover sans cesse grâce à l'acquisition de nouvelles connaissances."
@@ -328,6 +342,8 @@ fill:"#FFFFFF08",
                     number:"#C9BAF9",
                     text:"#493167"
                 },
+                sectionCardHeight: "90rem",
+
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Organisation de sorties culturelles",
                         contenu:"Chaque année, nous organisons au moins une sortie culturelle. Baya, icône de la peinture algérienne à la Vieille Charité de Marseille en passant par l’exposition immersive d’Alphonse Mucha à l’Opéra Bastille de Paris, nos sorties ont toujours un lien avec l’art pour inspirer l’équipe et se renouveler.<br> Retrouvez-nous <a target='_blank' href='https://www.instagram.com/p/CxZ-tnCM3bY/'>en vidéo lors de la dernière édition.</a> "
@@ -379,7 +395,7 @@ fill:"#FFFFFF08",
             bg: "#FFB4BF",
             textColor: "#E52A41",
             text: "Nous sommes engagés dans une démarche altruiste de partage des savoirs, des connaissances et de notre temps pour favoriser une société basée sur l’entraide.",
-            textMobile: "Nous sommes engagés dans une démarche altruiste de partage des savoirs, des connaissances et de notre temps pour favoriser une société basée sur l’entraide."
+            textMobile: "Nous sommes engagés dans une démarche altruiste de partage des savoirs, des connaissan -ces et de notre temps pour favoriser une société basée sur l’entraide."
 
         ,lineColor:"#E52A410A",
         icons:[
@@ -396,6 +412,7 @@ fill:"#FFFFFF08",
         ]
 
         },
+        mobileScroll: 6,
         contents: [
             {
                 text: "actions et décisions",
@@ -408,6 +425,8 @@ fill:"#FFFFFF08",
                     number:"#FFB4BF",
                     text:"#E52A41"
                 },
+                sectionCardHeight: "136rem",
+
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Réalisation de projets pro-bono",
                         contenu:"Tous les ans, nous sélectionnons et votons pour un projet éthique ou caritatif auquel nous participons, sous forme de mécénat de compétences. Cette année, c’est aux côtés de Pure Océan que nous nous engageons, en devenant leur agence conseil en communication digitale."

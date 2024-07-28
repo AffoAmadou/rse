@@ -79,7 +79,6 @@ const tag = ref(null);
 const title = ref(null);
 
 const displayIndex = props.index + 1;
-console.log(displayIndex);
 
 const components = [
     defineAsyncComponent(() => import('../components/icons/environnement.vue')),
@@ -131,7 +130,7 @@ onMounted(() => {
         start: "top 70%",
         id: props.index,
 
-        markers: true,
+        // markers: true,
 
         onEnter: () => {
             Signal.emit(':navClick', props.index);
@@ -248,8 +247,9 @@ onMounted(() => {
     letter-spacing: -.2rem;
     width: 100%;
     opacity: 0;
-
+    word-break: break-word;
     
+
 
 }
 

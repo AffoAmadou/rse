@@ -37,7 +37,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const textSection = ref(null);
 const isMobileT = isMobile;
-console.log(isMobileT);
 
 const props = defineProps({
   text: {
@@ -61,7 +60,6 @@ const props = defineProps({
     default: () => [],
   },
 });
-console.log(props.textMobile);
 const textRevealRef = ref(null);
 
 // Define the components using async imports
