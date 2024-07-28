@@ -199,7 +199,7 @@ onMounted(() => {
 
     let end = isMobile ? "+=400%" : "+=200%";
 
-    let y = isMobile ? 2 : 1.8;
+    let y = isMobile ? 1.8 : 1.8;
     console.log(cardWrapperHeight, y);
 
     gsap.to(cardWrapper.value, {
