@@ -53,7 +53,7 @@ export const data = [
         ]
         }
         ,
-        mobileScroll: 2,
+        mobileScroll: 1.8,
         contents: [
             {
                 text: "LOCAUX DE L’AGENCE",
@@ -96,7 +96,7 @@ export const data = [
                     number:"#9AD8CB",
                     text:"#005454"
                 },
-                 sectionCardHeight: "110rem",
+                  sectionCardHeight: "87rem",
 
                 cards: [
                     { top: "14.1rem", left: "25.5rem", index: "01", text: "Favoriser le télétravail", 
@@ -120,7 +120,7 @@ export const data = [
                     number:"#9AD8CB",
                     text:"#005454"
                 },
-                 sectionCardHeight: "90rem",
+                 sectionCardHeight: "55rem",
 
                 cards: [
                     { top: "14.1rem", left: "25.5rem", index: "01", text: "Education de nos clients",
@@ -210,7 +210,7 @@ fill:"#FFFFFF08",
                     number:"#ABBFFF",
                     text:"#312A89"
                 },
-                 sectionCardHeight: "110rem",
+                  sectionCardHeight: "87rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Mise en place d'un code de conduite",
@@ -235,7 +235,7 @@ fill:"#FFFFFF08",
                     number:"#ABBFFF",
                     text:"#312A89"
                 },
-                 sectionCardHeight: "110rem",
+                  sectionCardHeight: "87rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Parité & équité",
@@ -319,7 +319,7 @@ fill:"#FFFFFF08",
                     number:"#C9BAF9",
                     text:"#493167"
                 },
-                 sectionCardHeight: "90rem",
+                 sectionCardHeight: "55rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Encourager la formation",
@@ -342,7 +342,7 @@ fill:"#FFFFFF08",
                     number:"#C9BAF9",
                     text:"#493167"
                 },
-                 sectionCardHeight: "110rem",
+                  sectionCardHeight: "87rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Organisation de sorties culturelles",
