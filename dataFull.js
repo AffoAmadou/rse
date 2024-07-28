@@ -53,7 +53,7 @@ export const data = [
         ]
         }
         ,
-        mobileScroll: "400%",
+        mobileScroll: 2,
         contents: [
             {
                 text: "LOCAUX DE L’AGENCE",
@@ -196,7 +196,7 @@ fill:"#FFFFFF08",
             }
         ]
         },
-        mobileScroll: "800%",
+        mobileScroll: 3.5,
         contents: [
             {
                 text: "ethique des affaires",
@@ -305,7 +305,7 @@ fill:"#FFFFFF08",
             ]
 
         },
-        mobileScroll: "50%",
+        mobileScroll: 3.5,
         contents: [
             {
                 text: "formations et certifications",
@@ -412,7 +412,7 @@ fill:"#FFFFFF08",
         ]
 
         },
-        mobileScroll: "50%",
+        mobileScroll: 4.5,
         contents: [
             {
                 text: "actions et décisions",
