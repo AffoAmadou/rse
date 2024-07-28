@@ -30,7 +30,7 @@
 
 <script setup>
 import Card from './Card.vue';
-
+//  :style="{ height: isMobile ? item.sectionCardHeight : '110vh' }"
 import { onMounted, ref } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
