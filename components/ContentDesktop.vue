@@ -17,7 +17,7 @@
 
             <div ref="cardWrapper" class="card__wrapper">
                 <div class="sectionCard" v-for="(item, index) in props.contents" :key="index"
-                    :style="{ height: isMobile ? item.sectionCardHeight : '110vh' }">
+                   >
                     <Card v-for="card in item.cards" :cards="item.cards" :key="card.index" :top="card.top"
                         :left="card.left" :index="card.index" :text="card.text" :colors="item.cardsColors"
                         :categoryId="props.categoryId" :categoryTag="props.categoryTag" :contentIndex="item.text"
