@@ -53,7 +53,7 @@ export const data = [
         ]
         }
         ,
-        mobileScroll: 2.1,
+        mobileScroll: "400%",
         contents: [
             {
                 text: "LOCAUX DE L’AGENCE",
@@ -66,7 +66,7 @@ export const data = [
                     number:"#9AD8CB",
                     text:"#005454"
                 },
-                sectionCardHeight: "136rem",
+                 sectionCardHeight: "150rem",
                 cards: [
                     { top: "10.1rem", left: "15.5rem", index: "01", text: "Eco-gestion du matériel de bureau",
                         contenu:'Notre matériel de bureau est acheté en seconde main, sur des sites comme  <a target="_blank" href="https://www.backmarket.fr/fr-fr">backmarket.fr</a>.<br>Tous nos équipements sont recyclés à leur tour. Nous privilégions également des fournitures écologiques.'
@@ -96,7 +96,7 @@ export const data = [
                     number:"#9AD8CB",
                     text:"#005454"
                 },
-                sectionCardHeight: "90rem",
+                 sectionCardHeight: "110rem",
 
                 cards: [
                     { top: "14.1rem", left: "25.5rem", index: "01", text: "Favoriser le télétravail", 
@@ -120,7 +120,7 @@ export const data = [
                     number:"#9AD8CB",
                     text:"#005454"
                 },
-                sectionCardHeight: "70rem",
+                 sectionCardHeight: "90rem",
 
                 cards: [
                     { top: "14.1rem", left: "25.5rem", index: "01", text: "Education de nos clients",
@@ -196,7 +196,7 @@ fill:"#FFFFFF08",
             }
         ]
         },
-        mobileScroll: 3.6,
+        mobileScroll: "800%",
         contents: [
             {
                 text: "ethique des affaires",
@@ -210,7 +210,7 @@ fill:"#FFFFFF08",
                     number:"#ABBFFF",
                     text:"#312A89"
                 },
-                sectionCardHeight: "90rem",
+                 sectionCardHeight: "110rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Mise en place d'un code de conduite",
@@ -235,7 +235,7 @@ fill:"#FFFFFF08",
                     number:"#ABBFFF",
                     text:"#312A89"
                 },
-                sectionCardHeight: "90rem",
+                 sectionCardHeight: "110rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Parité & équité",
@@ -305,7 +305,7 @@ fill:"#FFFFFF08",
             ]
 
         },
-        mobileScroll: 4.3,
+        mobileScroll: "50%",
         contents: [
             {
                 text: "formations et certifications",
@@ -319,7 +319,7 @@ fill:"#FFFFFF08",
                     number:"#C9BAF9",
                     text:"#493167"
                 },
-                sectionCardHeight: "70rem",
+                 sectionCardHeight: "90rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Encourager la formation",
@@ -342,7 +342,7 @@ fill:"#FFFFFF08",
                     number:"#C9BAF9",
                     text:"#493167"
                 },
-                sectionCardHeight: "90rem",
+                 sectionCardHeight: "110rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Organisation de sorties culturelles",
@@ -412,7 +412,7 @@ fill:"#FFFFFF08",
         ]
 
         },
-        mobileScroll: 6,
+        mobileScroll: "50%",
         contents: [
             {
                 text: "actions et décisions",
@@ -425,7 +425,7 @@ fill:"#FFFFFF08",
                     number:"#FFB4BF",
                     text:"#E52A41"
                 },
-                sectionCardHeight: "136rem",
+                 sectionCardHeight: "150rem",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Réalisation de projets pro-bono",

@@ -15,8 +15,8 @@
         </div>
         <div class="content__wrapper" ref="contentWrapper">
 
-            <div ref="cardWrapper" class="card__wrapper">
-                <div class="sectionCard" v-for="(item, index) in props.contents" :key="index"
+            <div  ref="cardWrapper" class="card__wrapper">
+                <div class="sectionCard" v-for="(item, index) in props.contents" :key="index" :style="{ height: isMobile ? item.sectionCardHeight : '110vh' }"
                    >
                     <Card v-for="card in item.cards" :cards="item.cards" :key="card.index" :top="card.top"
                         :left="card.left" :index="card.index" :text="card.text" :colors="item.cardsColors"
@@ -61,7 +61,7 @@ const props = defineProps({
         default: 'Environnement',
     },
     mobileScroll: {
-        type: Number,
+        type: String,
         default: 2,
     },
 });
@@ -200,7 +200,7 @@ onMounted(() => {
     let end = isMobile ? "+=400%" : "+=200%";
 
     let y = isMobile ? 2 : 1.8;
-    console.log(y);
+    console.log(cardWrapperHeight, y);
 
     gsap.to(cardWrapper.value, {
         scrollTrigger: {
@@ -288,9 +288,7 @@ onMounted(() => {
 .card__wrapper {
     width: 100%;
     min-height: 700vh;
-    // min-height: 100vh;
-    //     height: fit-content;
-
+  
     display: flex;
     flex-direction: column;
 
@@ -298,7 +296,9 @@ onMounted(() => {
     @media screen and (max-width: 600px) {
         flex-direction: column;
         gap: 12rem;
-        height: 500vh;
+        height: 200vh;
+
+        // background: green;
 
         .card {
 
