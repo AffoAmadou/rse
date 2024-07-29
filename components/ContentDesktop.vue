@@ -194,10 +194,10 @@ onMounted(() => {
                     stagger: .1,
                 });
             },
-            onComplete: () => {
-                // currentIndex.value = index;
-                ScrollTrigger.refresh();
-            },
+            // onComplete: () => {
+            //     // currentIndex.value = index;
+            //     ScrollTrigger.refresh();
+            // },
 
         });
 
