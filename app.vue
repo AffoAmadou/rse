@@ -14,11 +14,16 @@ import Loader from "./components/Loader.vue";
 import OpenCard from './components/OpenCard.vue';
 import FooterMobile from './components/FooterMobile.vue';
 import { isMobile } from 'mobile-device-detect';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 const isLoading = ref(true); // Initial loading state
 
 
 
 Signal.on(":loaderFinished", (index) => {
+  ScrollTrigger.normalizeScroll(true)
   isLoading.value = false;
 })
 </script>
@@ -45,7 +50,8 @@ Signal.on(":loaderFinished", (index) => {
           :bgColor="content.bgColor" :txtColor="content.txtColor" :lineColor="content.lineColor"
           :categoryId="item.header.index" :categoryTag="item.header.menuTag" /> -->
 
-        <ContentDesktop :mobileScroll="item.mobileScroll" :contents="item.contents" :categoryId="item.header.index" :categoryTag="item.header.menuTag" />
+        <ContentDesktop :mobileScroll="item.mobileScroll" :contents="item.contents" :categoryId="item.header.index"
+          :categoryTag="item.header.menuTag" />
       </div>
 
       <Footer v-if="!isMobile" />
