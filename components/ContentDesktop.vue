@@ -205,7 +205,7 @@ onMounted(() => {
     gsap.to(cardWrapper.value, {
         scrollTrigger: {
             onEnter: () => {
-                ScrollTrigger.refresh();
+                // ScrollTrigger.refresh();
 
             },
             trigger: contentSection.value,
