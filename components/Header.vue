@@ -203,7 +203,7 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 0;
+    z-index: 2;
     position: relative;
 
     @media screen and (max-width: 600px) {
