@@ -300,7 +300,7 @@ onMounted(() => {
     @media screen and (max-width: 600px) {
         flex-direction: column;
         gap: 12rem;
-        height: 200vh;
+        height: 200svh;
 
         // background: green;
 
@@ -363,7 +363,7 @@ onMounted(() => {
         display: flex;
         flex-direction: column;
         gap: 4rem;
-        height: 136vh;
+        height: 136svh;
 
         margin-bottom: 0;
     }
