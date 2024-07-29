@@ -196,7 +196,7 @@ fill:"#FFFFFF08",
             }
         ]
         },
-        mobileScroll: 2.7,
+        mobileScroll: 3,
         contents: [
             {
                 text: "ethique des affaires",
