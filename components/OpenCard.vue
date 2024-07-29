@@ -154,6 +154,7 @@ a {
 
 
     @media screen and (max-width: 600px) {
+        height: 100lvh;
         justify-content: center;
         padding-right: 0;
         align-items: flex-start;
