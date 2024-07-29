@@ -216,6 +216,7 @@ onMounted(() => {
             // pinSpacing: true,
             markers: true,
             start: "top top",
+            pinType: 'fixed',
             end: end,
             // onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
