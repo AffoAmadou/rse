@@ -38,8 +38,6 @@ import SplitType from 'split-type';
 import { isMobile } from 'mobile-device-detect';
 
 
-gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.refresh();
 
 
 const contentSection = ref(null);
@@ -74,6 +72,9 @@ const randomNumbers = () => {
 
 
 onMounted(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.refresh();
+
     const body = document.querySelector('body');
     const cards = document.querySelectorAll('.card__index');
     const carsTexts = document.querySelectorAll('.card__bottom__text');
