@@ -40,6 +40,8 @@ import { isMobile } from 'mobile-device-detect';
 
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.refresh();
+ScrollTrigger.normalizeScroll(true);
+
 
 const contentSection = ref(null);
 const contentWrapper = ref(null);
