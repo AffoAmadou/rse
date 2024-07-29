@@ -211,7 +211,7 @@ onMounted(() => {
             trigger: contentSection.value,
             scrub: true,
             pin: true,
-            anticipatePin: .3,
+            anticipatePin: .7,
             // pinSpacer: false,
             // pinSpacing: true,
             markers: true,
