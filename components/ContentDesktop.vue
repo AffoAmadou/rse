@@ -73,7 +73,10 @@ const randomNumbers = () => {
 
 onMounted(() => {
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.refresh();
+
+    if (isMobile) {
+        ScrollTrigger.refresh();
+    }
 
     const body = document.querySelector('body');
     const cards = document.querySelectorAll('.card__index');
