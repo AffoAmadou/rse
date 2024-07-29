@@ -24,6 +24,7 @@ const isLoading = ref(true); // Initial loading state
 
 Signal.on(":loaderFinished", (index) => {
   isLoading.value = false;
+  ScrollTrigger.normalizeScroll(true);
 })
 </script>
 
