@@ -216,7 +216,7 @@ onMounted(() => {
 
 .header--0 {
     @media screen and (max-width: 600px) {
-        height: 100vh;
+        height: 100svh;
     }
 }
 
