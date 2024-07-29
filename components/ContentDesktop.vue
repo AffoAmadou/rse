@@ -206,6 +206,8 @@ onMounted(() => {
         scrollTrigger: {
             onEnter: () => {
                 ScrollTrigger.refresh();
+                ScrollTrigger.normalizeScroll(true);
+
             },
             trigger: contentSection.value,
             scrub: true,
