@@ -142,8 +142,8 @@ onMounted(() => {
             onStart: () => {
 
                 if (index !== 0) {
-                    // marqueeEnterExit(index);
-                    currentIndex.value = index;
+                    marqueeEnterExit(index);
+                    // currentIndex.value = index;
                 }
 
 
