@@ -3,8 +3,8 @@ import { ref } from 'vue';
 import Header from "./components/Header.vue";
 import TextReveal from "./components/TextReveal.vue";
 import Nav from "./components/Nav.vue";
-import Content from "./components/Content.vue";
 import ContentDesktop from './components/ContentDesktop.vue';
+import ContentMobile from './components/ContentMobile.vue';
 import Footer from "./components/Footer.vue";
 import { data } from "./dataFull.js";
 import Signal from '~/utils/signal';
@@ -48,10 +48,9 @@ Signal.on(":loaderFinished", (index) => {
           :textMobile="item.textReveal.textMobile" :icons="item.textReveal.icons"
           :lineColor="item.textReveal.lineColor" />
 
-        <!-- <Content v-for="(content, contentIndex) in item.contents" :key="contentIndex" :textm="content.text"
-          :texts="content.texts" :cards="content.cards" :cardsColors="content.cardsColors" :image="content.image"
-          :bgColor="content.bgColor" :txtColor="content.txtColor" :lineColor="content.lineColor"
-          :categoryId="item.header.index" :categoryTag="item.header.menuTag" /> -->
+       
+          <!-- <ContentMobile :mobileScroll="item.mobileScroll" :contents="item.contents" :categoryId="item.header.index"
+          :categoryTag="item.header.menuTag" /> -->
 
         <ContentDesktop :mobileScroll="item.mobileScroll" :contents="item.contents" :categoryId="item.header.index"
           :categoryTag="item.header.menuTag" />

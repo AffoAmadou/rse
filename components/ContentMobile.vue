@@ -214,8 +214,8 @@ onMounted(() => {
 
     let end = isMobile ? "+=400%" : "+=200%";
 
-    // let y = isMobile ? props.mobileScroll : 1.8;
-    let y = 1.8;
+    let y = isMobile ? props.mobileScroll : 1.8;
+    // let y = 1.8;
     console.log(cardWrapperHeight, y);
 
     gsap.to(cardWrapper.value, {
@@ -227,7 +227,7 @@ onMounted(() => {
             scrub: true,
             pin: true,
             anticipatePin: 1,
-            pinType: "transform",
+            
             markers: true,
             start: "top top",
             end: end,
@@ -268,9 +268,13 @@ onMounted(() => {
     @extend %center;
     position: relative;
     z-index: 1;
-
+display: none;
     @media screen and (max-width: 600px) {
-        // display: none;
+        display: flex;
+    }
+
+    @media screen and (orientation: landscape) {
+        display: none;
     }
 }
 

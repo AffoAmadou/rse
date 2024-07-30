@@ -15,7 +15,7 @@
                 <p v-if="currentCard" v-html="currentCard.contenu" class="open_card__content">
                 </p>
 
-                <img v-if="image" :src="currentCard.image" alt="" class="open__card__image">
+                <!-- <img v-if="image" :src="currentCard.image" alt="" class="open__card__image"> -->
             </div>
             <div class="open__card__bottom">
                 <p v-if="currentCard" v-html="currentCard.index" class="open__card__index"></p>

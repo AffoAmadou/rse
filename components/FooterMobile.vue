@@ -77,10 +77,12 @@ onMounted(() => {
             trigger: footerSection.value,
             scrub: true,
             pin: true,
+            // pinSpacer: false,
+            pinSpacing: true,
             start: "top top",
             end: "+=10%"
         },
-        y: `-=${cardWrapperHeight / 3.8}`,
+        y: `-=${cardWrapperHeight / 3}`,
         ease: "none"
     })
 });
@@ -101,6 +103,7 @@ onMounted(() => {
         align-items: center;
         width: 100%;
         height: 100vh;
+        margin-top:-20rem ;
     }
 
     @media screen and (orientation: landscape) {
