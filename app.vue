@@ -17,11 +17,14 @@ import FooterMobileLand from './components/FooterMobileLand.vue';
 import { isMobile } from 'mobile-device-detect';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const isLoading = ref(true); // Initial loading state
 
-
+// if (isMobile) {
+//         ScrollTrigger.refresh();
+//     }
 
 Signal.on(":loaderFinished", (index) => {
   isLoading.value = false;

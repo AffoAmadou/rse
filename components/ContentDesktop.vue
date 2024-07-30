@@ -74,9 +74,7 @@ const randomNumbers = () => {
 onMounted(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    if (isMobile) {
-        ScrollTrigger.refresh();
-    }
+    ScrollTrigger.config({ ignoreMobileResize: true})
 
     const body = document.querySelector('body');
     const cards = document.querySelectorAll('.card__index');
@@ -215,18 +213,17 @@ onMounted(() => {
     gsap.to(cardWrapper.value, {
         scrollTrigger: {
             onEnter: () => {
-                // ScrollTrigger.refresh();
 
             },
             trigger: contentSection.value,
             scrub: true,
             pin: true,
             anticipatePin: .7,
+            
             // pinSpacer: false,
             // pinSpacing: true,
             markers: true,
             start: "top top",
-            pinType: 'fixed',
             end: end,
             // onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
