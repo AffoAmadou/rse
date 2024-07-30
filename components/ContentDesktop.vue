@@ -306,7 +306,7 @@ onMounted(() => {
 
     display: flex;
     flex-direction: column;
-
+will-change: transform;
 
     @media screen and (max-width: 600px) {
         flex-direction: column;
