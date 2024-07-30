@@ -84,7 +84,7 @@ onMounted(() => {
     top: 36rem;
     left: 15.5rem;
 
-    @media screen and (max-width: 912px) {
+    @media screen and (max-width: 912px) and (orientation: portrait) {
         width: 78%;
         top: 90rem;
         left: 2.5rem;
