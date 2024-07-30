@@ -106,7 +106,7 @@ onMounted(() => {
         color: #162040;
         z-index: 1;
 
-        @media screen and (max-width: 912px)  and (orientation: landscape) {
+        @media screen and (max-width: 912px)  and (orientation: portrait) {
             top: 46rem;
         }
 
@@ -164,7 +164,7 @@ onMounted(() => {
         justify-content: space-between;
         z-index: 1;
 
-        @media screen and (max-width: 912px)  and (orientation: landscape) {
+        @media screen and (max-width: 912px)  and (orientation: portrait) {
             top: 136rem;
         }
 
