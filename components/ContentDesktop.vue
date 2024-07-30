@@ -282,6 +282,7 @@ console.log("callsss");        const text = new SplitType(".mf", { types: 'words
     position: absolute;
     top: 0;
     left: 0;
+    will-change: transform;
 
     @extend %center;
     z-index: 0;
@@ -386,5 +387,9 @@ will-change: transform;
 
 .msi {
     margin-left: 3rem;
+}
+
+.rf{
+    will-change: transform;
 }
 </style>
