@@ -18,7 +18,9 @@ export const data = [
                     top:"8.5rem",
                     left:"10rem",
                     fill:"#FFFFFF08",
-                                        transform: 'rotate(0deg)'
+                                        transform: 'rotate(0deg)',
+                                        topMob:"8.5rem"  ,                            
+
 
                 },
                 {
@@ -28,7 +30,9 @@ export const data = [
                     top:"36rem",
                     left:"95.2rem",
                     fill:"#FFFFFF08",
-                                        transform: 'rotate(0deg)'
+                                        transform: 'rotate(0deg)',
+                                        topMob:"8.5rem"  ,                            
+
 
                 }
             ]
@@ -48,7 +52,8 @@ export const data = [
                 height:"50.1rem",
                 top:"16.4rem",
                 left:"112rem",
-                fill:"#0054540F",                                 transform: 'rotate(0deg)'
+                fill:"#0054540F",   
+                transform: 'rotate(0deg)'
 
             },
            
@@ -153,6 +158,8 @@ export const data = [
                     height:"35.4rem",
                     top:"41.1rem",
                     left:"15.6rem",
+                    topMob:"8.5rem"  ,                            
+
 fill:"#FFFFFF08",
                     transform: 'rotate(0deg)'
 
@@ -164,7 +171,9 @@ fill:"#FFFFFF08",
                     top:"1.9rem",
                     left:"76.7rem",
                     fill:"#FFFFFF08",
-                                        transform: 'rotate(0deg)'
+                                        transform: 'rotate(0deg)',
+                                        topMob:"8.5rem"  ,                            
+
 
                 }
             ]
@@ -273,7 +282,9 @@ fill:"#FFFFFF08",
                     top:"16.9rem",
                     left:"17rem",
                     fill:"#FFFFFF08",
-                    transform: 'rotate(0deg)'
+                    transform: 'rotate(0deg)',
+                    topMob:"8.5rem"  ,                            
+
 
                 },
                 {
@@ -283,7 +294,9 @@ fill:"#FFFFFF08",
                     top:"37.5rem",
                     left:"102rem",
                     fill:"#FFFFFF08",
-                    transform: 'rotate(0deg)'
+                    transform: 'rotate(0deg)',
+                    topMob:"8.5rem"  ,                            
+
 
                 }
             ]
@@ -385,7 +398,9 @@ fill:"#FFFFFF08",
                     top:"34rem",
                     left:"8.6rem",
                     fill:"#FFFFFF0F",
-                    transform: 'rotate(0deg)'
+                    transform: 'rotate(0deg)',
+                    topMob:".5rem"  ,                            
+
                 },
                 {
                     index:3,
@@ -394,7 +409,9 @@ fill:"#FFFFFF08",
                     top:"8.4rem",
                     left:"113.4rem",
                     fill:"#FFFFFF0F",
-                    transform: 'rotate(90deg)'
+                    transform: 'rotate(90deg)',
+                    topMob:"8.5rem"  ,                            
+
                 }
             ]
             

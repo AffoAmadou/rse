@@ -3,7 +3,7 @@
         <component :style="{
             width: props.icons[0].width,
             height: props.icons[0].height,
-            top: props.icons[0].top,
+            top: isMobile ? props.icons[0].topMob : props.icons[0].top,
             left: props.icons[0].left,
             transform: props.icons[0].transform,
             zIndex: '0',
