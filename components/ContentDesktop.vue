@@ -230,7 +230,7 @@ console.log("callsss");        const text = new SplitType(".mf", { types: 'words
              pinType: "fixed",
             markers: true,
             start: "top top",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             end:()=> end,
             onUpdate: (self) => {
                 let progress = self.progress;

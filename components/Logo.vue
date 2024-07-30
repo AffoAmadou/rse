@@ -59,7 +59,7 @@
     width: 100%;
     left: 0;
     height: 7.1rem;
-    z-index: 20;
+    z-index: 1;
     // background-color: #162040;
 
 a{
