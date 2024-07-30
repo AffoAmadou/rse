@@ -1,7 +1,7 @@
 <template>
     <section class="content" ref="contentSection">
 
-        <div ref="marquee" class="marquee__wrapper">
+        <!-- <div ref="marquee" class="marquee__wrapper">
             <Vue3Marquee class="rf">
                 <div class="marquee__content">
                     <p class="marquee__text mf">{{ props.contents[currentIndex].text }}</p>
@@ -10,7 +10,7 @@
                     <img style="margin-right: 5rem;" class="marquee__image mis" src="/public/img/locaux.png" alt="">
                 </div>
             </Vue3Marquee>
-        </div>
+        </div> -->
         
         <div class="content__wrapper" ref="contentWrapper">
 
@@ -73,7 +73,9 @@ const randomNumbers = () => {
 onMounted(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    ScrollTrigger.config({ ignoreMobileResize: true})
+    ScrollTrigger.config({ ignoreMobileResize: true,
+        fastScrollEnd: true,
+    })
 
 
     const body = document.querySelector('body');
@@ -187,7 +189,6 @@ onMounted(() => {
                     ease: 'ease.inout'
                 })
 
-
                 gsap.to(tagItem, {
                     backgroundColor: props.contents[index].cardsColors.text,
                     duration: 1.4,
@@ -209,7 +210,6 @@ onMounted(() => {
             },
            
         });
-
     });
 
     let end = isMobile ? "+=400%" : "+=200%";
