@@ -248,7 +248,8 @@ console.log("callsss");        const text = new SplitType(".mf", { types: 'words
             ,
 
         },
-        y: `-=${cardWrapperHeight / y}`,
+        // y: `-=${cardWrapperHeight / y}`,
+        translateY:`-=${cardWrapperHeight / y}`,
         ease: "none"
     });
 
