@@ -33,9 +33,9 @@ Signal.on(":loaderFinished", (index) => {
 })
 
 onMounted(() => {
-  ScrollTrigger.normalizeScroll({
-  target:[".card__wrapper",".header",".text__reveal"]
-})
+//   ScrollTrigger.normalizeScroll({
+//   target:[".card__wrapper",".header",".text__reveal"]
+// })
 })
 </script>
 
