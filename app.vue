@@ -27,7 +27,7 @@ const isLoading = ref(true); // Initial loading state
 //     }
 
 ScrollTrigger.normalizeScroll({
-  target:".card__wrapper"
+  target:[".card__wrapper",".header",".text__reveal"]
 })
 
 Signal.on(":loaderFinished", (index) => {
