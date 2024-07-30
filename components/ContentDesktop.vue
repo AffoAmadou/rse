@@ -222,9 +222,7 @@ console.log("callsss");        const text = new SplitType(".mf", { types: 'words
 
     gsap.to(cardWrapper.value, {
         scrollTrigger: {
-            onEnter: () => {
-
-            },
+            
             trigger: contentSection.value,
             scrub: true,
             pin: true,
@@ -232,6 +230,7 @@ console.log("callsss");        const text = new SplitType(".mf", { types: 'words
              pinType: "fixed",
             markers: true,
             start: "top top",
+            invalidateOnRefresh: true,
             end:()=> end,
             onUpdate: (self) => {
                 let progress = self.progress;
