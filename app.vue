@@ -26,6 +26,10 @@ const isLoading = ref(true); // Initial loading state
 //         ScrollTrigger.refresh();
 //     }
 
+ScrollTrigger.normalizeScroll({
+  target:".card__wrapper"
+})
+
 Signal.on(":loaderFinished", (index) => {
   isLoading.value = false;
 })
