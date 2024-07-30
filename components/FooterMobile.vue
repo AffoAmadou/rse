@@ -80,7 +80,7 @@ onMounted(() => {
             pinSpacer: false,
             pinSpacing: true,
             start: "top top",
-            end: "+=10%"
+            end: "+=25%"
         },
         y: `-=${cardWrapperHeight / 3}`,
         ease: "none"
