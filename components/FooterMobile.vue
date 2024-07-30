@@ -77,7 +77,7 @@ onMounted(() => {
             trigger: footerSection.value,
             scrub: true,
             pin: true,
-            // pinSpacer: false,
+            pinSpacer: false,
             pinSpacing: true,
             start: "top top",
             end: "+=10%"
