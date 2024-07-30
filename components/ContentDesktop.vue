@@ -75,9 +75,7 @@ onMounted(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     ScrollTrigger.config({ ignoreMobileResize: true})
-    ScrollTrigger.normalizeScroll({
-  target:cardWrapper
-})
+
 
     const body = document.querySelector('body');
     const cards = document.querySelectorAll('.card__index');

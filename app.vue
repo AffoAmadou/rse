@@ -31,6 +31,12 @@ const isLoading = ref(true); // Initial loading state
 Signal.on(":loaderFinished", (index) => {
   isLoading.value = false;
 })
+
+onMounted(() => {
+  ScrollTrigger.normalizeScroll({
+  target:[".card__wrapper",".header",".text__reveal"]
+})
+})
 </script>
 
 <template>
