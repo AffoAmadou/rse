@@ -227,7 +227,7 @@ onMounted(() => {
             scrub: true,
             pin: true,
             anticipatePin: 1,
-            pinType: "transform",
+            // pinType: "transform",
             markers: true,
             start: "top top",
             end: end,
@@ -309,6 +309,8 @@ onMounted(() => {
 will-change: transform;
 
     @media screen and (max-width: 600px) {
+        will-change: transform;
+
         flex-direction: column;
         gap: 12rem;
         height: 200svh;
