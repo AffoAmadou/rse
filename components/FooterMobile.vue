@@ -95,6 +95,7 @@ onMounted(() => {
         align-items: center;
         width: 100%;
         height: 100vh;
+        margin-top: -40rem;
     }
 
     @media screen and (orientation: landscape) {

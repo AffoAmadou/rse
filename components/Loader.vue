@@ -61,7 +61,7 @@ onMounted(() => {
 
 .loader {
     width: 100%;
-    height: 100vh;
+    height: 100lvh;
     position: fixed;
     background-color: #162040;
     color: #FF90B9;

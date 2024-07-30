@@ -153,6 +153,7 @@ onMounted(() => {
                 gsap.to(body, {
                     backgroundColor: props.contents[index].bgColor,
                     color: props.contents[index].txtColor,
+                    delay:.3,
                     duration: 1.4,
                     ease: 'ease.inout'
                 });
@@ -195,11 +196,7 @@ onMounted(() => {
                     stagger: .1,
                 });
             },
-            // onComplete: () => {
-            //     // currentIndex.value = index;
-            //     ScrollTrigger.refresh();
-            // },
-
+           
         });
 
     });
