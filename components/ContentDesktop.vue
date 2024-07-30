@@ -151,62 +151,63 @@ onMounted(() => {
                     // currentIndex.value = index;
                 }
 
+                let tl = gsap.timeline();
 
-                gsap.to(body, {
+                tl.to(body, {
                     backgroundColor: props.contents[index].bgColor,
                     color: props.contents[index].txtColor,
                     delay:.3,
                     duration: 1.4,
                     ease: 'ease.inout'
-                });
+                },0);
 
                 if(isMobile){
                     console.log('mobile');
-            gsap.to(".logo__wrapper", {
+            tl.to(".logo__wrapper", {
                 backgroundColor: props.contents[index].bgColor,
                 delay:.3,
 
                 duration: 1.4,
                 ease: "ease.inout",
-            });
+            },0);
         }
 
-                gsap.to(cards, {
+                tl.to(cards, {
                     color: props.contents[index].cardsColors.number,
                     duration: 1.4,
                     ease: 'ease.inout'
-                });
+                },0);
 
-                gsap.to(carsTexts, {
+                tl.to(carsTexts, {
                     color: props.contents[index].cardsColors.text,
                     duration: 1.4,
                     ease: 'ease.inout'
-                })
+                },0)
 
-                gsap.to(btn, {
+                tl.to(btn, {
                     fill: props.contents[index].cardsColors.text,
                     duration: 1.4,
                     ease: 'ease.inout'
-                })
+                },0)
 
-                gsap.to(tagItem, {
+                tl.to(tagItem, {
                     backgroundColor: props.contents[index].cardsColors.text,
                     duration: 1.4,
                     ease: 'ease.inout'
-                })
+                },0)
 
 
-                gsap.to(lineV, {
+                tl.to(lineV, {
                     borderColor: props.contents[index].lineColor,
                     duration: 2,
                     stagger: .1,
-                });
+                },0);
 
-                gsap.to(lineH, {
+                tl.to(lineH, {
                     borderColor: props.contents[index].lineColor,
                     duration: 2,
                     stagger: .1,
-                });
+                },0);
             },
            
         });
