@@ -218,14 +218,11 @@ onMounted(() => {
             trigger: contentSection.value,
             scrub: true,
             pin: true,
-            anticipatePin: .7,
+            anticipatePin: 1,
             
-            // pinSpacer: false,
-            // pinSpacing: true,
             markers: true,
             start: "top top",
             end: end,
-            // onRefresh: () => ScrollTrigger.refresh(),
             onUpdate: (self) => {
                 let progress = self.progress;
                 if (self.direction === 1) {
