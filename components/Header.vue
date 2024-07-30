@@ -149,6 +149,14 @@ onMounted(() => {
                 ease: "ease.inout",
             });
 
+            if(isMobile){
+            gsap.to(".logo__wrapper", {
+                backgroundColor: props.bgColor,
+                color: props.txtColor,
+                duration: 1.4,
+                ease: "ease.inout",
+            });
+        }
             gsap.to(lineV, {
                 borderColor: props.lineColor,
                 duration: 2,
@@ -170,6 +178,15 @@ onMounted(() => {
                 duration: 1.4,
                 ease: "ease.inout",
             });
+
+            if(isMobile){
+            gsap.to(".logo__wrapper", {
+                backgroundColor: props.bgColor,
+                color: props.txtColor,
+                duration: 1.4,
+                ease: "ease.inout",
+            });
+        }
 
             gsap.to(lineV, {
                 borderColor: props.lineColor,

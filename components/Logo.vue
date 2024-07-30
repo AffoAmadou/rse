@@ -43,6 +43,7 @@
 
     </div>
 
+
 </template>
 
 <script setup>
@@ -53,12 +54,17 @@
 .logo__wrapper {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     position: fixed;
     width: 100%;
     left: 0;
-    top: 5.1rem;
-    z-index: 2;
+    height: 7.1rem;
+    z-index: 20;
+    // background-color: #162040;
 
+a{
+    height: fit-content;
+}
     svg {
         width: 12.6rem;
         height: 1.9rem;
@@ -66,7 +72,7 @@
     }
 
     @media screen and (max-width: 600px){
-        z-index: 1;
+        z-index: 20;
         
     }
 }

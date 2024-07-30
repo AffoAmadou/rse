@@ -60,6 +60,12 @@ onMounted(() => {
                 duration: 1.4,
                 ease: 'ease.inout'
             });
+
+            gsap.to(".logo__wrapper", {
+                backgroundColor: '#162040',
+                duration: 1.4,
+                ease: 'ease.inout'
+            });
         },
     });
 
@@ -95,7 +101,6 @@ onMounted(() => {
         align-items: center;
         width: 100%;
         height: 100vh;
-        margin-top: -40rem;
     }
 
     @media screen and (orientation: landscape) {

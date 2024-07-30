@@ -158,6 +158,17 @@ onMounted(() => {
                     ease: 'ease.inout'
                 });
 
+                if(isMobile){
+                    console.log('mobile');
+            gsap.to(".logo__wrapper", {
+                backgroundColor: props.contents[index].bgColor,
+                delay:.3,
+
+                duration: 1.4,
+                ease: "ease.inout",
+            });
+        }
+
                 gsap.to(cards, {
                     color: props.contents[index].cardsColors.number,
                     duration: 1.4,
