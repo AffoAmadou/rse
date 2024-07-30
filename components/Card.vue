@@ -38,7 +38,7 @@
   justify-content: space-between;
   cursor: pointer;
   z-index: 100;
-
+will-change: transform;
   @media screen and (max-width: 912px) {
     width: 38.5rem;
 
