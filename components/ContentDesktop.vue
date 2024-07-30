@@ -232,7 +232,7 @@ console.log("callsss");        const text = new SplitType(".mf", { types: 'words
             // pinType: "transform",
             markers: true,
             start: "top top",
-            end: end,
+            end:()=> end,
             onUpdate: (self) => {
                 let progress = self.progress;
                 if (self.direction === 1) {
