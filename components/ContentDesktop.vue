@@ -1,7 +1,7 @@
 <template>
     <section class="content" ref="contentSection">
 
-        <!-- <div ref="marquee" class="marquee__wrapper">
+        <div ref="marquee" class="marquee__wrapper">
             <Vue3Marquee class="rf">
                 <div class="marquee__content">
                     <p class="marquee__text mf">{{ props.contents[currentIndex].text }}</p>
@@ -11,7 +11,7 @@
                 </div>
             </Vue3Marquee>
         </div>
-         -->
+        
         <div class="content__wrapper" ref="contentWrapper">
 
             <div ref="cardWrapper" class="card__wrapper">
