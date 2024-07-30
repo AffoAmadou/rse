@@ -229,7 +229,7 @@ console.log("callsss");        const text = new SplitType(".mf", { types: 'words
             scrub: true,
             pin: true,
             anticipatePin: 1,
-            pinType: "transform",
+            // pinType: "transform",
             markers: true,
             start: "top top",
             end: end,
