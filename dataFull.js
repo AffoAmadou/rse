@@ -3,6 +3,8 @@ export const data = [
         header: {
             index: 0,
             text: "Engagés <br/> pour préserver<br/> la planète",
+            textMob: "Engagés <br/> pour préserver<br/> la planète",
+
             tag: "Environnement",
             menuTag: "Environnement",
             bgColor: "#005454",
@@ -138,6 +140,8 @@ export const data = [
             menuTag: "Éthique",
             index: 1,
             text: "Engagés pour des <br/> relations éthiques<br/> et responsables",
+            textMob: "Engagés pour des <br/> relations éthiques<br/> et responsa -bles",
+
             tag: "Éthique",
             bgColor: "#312A89",
             txtColor: "#ABBFFF",
@@ -255,11 +259,12 @@ fill:"#FFFFFF08",
         header: {
             index: 2,
             text: "Engagés pour <br/> nos équipes ",
+            textMob: "Engagés pour <br/> nos équipes ",
+
             tag: "Social",
             menuTag: "Social",
             bgColor: "#493167",
-            txtColor: "#C9BAF9",
-            lineColor:"#C9BAF90D",
+            txtColor: "#C9BAF9",            lineColor:"#C9BAF90D",
             icons:[
                 {
                     index:2,
@@ -364,6 +369,9 @@ fill:"#FFFFFF08",
         header: {
             index: 3,
             text: "Engagés dans <br/> nos prises <br/> de décisions",
+            text: "Engagés dans <br/> nos prises <br/> de décisions",
+            textMob: "Engagés dans <br/> nos prises <br/> de décisions",
+
             tag: "Engagement",
             menuTag: "Engagement",
             bgColor: "#E52A41",

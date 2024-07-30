@@ -21,11 +21,12 @@
 
         <div class="header__content">
             <div ref="index" class="index">0{{ displayIndex }}-04</div>
-            <h1 ref="title" class="header__title" v-html="props.text">
+            <h1 v-if="!isMobile" ref="title" class="header__title" v-html="props.text">
             </h1>
-            <div ref="tag" class="header__tag">
-                <p>{{ props.tag }}</p>
-            </div>
+            <h1 v-else ref="title" class="header__title" v-html="props.textMob"></h1>
+                <div ref="tag" class="header__tag">
+                    <p>{{ props.tag }}</p>
+                </div>
         </div>
     </section>
 </template>
@@ -35,6 +36,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted, ref, computed, defineAsyncComponent } from 'vue';
 import Signal from '../utils/signal';
+import { isMobile } from 'mobile-device-detect';
 
 gsap.registerPlugin(ScrollTrigger);
 const props = defineProps({
@@ -70,7 +72,11 @@ const props = defineProps({
         type: String,
         default: '0',
 
-    }
+    },
+    textMob: {
+        type: String,
+        default: 'Environnement',
+    },
 
 });
 const headerSection = ref(null);
@@ -248,7 +254,7 @@ onMounted(() => {
     width: 100%;
     opacity: 0;
     word-break: break-word;
-    
+
 
 
 }

@@ -13,6 +13,7 @@ import Logo from './components/Logo.vue';
 import Loader from "./components/Loader.vue";
 import OpenCard from './components/OpenCard.vue';
 import FooterMobile from './components/FooterMobile.vue';
+import FooterMobileLand from './components/FooterMobileLand.vue';
 import { isMobile } from 'mobile-device-detect';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -37,7 +38,7 @@ Signal.on(":loaderFinished", (index) => {
       <OpenCard />
 
       <div v-for="(item, index) in data" :key="index">
-        <Header :index="item.header.index" :text="item.header.text" :tag="item.header.tag"
+        <Header :index="item.header.index" :text="item.header.text" :textMob="item.header.textMob" :tag="item.header.tag"
           :bgColor="item.header.bgColor" :txtColor="item.header.txtColor" :lineColor="item.header.lineColor"
           :icons="item.header.icons" :goto="item.header.menuTag" />
         <TextReveal :bg="item.textReveal.bg" :textColor="item.textReveal.textColor" :text="item.textReveal.text"
@@ -55,6 +56,7 @@ Signal.on(":loaderFinished", (index) => {
 
       <Footer v-if="!isMobile" />
       <FooterMobile v-else />
+      <FooterMobileLand v-if="isMobile" />
     </div>
     <div v-else>
       <Loader />

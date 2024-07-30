@@ -97,6 +97,20 @@ onMounted(() => {
         height: 100vh;
     }
 
+    @media screen and (orientation: landscape) {
+        display: none;
+    }
+    //media query for orientation
+    // @media screen and (orientation: landscape) {
+    //     display: flex;
+    //     width: 100%;
+    //     height: 100vh;
+    //     justify-content: center;
+    //     align-items: center;
+    //     position: relative;
+    //     overflow: hidden;
+    // }
+
     .marquee__wrapper {
         width: 100%;
         height: 100%;
@@ -152,7 +166,16 @@ onMounted(() => {
 
     padding: 20rem 3rem 1rem 3rem;
 
+    @media screen and (orientation: landscape) {
+       position: relative;
+       display: block;
+       height: fit-content;
+    }
+
+
 }
+
+
 
 .footer__card {
     width: 34.5rem;
@@ -204,7 +227,7 @@ onMounted(() => {
 
 
     @media screen and (max-width: 600px) {
-       
+
         margin-bottom: 5rem;
     }
 }
