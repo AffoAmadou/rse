@@ -228,7 +228,7 @@ onMounted(() => {
             pin: true,
             anticipatePin: 1,
             
-            markers: true,
+            // markers: true,
             start: "top top",
             end: end,
             onUpdate: (self) => {
