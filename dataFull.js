@@ -209,7 +209,7 @@ fill:"#FFFFFF08",
             }
         ]
         },
-        mobileScroll: 3,
+        mobileScroll: 1.8,
         contents: [
             {
                 text: "ethique des affaires",
@@ -323,7 +323,7 @@ fill:"#FFFFFF08",
             ]
 
         },
-        mobileScroll: 3.5,
+        mobileScroll: 1.8,
         contents: [
             {
                 text: "formations et certifications",
@@ -437,7 +437,7 @@ fill:"#FFFFFF08",
         ]
 
         },
-        mobileScroll: 4.5,
+        mobileScroll: 4.2,
         contents: [
             {
                 text: "actions et décisions",

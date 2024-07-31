@@ -216,8 +216,8 @@ console.log("callsss");        const text = new SplitType(".mf", { types: 'words
 
     let end = isMobile ? "+=300%" : "+=200%";
 
-    // let y = isMobile ? props.mobileScroll : 1.8;
-    let y = 1.8;
+    let y = isMobile ? props.mobileScroll : 1.8;
+    // let y = 1.8;
     console.log(cardWrapperHeight, y);
 
     gsap.to(cardWrapper.value, {
