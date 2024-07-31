@@ -252,7 +252,7 @@ fill:"#FFFFFF08",
 
                 cards: [
                     { top: "12.3rem", left: "20.4rem", index: "01", text: "Parité & équité",
-                        contenu:"Étant une entreprise fondée par deux femmes, nous portons une grande attention à la parité au sein de l’agence : notre équipe est composée d’autant d' hommes que de femmes.Les salaires sont également connus de tous et réévalués chaque année."
+                        contenu:"Étant une entreprise fondée par deux femmes, nous portons une grande attention à la parité au sein de l’agence : notre équipe est composée d’autant d' hommes que de femmes. Les salaires sont également connus de tous et réévalués chaque année."
                      },
                     { top: "60.2rem", left: "90rem", index: "02", text: "Egalité des chances",
                         contenu:"Nous recrutons dans toute la France pour favoriser l’égalité des chances. La pratique du télétravail est encouragée au sein de l’agence. Nous n’imposons pas non plus de diplômes ou un niveau d’études dans les postes à pourvoir : nous valorisons l’expérience et le vécu de chacun."
