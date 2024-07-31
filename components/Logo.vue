@@ -73,6 +73,10 @@ a{
 
     @media screen and (max-width: 600px){
         z-index: 20;
+        height: 8.5rem;
+        padding-bottom: 1.8rem;
+
+
         
     }
 }
