@@ -53,7 +53,7 @@ function onClick(text) {
   Signal.emit(':navClick', props.index);
 
   let id = "#" + props.text;
-  gsap.to(window, { duration: 2, scrollTo: id });
+  gsap.to(window, { duration: 2, scrollTo: {y:id, offsetY:105} });
 }
 
 
