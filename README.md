@@ -1,6 +1,7 @@
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[![Visit my website](https://img.shields.io/badge/Visit-My%20Website-blue)](https://amadouh.fr/)
 
 ## Setup
 
